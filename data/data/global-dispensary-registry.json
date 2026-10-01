@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "1.0.0",
+  "registry": {
+    "id": "global-dispensary-registry",
+    "name": "Global Dispensary Registry",
+    "mode": "sandbox",
+    "defaultStatus": "directory_only"
+  },
+  "statuses": {
+    "directory_only": {
+      "liveInventory": false,
+      "ordering": false,
+      "description": "Directory location only."
+    },
+    "integration_available": {
+      "liveInventory": false,
+      "ordering": false,
+      "description": "Integration can be configured after authorization."
+    },
+    "live_connected": {
+      "liveInventory": true,
+      "ordering": true,
+      "description": "Authorized live integration is active."
+    }
+  },
+  "regions": [
+    {
+      "regionId": "north-america",
+      "name": "North America",
+      "countries": [
+        {
+          "countryCode": "US",
+          "name": "United States",
+          "enabled": true
+        },
+        {
+          "countryCode": "CA",
+          "name": "Canada",
+          "enabled": true
+        },
+        {
+          "countryCode": "MX",
+          "name": "Mexico",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "regionId": "south-america",
+      "name": "South America",
+      "countries": [
+        {
+          "countryCode": "UY",
+          "name": "Uruguay",
+          "enabled": true
+        },
+        {
+          "countryCode": "CO",
+          "name": "Colombia",
+          "enabled": true
+        },
+        {
+          "countryCode": "BR",
+          "name": "Brazil",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "regionId": "europe",
+      "name": "Europe",
+      "countries": [
+        {
+          "countryCode": "DE",
+          "name": "Germany",
+          "enabled": true
+        },
+        {
+          "countryCode": "NL",
+          "name": "Netherlands",
+          "enabled": true
+        },
+        {
+          "countryCode": "ES",
+          "name": "Spain",
+          "enabled": true
+        },
+        {
+          "countryCode": "PT",
+          "name": "Portugal",
+          "enabled": true
+        },
+        {
+          "countryCode": "CH",
+          "name": "Switzerland",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "regionId": "africa",
+      "name": "Africa",
+      "countries": [
+        {
+          "countryCode": "ZA",
+          "name": "South Africa",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "regionId": "asia-pacific",
+      "name": "Asia Pacific",
+      "countries": [
+        {
+          "countryCode": "TH",
+          "name": "Thailand",
+          "enabled": true
+        },
+        {
+          "countryCode": "AU",
+          "name": "Australia",
+          "enabled": true
+        },
+        {
+          "countryCode": "NZ",
+          "name": "New Zealand",
+          "enabled": true
+        }
+      ]
+    }
+  ],
+  "dispensaries": [],
+  "integrationPolicy": {
+    "requireAuthorization": true,
+    "allowPrivateCredentialImport": false,
+    "credentialsClientSide": false,
+    "serverSideCredentialsOnly": true,
+    "directoryRecordDoesNotImplyIntegration": true,
+    "liveInventoryRequiresAuthorizedConnector": true,
+    "orderingRequiresAuthorizedConnector": true
+  }
+    }
