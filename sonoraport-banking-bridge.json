@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0.0",
+  "bridge": {
+    "id": "worldsandbox-sonoraport-banking",
+    "name": "Worldsandbox13 — SonoraPort Banking Bridge",
+    "enabled": true,
+    "mode": "authenticated-service",
+    "source": "Worldsandbox13",
+    "target": "sonoraport-banking"
+  },
+  "bankingService": {
+    "baseUrlEnvironmentVariable": "SONORAPORT_BANKING_API_URL",
+    "authenticationEnvironmentVariable": "SONORAPORT_BANKING_BRIDGE_TOKEN",
+    "healthEndpoint": "/api/health",
+    "capabilitiesEndpoint": "/api/capabilities",
+    "bridgeStatusEndpoint": "/api/world-sandbox/status"
+  },
+  "permissions": {
+    "healthRead": true,
+    "capabilityRead": true,
+    "bankingStatusRead": true,
+    "credentialRead": false,
+    "secretRead": false,
+    "directMoneyMovement": false
+  },
+  "bankingRequests": {
+    "enabled": true,
+    "executionAuthority": "sonoraport-banking",
+    "requireAuthentication": true,
+    "requireAuthorization": true,
+    "requirePolicyChecks": true,
+    "requireAuditReceipt": true
+  },
+  "security": {
+    "credentialsStoredInRepository": false,
+    "serverToServerOnly": true,
+    "requireHttpsInProduction": true,
+    "failClosed": true,
+    "auditRequests": true
+  },
+  "connectionState": {
+    "configured": false,
+    "reason": "Runtime banking URL and bridge token must be supplied through deployment environment secrets."
+  }
+}
