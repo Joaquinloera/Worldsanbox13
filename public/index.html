@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Worldsandbox13 Command Center</title>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #03070a;
+      --panel: #081117;
+      --panel2: #0d1920;
+      --line: #17303a;
+      --text: #e9f7f5;
+      --muted: #86a6aa;
+      --green: #42ff9e;
+      --cyan: #39d9ff;
+      --amber: #ffc857;
+      --red: #ff5964;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+    }
+
+    header {
+      padding: 18px;
+      border-bottom:
+        1px solid var(--line);
+
+      background:
+        linear-gradient(
+          90deg,
+          #071017,
+          #0a1920
+        );
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .statusbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 12px;
+      border-bottom:
+        1px solid var(--line);
+    }
+
+    .status {
+      padding: 8px 11px;
+      border:
+        1px solid var(--line);
+      border-radius: 6px;
+      background: var(--panel);
+      font-size: 12px;
+    }
+
+    .online {
+      color: var(--green);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns:
+        280px 1fr 300px;
+      min-height:
+        calc(100vh - 125px);
+    }
+
+    aside {
+      padding: 12px;
+      background: var(--panel);
+      overflow-y: auto;
+    }
+
+    .left {
+      border-right:
+        1px solid var(--line);
+    }
+
+    .right {
+      border-left:
+        1px solid var(--line);
+    }
+
+    .panel {
+      margin-bottom: 12px;
+      padding: 12px;
+      border:
+        1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel2);
+    }
+
+    .panel h2 {
+      margin:
+        0 0 10px 0;
+      font-size: 14px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .metric {
+      display: flex;
+      justify-content:
+        space-between;
+      padding: 7px 0;
+      border-bottom:
+        1px solid #14262e;
+      font-size: 13px;
+    }
+
+    .metric:last-child {
+      border-bottom: none;
+    }
+
+    button {
+      width: 100%;
+      margin: 4px 0;
+      padding: 10px;
+      border:
+        1px solid var(--line);
+      border-radius: 5px;
+      background: #0c1b22;
+      color: var(--text);
+      text-align: left;
+      cursor: pointer;
+    }
+
+    button:hover {
+      border-color: var(--cyan);
+    }
+
+    button.active {
+      color: var(--green);
+      border-color: var(--green);
+    }
+
+    #map {
+      width: 100%;
+      height:
+        calc(100vh - 125px);
+      background: #071017;
+    }
+
+    .event {
+      padding: 9px 0;
+      border-bottom:
+        1px solid #14262e;
+      font-size: 12px;
+    }
+
+    .event strong {
+      color: var(--amber);
+    }
+
+    .danger {
+      color: var(--red);
+    }
+
+    .count {
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    .footer-note {
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    @media (
+      max-width: 900px
+    ) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .left,
+      .right {
+        border: none;
+      }
+
+      #map {
+        height: 55vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>WORLD SANDBOX 13</h1>
+
+  <div class="subtitle">
+    Global Multi-Hazard & Technology
+    Monitoring Command Center
+  </div>
+</header>
+
+<div class="statusbar">
+
+  <div class="status">
+    CORE:
+    <span
+      id="coreStatus"
+      class="online"
+    >
+      CONNECTING
+    </span>
+  </div>
+
+  <div class="status">
+    HAZARDS:
+    <span
+      id="hazardCount"
+      class="count"
+    >
+      —
+    </span>
+  </div>
+
+  <div class="status">
+    BANKS:
+    <span
+      id="bankCount"
+      class="count"
+    >
+      —
+    </span>
+  </div>
+
+  <div class="status">
+    AI:
+    <span
+      id="aiCount"
+      class="count"
+    >
+      —
+    </span>
+  </div>
+
+  <div class="status">
+    UTC:
+    <span id="clock">
+      —
+    </span>
+  </div>
+
+</div>
+
+<div class="layout">
+
+  <aside class="left">
+
+    <div class="panel">
+      <h2>World Layers</h2>
+
+      <button
+        class="active"
+        data-layer="hazards"
+      >
+        🌎 Live Hazards
+      </button>
+
+      <button
+        data-layer="banks"
+      >
+        🏦 Global Banking
+      </button>
+
+      <button
+        data-layer="ai"
+      >
+        🤖 AI Technology
+      </button>
+
+      <button
+        data-layer="nuclear"
+      >
+        ⚛ Nuclear Risk
+      </button>
+
+      <button
+        data-layer="government"
+      >
+        🏛 Government Data
+      </button>
+    </div>
+
+    <div class="panel">
+      <h2>Hazard Engines</h2>
+
+      <div class="metric">
+        <span>Earthquakes</span>
+        <span
+          id="earthquakeCount"
+          class="count"
+        >
+          —
+        </span>
+      </div>
+
+      <div class="metric">
+        <span>Tornadoes</span>
+        <span
+          id="tornadoCount"
+          class="count"
+        >
+          —
+        </span>
+      </div>
+
+      <div class="metric">
+        <span>Tsunamis</span>
+        <span
+          id="tsunamiCount"
+          class="count"
+        >
+          —
+        </span>
+      </div>
+
+      <div class="metric">
+        <span>Microbursts</span>
+        <span
+          id="microburstCount"
+          class="count"
+        >
+          —
+        </span>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>System</h2>
+
+      <div class="metric">
+        <span>USGS</span>
+        <span class="online">
+          PUBLIC
+        </span>
+      </div>
+
+      <div class="metric">
+        <span>NOAA / NWS</span>
+        <span class="online">
+          PUBLIC
+        </span>
+      </div>
+
+      <div class="metric">
+        <span>America.gov</span>
+        <span class="online">
+          REGISTERED
+        </span>
+      </div>
+    </div>
+
+  </aside>
+
+  <main>
+    <div id="map"></div>
+  </main>
+
+  <aside class="right">
+
+    <div class="panel">
+      <h2 id="feedTitle">
+        Live Event Feed
+      </h2>
+
+      <div id="feed">
+        Loading sandbox data...
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Sandbox Policy</h2>
+
+      <div class="footer-note">
+        Public-information monitoring
+        and simulation environment.
+        Private systems, credentials,
+        command-and-control systems,
+        and restricted infrastructure
+        are not accessed.
+      </div>
+    </div>
+
+  </aside>
+
+</div>
+
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+></script>
+
+<script>
+
+  const map = L.map(
+    "map",
+    {
+      worldCopyJump: true
+    }
+  ).setView(
+    [20, 0],
+    2
+  );
+
+  L.tileLayer(
+    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    {
+      maxZoom: 18,
+      attribution:
+        "&copy; OpenStreetMap contributors"
+    }
+  ).addTo(map);
+
+  const hazardLayer =
+    L.layerGroup()
+      .addTo(map);
+
+  function escapeHTML(value) {
+    return String(value ?? "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+  async function getJSON(url) {
+    const response =
+      await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(
+        `${url}: HTTP ${response.status}`
+      );
+    }
+
+    return response.json();
+  }
+
+  function setText(id, value) {
+    const element =
+      document.getElementById(id);
+
+    if (element) {
+      element.textContent = value;
+    }
+  }
+
+  function updateClock() {
+    setText(
+      "clock",
+      new Date()
+        .toISOString()
+        .slice(11, 19)
+    );
+  }
+
+  setInterval(
+    updateClock,
+    1000
+  );
+
+  updateClock();
+
+  async function loadStatus() {
+    try {
+      const data =
+        await getJSON(
+          "/api/status"
+        );
+
+      setText(
+        "coreStatus",
+        data.status
+          ?.toUpperCase() ||
+          "ONLINE"
+      );
+
+    } catch {
+      setText(
+        "coreStatus",
+        "OFFLINE"
+      );
+    }
+  }
+
+  function addEarthquakeMarker(
+    event
+  ) {
+    if (
+      typeof event.latitude !==
+        "number" ||
+      typeof event.longitude !==
+        "number"
+    ) {
+      return;
+    }
+
+    const magnitude =
+      Number(
+        event.magnitude || 0
+      );
+
+    const radius =
+      Math.max(
+        4,
+        magnitude * 2
+      );
+
+    L.circleMarker(
+      [
+        event.latitude,
+        event.longitude
+      ],
+      {
+        radius,
+        weight: 1,
+        fillOpacity: 0.65
+      }
+    )
+      .bindPopup(
+        `
+          <strong>
+            Earthquake
+          </strong>
+          <br>
+          Magnitude:
+          ${escapeHTML(
+            event.magnitude
+          )}
+          <br>
+          ${escapeHTML(
+            event.place
+          )}
+          <br>
+          Source: USGS
+        `
+      )
+      .addTo(
+        hazardLayer
+      );
+  }
+
+  async function loadHazards() {
+    try {
+      const data =
+        await getJSON(
+          "/api/hazards"
+        );
+
+      const events =
+        data.events || [];
+
+      hazardLayer
+        .clearLayers();
+
+      events
+        .filter(
+          event =>
+            event.hazard_type ===
+            "earthquake"
+        )
+        .forEach(
+          addEarthquakeMarker
+        );
+
+      setText(
+        "hazardCount",
+        events.length
+      );
+
+      setText(
+        "earthquakeCount",
+        events.filter(
+          e =>
+            e.hazard_type ===
+            "earthquake"
+        ).length
+      );
+
+      setText(
+        "tornadoCount",
+        events.filter(
+          e =>
+            e.hazard_type ===
+            "tornado"
+        ).length
+      );
+
+      setText(
+        "tsunamiCount",
+        events.filter(
+          e =>
+            e.hazard_type ===
+            "tsunami"
+        ).length
+      );
+
+      setText(
+        "microburstCount",
+        events.filter(
+          e =>
+            e.hazard_type ===
+            "microburst"
+        ).length
+      );
+
+      showHazardFeed(
+        events.slice(0, 30)
+      );
+
+    } catch (error) {
+      document.getElementById(
+        "feed"
+      ).textContent =
+        "Hazard feed unavailable.";
+    }
+  }
+
+  function showHazardFeed(events) {
+    setText(
+      "feedTitle",
+      "Live Event Feed"
+    );
+
+    const feed =
+      document.getElementById(
+        "feed"
+      );
+
+    if (!events.length) {
+      feed.textContent =
+        "No events returned.";
+      return;
+    }
+
+    feed.innerHTML =
+      events.map(
+        event => `
+          <div class="event">
+            <strong>
+              ${escapeHTML(
+                event.hazard_type
+              )}
+            </strong>
+            <br>
+            ${escapeHTML(
+              event.place ||
+              event.headline ||
+              event.area ||
+              "Global event"
+            )}
+          </div>
+        `
+      ).join("");
+  }
+
+  async function showBanks() {
+    const data =
+      await getJSON(
+        "/api/banks"
+      );
+
+    const global =
+      data.globalFinancialInstitutions ||
+      [];
+
+    const central =
+      data.centralBanks || [];
+
+    setText(
+      "bankCount",
+      global.length +
+      central.length
+    );
+
+    setText(
+      "feedTitle",
+      "Global Banking"
+    );
+
+    document.getElementById(
+      "feed"
+    ).innerHTML =
+      [...global, ...central]
+        .slice(0, 80)
+        .map(
+          bank => `
+            <div class="event">
+              <strong>
+                ${escapeHTML(
+                  bank.name
+                )}
+              </strong>
+              <br>
+              ${escapeHTML(
+                bank.country ||
+                bank.type ||
+                ""
+              )}
+            </div>
+          `
+        ).join("");
+  }
+
+  async function showAI() {
+    const data =
+      await getJSON(
+        "/api/ai-companies"
+      );
+
+    const organizations =
+      data.organizations || [];
+
+    setText(
+      "aiCount",
+      organizations.length
+    );
+
+    setText(
+      "feedTitle",
+      "AI Technology"
+    );
+
+    document.getElementById(
+      "feed"
+    ).innerHTML =
+      organizations.map(
+        company => `
+          <div class="event">
+            <strong>
+              ${escapeHTML(
+                company.name
+              )}
+            </strong>
+            <br>
+            ${escapeHTML(
+              company.category
+            )}
+            <br>
+            ${escapeHTML(
+              (
+                company.products ||
+                []
+              ).join(", ")
+            )}
+          </div>
+        `
+      ).join("");
+  }
+
+  async function showNuclear() {
+    const data =
+      await getJSON(
+        "/api/nuclear-risk"
+      );
+
+    const countries =
+      data.nuclearRisk
+        ?.nuclearArmedStates ||
+      [];
+
+    setText(
+      "feedTitle",
+      "Nuclear Risk Monitoring"
+    );
+
+    document.getElementById(
+      "feed"
+    ).innerHTML =
+      countries.map(
+        country => `
+          <div class="event">
+            <strong>
+              ${escapeHTML(
+                country
+              )}
+            </strong>
+            <br>
+            Public risk-monitoring
+            registry
+          </div>
+        `
+      ).join("");
+  }
+
+  async function showGovernment() {
+    const data =
+      await getJSON(
+        "/api/government"
+      );
+
+    setText(
+      "feedTitle",
+      "Government Information"
+    );
+
+    document.getElementById(
+      "feed"
+    ).innerHTML =
+      `
+        <div class="event">
+          <strong>
+            ${escapeHTML(
+              data.name ||
+              "America.gov"
+            )}
+          </strong>
+          <br>
+          ${escapeHTML(
+            data.type ||
+            "government-information"
+          )}
+        </div>
+      `;
+  }
+
+  document
+    .querySelectorAll(
+      "[data-layer]"
+    )
+    .forEach(
+      button => {
+
+        button.addEventListener(
+          "click",
+          async () => {
+
+            document
+              .querySelectorAll(
+                "[data-layer]"
+              )
+              .forEach(
+                item =>
+                  item.classList
+                    .remove(
+                      "active"
+                    )
+              );
+
+            button.classList
+              .add("active");
+
+            const layer =
+              button.dataset.layer;
+
+            try {
+              if (
+                layer ===
+                "hazards"
+              ) {
+                await loadHazards();
+              }
+
+              if (
+                layer ===
+                "banks"
+              ) {
+                await showBanks();
+              }
+
+              if (
+                layer ===
+                "ai"
+              ) {
+                await showAI();
+              }
+
+              if (
+                layer ===
+                "nuclear"
+              ) {
+                await showNuclear();
+              }
+
+              if (
+                layer ===
+                "government"
+              ) {
+                await showGovernment();
+              }
+
+            } catch (error) {
+              document
+                .getElementById(
+                  "feed"
+                )
+                .textContent =
+                  "Layer unavailable.";
+            }
+          }
+        );
+      }
+    );
+
+  async function bootDashboard() {
+    await Promise.allSettled([
+      loadStatus(),
+      loadHazards(),
+      showBanks(),
+      showAI()
+    ]);
+
+    setText(
+      "feedTitle",
+      "Live Event Feed"
+    );
+
+    await loadHazards();
+  }
+
+  bootDashboard();
+
+  setInterval(
+    loadHazards,
+    60000
+  );
+
+</script>
+
+</body>
+</html>
