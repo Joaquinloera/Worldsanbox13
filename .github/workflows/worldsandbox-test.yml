@@ -48,6 +48,239 @@ jobs:
           node -e "JSON.parse(require('fs').readFileSync('data/global-dispensary-registry.json','utf8'))"
           node -e "JSON.parse(require('fs').readFileSync('data/global-infrastructure-registry.json','utf8'))"
           node -e "JSON.parse(require('fs').readFileSync('data/global-shipping-agriculture-registry.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('data/global-payment-networks-registry.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('data/global-financial-institutions-registry.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('data/sonoraport-banking-bridge.json','utf8'))"
+
+      - name: Verify payment and digital currency registry
+        run: |
+          node <<'NODE'
+          const fs = require("fs");
+
+          const registry = JSON.parse(
+            fs.readFileSync(
+              "data/global-payment-networks-registry.json",
+              "utf8"
+            )
+          );
+
+          const requiredNetworks = [
+            "paypal",
+            "venmo",
+            "cash-app",
+            "zelle",
+            "apple-pay"
+          ];
+
+          const requiredCurrencies = [
+            "bitcoin",
+            "ethereum",
+            "usdc",
+            "usdt"
+          ];
+
+          for (const id of requiredNetworks) {
+            const network = registry.paymentNetworks.find(
+              item => item.id === id
+            );
+
+            if (!network) {
+              throw new Error(
+                `Missing payment network: ${id}`
+              );
+            }
+
+            if (network.registered !== true) {
+              throw new Error(
+                `Payment network not registered: ${id}`
+              );
+            }
+
+            if (
+              network.credentialsStoredInRepository !== false
+            ) {
+              throw new Error(
+                `Unsafe credential policy: ${id}`
+              );
+            }
+          }
+
+          for (const id of requiredCurrencies) {
+            const currency = registry.digitalCurrencies.find(
+              item => item.id === id
+            );
+
+            if (!currency) {
+              throw new Error(
+                `Missing digital currency: ${id}`
+              );
+            }
+
+            if (currency.registered !== true) {
+              throw new Error(
+                `Digital currency not registered: ${id}`
+              );
+            }
+
+            if (currency.settlementEnabled !== false) {
+              throw new Error(
+                `Unverified settlement enabled: ${id}`
+              );
+            }
+          }
+
+          if (
+            registry.bankingBridge
+              ?.paymentExecutionAuthority !==
+            "sonoraport-banking"
+          ) {
+            throw new Error(
+              "Invalid payment execution authority"
+            );
+          }
+
+          if (
+            registry.bankingBridge
+              ?.directMoneyMovement !== false
+          ) {
+            throw new Error(
+              "Direct money movement must remain disabled"
+            );
+          }
+
+          console.log(
+            "Payment and digital currency registry verified"
+          );
+          NODE
+
+      - name: Verify financial institution registry
+        run: |
+          node <<'NODE'
+          const fs = require("fs");
+
+          const registry = JSON.parse(
+            fs.readFileSync(
+              "data/global-financial-institutions-registry.json",
+              "utf8"
+            )
+          );
+
+          const requiredInstitutions = [
+            "blackrock",
+            "vanguard",
+            "state-street",
+            "jpmorgan-chase",
+            "bayer-monsanto"
+          ];
+
+          for (const id of requiredInstitutions) {
+            const institution =
+              registry.institutions.find(
+                item => item.id === id
+              );
+
+            if (!institution) {
+              throw new Error(
+                `Missing institution: ${id}`
+              );
+            }
+
+            if (institution.registered !== true) {
+              throw new Error(
+                `Institution not registered: ${id}`
+              );
+            }
+
+            if (
+              institution.externalSystemAccess !== false
+            ) {
+              throw new Error(
+                `External access unexpectedly enabled: ${id}`
+              );
+            }
+
+            if (
+              institution.credentialsStoredInRepository !== false
+            ) {
+              throw new Error(
+                `Unsafe credential policy: ${id}`
+              );
+            }
+          }
+
+          if (
+            registry.sonoraportBankingBoundary
+              ?.authority !==
+            "sonoraport-banking"
+          ) {
+            throw new Error(
+              "Invalid banking authority"
+            );
+          }
+
+          console.log(
+            "Financial institution registry verified"
+          );
+          NODE
+
+      - name: Verify core runtime loads registries
+        run: |
+          node <<'NODE'
+          const app = require("./app");
+
+          const paymentRegistry = app.readJSON(
+            "data/global-payment-networks-registry.json"
+          );
+
+          const institutionRegistry = app.readJSON(
+            "data/global-financial-institutions-registry.json"
+          );
+
+          app.validatePaymentRegistry(
+            paymentRegistry
+          );
+
+          app.validateInstitutionRegistry(
+            institutionRegistry
+          );
+
+          const payments =
+            app.buildPaymentNetworkRegistry(
+              paymentRegistry
+            );
+
+          const currencies =
+            app.buildDigitalCurrencyRegistry(
+              paymentRegistry
+            );
+
+          const institutions =
+            app.buildInstitutionRegistry(
+              institutionRegistry
+            );
+
+          if (payments.length !== 5) {
+            throw new Error(
+              "Expected 5 payment networks"
+            );
+          }
+
+          if (currencies.length !== 4) {
+            throw new Error(
+              "Expected 4 digital currencies"
+            );
+          }
+
+          if (institutions.length !== 5) {
+            throw new Error(
+              "Expected 5 institutions"
+            );
+          }
+
+          console.log(
+            "WorldSandbox registry runtime verified"
+          );
+          NODE
 
       - name: Start unified API
         run: |
@@ -68,7 +301,7 @@ jobs:
         env:
           PORT: "3000"
           HOST: "127.0.0.1"
-          WORLDSANDBOX_USER_AGENT: "Worldsandbox13-GitHub-Actions/0.4"
+          WORLDSANDBOX_USER_AGENT: "Worldsandbox13-GitHub-Actions/0.5"
 
       - name: Test API status
         run: curl --fail --silent http://127.0.0.1:3000/api/status
