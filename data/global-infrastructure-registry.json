@@ -10,7 +10,7 @@
     "directory_only": {
       "connected": false,
       "controlEnabled": false,
-      "description": "Infrastructure directory record only."
+      "description": "Directory and classification record only."
     },
     "integration_available": {
       "connected": false,
@@ -34,10 +34,180 @@
       "capabilities": {
         "towerDirectory": true,
         "coverageMapping": true,
+        "publicNetworkInformation": true,
         "networkStatus": false,
-        "deviceTracking": false,
         "privateSubscriberData": false,
+        "deviceTracking": false,
         "networkControl": false
+      }
+    },
+    {
+      "infrastructureId": "global-electronics-network",
+      "name": "Global Electronics & Connected Device Registry",
+      "category": "electronics",
+      "scope": "global",
+      "status": "directory_only",
+      "enabled": true,
+      "deviceClasses": [
+        "cell-phone",
+        "smartphone",
+        "iphone",
+        "android-phone",
+        "ipad",
+        "android-tablet",
+        "samsung-tablet",
+        "laptop",
+        "desktop-computer",
+        "smart-tv",
+        "apple-tv",
+        "streaming-device",
+        "apple-watch",
+        "smartwatch",
+        "wearable",
+        "smart-speaker",
+        "smart-home-device",
+        "gaming-console",
+        "vehicle-infotainment-device",
+        "iot-device"
+      ],
+      "platforms": [
+        "ios",
+        "ipados",
+        "android",
+        "windows",
+        "macos",
+        "linux",
+        "tvos",
+        "watchos",
+        "tizen",
+        "webos",
+        "chromeos",
+        "other"
+      ],
+      "capabilities": {
+        "deviceClassDirectory": true,
+        "platformClassification": true,
+        "manufacturerClassification": true,
+        "publicDeviceInformation": true,
+        "authorizedDeviceIntegration": false,
+        "privateDeviceData": false,
+        "preciseLocationTracking": false,
+        "communicationsInterception": false,
+        "cameraActivation": false,
+        "microphoneActivation": false,
+        "remoteDeviceControl": false
+      }
+    },
+    {
+      "infrastructureId": "global-camera-network",
+      "name": "Global Camera & Sensor Infrastructure Registry",
+      "category": "cameras-and-sensors",
+      "scope": "global",
+      "status": "directory_only",
+      "enabled": true,
+      "systems": [
+        "traffic-camera",
+        "public-safety-camera",
+        "license-plate-reader",
+        "flock-camera",
+        "airport-camera",
+        "commercial-security-camera",
+        "smart-doorbell",
+        "iot-camera"
+      ],
+      "capabilities": {
+        "systemDirectory": true,
+        "publicLocationMapping": true,
+        "publicSystemInformation": true,
+        "authorizedIntegration": false,
+        "privateCameraFeeds": false,
+        "licensePlateTracking": false,
+        "facialRecognition": false,
+        "remoteCameraControl": false
+      }
+    },
+    {
+      "infrastructureId": "global-satellite-network",
+      "name": "Global Satellite & Space Communications Registry",
+      "category": "satellite",
+      "scope": "global",
+      "status": "directory_only",
+      "enabled": true,
+      "systems": [
+        "communications-satellite",
+        "navigation-satellite",
+        "weather-satellite",
+        "earth-observation-satellite",
+        "starlink",
+        "commercial-satellite-network"
+      ],
+      "capabilities": {
+        "satelliteDirectory": true,
+        "publicOrbitalInformation": true,
+        "publicCoverageInformation": true,
+        "authorizedTelemetryIntegration": false,
+        "privateTelemetry": false,
+        "satelliteCommand": false
+      }
+    },
+    {
+      "infrastructureId": "global-logistics-network",
+      "name": "Global Logistics & Transportation Registry",
+      "category": "logistics",
+      "scope": "global",
+      "status": "directory_only",
+      "enabled": true,
+      "systems": [
+        "amazon-logistics",
+        "fedex",
+        "parcel-delivery",
+        "distribution-center",
+        "warehouse",
+        "cargo-hub"
+      ],
+      "capabilities": {
+        "companyDirectory": true,
+        "publicFacilityMapping": true,
+        "publicTrackingInterfaces": true,
+        "privateShipmentData": false,
+        "warehouseControl": false,
+        "vehicleControl": false
+      }
+    },
+    {
+      "infrastructureId": "global-airport-network",
+      "name": "Global Airport & Aviation Infrastructure Registry",
+      "category": "aviation",
+      "scope": "global",
+      "status": "directory_only",
+      "enabled": true,
+      "capabilities": {
+        "airportDirectory": true,
+        "publicFlightInformation": true,
+        "publicAirportStatus": true,
+        "authorizedDataIntegration": false,
+        "airTrafficControl": false,
+        "aircraftControl": false,
+        "restrictedAirportSystems": false
+      }
+    },
+    {
+      "infrastructureId": "global-defense-directory",
+      "name": "Global Defense Infrastructure Directory",
+      "category": "defense",
+      "scope": "global",
+      "status": "directory_only",
+      "enabled": true,
+      "systems": [
+        "iron-dome"
+      ],
+      "capabilities": {
+        "publicSystemInformation": true,
+        "publicLocationInformation": true,
+        "liveOperationalData": false,
+        "targetingData": false,
+        "restrictedNetworkAccess": false,
+        "commandAndControl": false
       }
     }
   ],
@@ -47,8 +217,11 @@
     "allowPrivateCredentialImport": false,
     "credentialsClientSide": false,
     "serverSideCredentialsOnly": true,
+    "liveDataRequiresAuthorizedConnector": true,
     "unauthorizedDeviceTracking": false,
     "unauthorizedNetworkControl": false,
-    "liveDataRequiresAuthorizedConnector": true
+    "unauthorizedSurveillanceAccess": false,
+    "unauthorizedPrivateDataAccess": false,
+    "defenseCommandAndControl": false
   }
 }
