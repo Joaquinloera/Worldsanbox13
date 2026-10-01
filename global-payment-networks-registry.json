@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "1.0.0",
+  "registry": {
+    "id": "worldsandbox-global-payment-networks",
+    "name": "WorldSandbox13 Global Payment & Digital Currency Registry",
+    "owner": "WorldSandbox13",
+    "enabled": true,
+    "executionAuthority": "sonoraport-banking",
+    "credentialsStoredInRepository": false
+  },
+
+  "paymentNetworks": [
+    {
+      "id": "paypal",
+      "name": "PayPal",
+      "category": "digital-payment-network",
+      "registered": true,
+      "connectionState": "not-configured",
+      "serverSideOnly": true,
+      "credentialsStoredInRepository": false,
+      "capabilities": {
+        "payments": true,
+        "merchantCheckout": true,
+        "digitalWallet": true,
+        "providerVerificationRequired": true
+      }
+    },
+    {
+      "id": "venmo",
+      "name": "Venmo",
+      "category": "digital-wallet",
+      "registered": true,
+      "connectionState": "not-configured",
+      "serverSideOnly": true,
+      "credentialsStoredInRepository": false,
+      "capabilities": {
+        "payments": true,
+        "merchantCheckout": true,
+        "digitalWallet": true,
+        "providerVerificationRequired": true
+      }
+    },
+    {
+      "id": "cash-app",
+      "name": "Cash App",
+      "category": "digital-wallet",
+      "registered": true,
+      "connectionState": "not-configured",
+      "serverSideOnly": true,
+      "credentialsStoredInRepository": false,
+      "capabilities": {
+        "payments": true,
+        "digitalWallet": true,
+        "providerVerificationRequired": true
+      }
+    },
+    {
+      "id": "zelle",
+      "name": "Zelle",
+      "category": "payment-network",
+      "registered": true,
+      "connectionState": "not-configured",
+      "serverSideOnly": true,
+      "credentialsStoredInRepository": false,
+      "capabilities": {
+        "payments": true,
+        "providerVerificationRequired": true
+      }
+    },
+    {
+      "id": "apple-pay",
+      "name": "Apple Pay",
+      "category": "digital-wallet",
+      "registered": true,
+      "connectionState": "not-configured",
+      "serverSideOnly": true,
+      "credentialsStoredInRepository": false,
+      "capabilities": {
+        "payments": true,
+        "merchantCheckout": true,
+        "digitalWallet": true,
+        "providerVerificationRequired": true
+      }
+    }
+  ],
+
+  "digitalCurrencies": [
+    {
+      "id": "bitcoin",
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "category": "cryptocurrency",
+      "registered": true,
+      "network": "Bitcoin",
+      "settlementEnabled": false
+    },
+    {
+      "id": "ethereum",
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "category": "cryptocurrency",
+      "registered": true,
+      "network": "Ethereum",
+      "settlementEnabled": false
+    },
+    {
+      "id": "usdc",
+      "symbol": "USDC",
+      "name": "USD Coin",
+      "category": "stablecoin",
+      "registered": true,
+      "settlementEnabled": false
+    },
+    {
+      "id": "usdt",
+      "symbol": "USDT",
+      "name": "Tether",
+      "category": "stablecoin",
+      "registered": true,
+      "settlementEnabled": false
+    }
+  ],
+
+  "bankingBridge": {
+    "authority": "sonoraport-banking",
+    "registryAuthority": "WorldSandbox13",
+    "paymentExecutionAuthority": "sonoraport-banking",
+    "directMoneyMovement": false,
+    "requireAuthentication": true,
+    "requireAuthorization": true,
+    "requireProviderVerification": true,
+    "requireAuditReceipt": true
+  },
+
+  "security": {
+    "credentialsStoredInRepository": false,
+    "privateKeysStoredInRepository": false,
+    "walletSeedsStoredInRepository": false,
+    "providerSecretsStoredInRepository": false,
+    "serverToServerOnly": true,
+    "requireHttpsInProduction": true,
+    "failClosed": true,
+    "auditRequests": true
+  },
+
+  "connectionPolicy": {
+    "registryPresenceDoesNotEqualProviderConnection": true,
+    "providerConnectionMustBeVerified": true,
+    "digitalCurrencySettlementMustBeVerified": true,
+    "unverifiedPaymentSuccessProhibited": true
+  },
+
+  "connectionState": {
+    "paypal": "not-configured",
+    "venmo": "not-configured",
+    "cashApp": "not-configured",
+    "zelle": "not-configured",
+    "applePay": "not-configured",
+    "digitalCurrencySettlement": "not-configured"
+  }
+}
