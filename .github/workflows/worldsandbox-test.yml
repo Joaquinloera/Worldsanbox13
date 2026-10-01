@@ -33,14 +33,81 @@ jobs:
           npm --version
 
       - name: Validate JavaScript
-        run: npm run check
+        run: |
+          node --check app.js
+          node --check hazard-sources.js
+          node --check server.js
 
-      - name: Validate JSON
+      - name: Validate JSON registries
         run: |
           node -e "JSON.parse(require('fs').readFileSync('worldsandbox.config.json','utf8'))"
           node -e "JSON.parse(require('fs').readFileSync('america-gov.connector.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('global-institutions.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('ai-technology.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('global-security.json','utf8'))"
 
-      - name: Boot World Sandbox
+      - name: Boot core runtime
         run: npm start
         env:
-          WORLDSANDBOX_USER_AGENT: "Worldsandbox13-GitHub-Actions/0.1"
+          WORLDSANDBOX_USER_AGENT: "Worldsandbox13-GitHub-Actions/0.2"
+
+      - name: Start unified API
+        run: |
+          node server.js > server.log 2>&1 &
+          echo $! > server.pid
+
+          for i in {1..20}; do
+            if curl --fail --silent http://127.0.0.1:3000/api/status > /dev/null; then
+              echo "World Sandbox API is online"
+              exit 0
+            fi
+
+            sleep 1
+          done
+
+          cat server.log
+          exit 1
+        env:
+          PORT: "3000"
+          HOST: "127.0.0.1"
+          WORLDSANDBOX_USER_AGENT: "Worldsandbox13-GitHub-Actions/0.2"
+
+      - name: Test API status
+        run: |
+          curl --fail --silent \
+            http://127.0.0.1:3000/api/status
+
+      - name: Test global banking registry
+        run: |
+          curl --fail --silent \
+            http://127.0.0.1:3000/api/banks
+
+      - name: Test AI technology registry
+        run: |
+          curl --fail --silent \
+            http://127.0.0.1:3000/api/ai-companies
+
+      - name: Test nuclear risk registry
+        run: |
+          curl --fail --silent \
+            http://127.0.0.1:3000/api/nuclear-risk
+
+      - name: Test government information registry
+        run: |
+          curl --fail --silent \
+            http://127.0.0.1:3000/api/government
+
+      - name: Test hazard API
+        run: |
+          curl --fail --silent \
+            http://127.0.0.1:3000/api/hazards
+
+      - name: Stop API
+        if: always()
+        run: |
+          if [ -f server.pid ]; then
+            kill "$(cat server.pid)" || true
+          fi
+
+          echo "----- SERVER LOG -----"
+          cat server.log || true
