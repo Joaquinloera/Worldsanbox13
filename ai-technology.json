@@ -1,0 +1,162 @@
+{
+  "registry": {
+    "name": "Worldsandbox13 AI Technology Layer",
+    "version": "1.0.0",
+    "access": "public-information-only"
+  },
+
+  "organizations": [
+    {
+      "name": "OpenAI",
+      "products": ["ChatGPT", "OpenAI API"],
+      "category": "frontier-ai",
+      "website": "https://openai.com"
+    },
+    {
+      "name": "Anthropic",
+      "products": ["Claude"],
+      "category": "frontier-ai",
+      "website": "https://www.anthropic.com"
+    },
+    {
+      "name": "Meta",
+      "products": [
+        "Meta AI",
+        "Llama",
+        "Meta Quest",
+        "Reality Labs",
+        "Ray-Ban Meta"
+      ],
+      "category": "ai-xr-technology",
+      "website": "https://www.meta.com"
+    },
+    {
+      "name": "Google DeepMind",
+      "products": ["Gemini"],
+      "category": "frontier-ai",
+      "website": "https://deepmind.google"
+    },
+    {
+      "name": "Microsoft",
+      "products": [
+        "Microsoft AI",
+        "Copilot",
+        "Azure AI"
+      ],
+      "category": "ai-cloud-platform",
+      "website": "https://www.microsoft.com"
+    },
+    {
+      "name": "NVIDIA",
+      "products": [
+        "CUDA",
+        "DGX",
+        "AI Computing"
+      ],
+      "category": "ai-compute",
+      "website": "https://www.nvidia.com"
+    },
+    {
+      "name": "xAI",
+      "products": ["Grok"],
+      "category": "frontier-ai",
+      "website": "https://x.ai"
+    },
+    {
+      "name": "Mistral AI",
+      "products": [
+        "Le Chat",
+        "Mistral Models"
+      ],
+      "category": "frontier-ai",
+      "website": "https://mistral.ai"
+    },
+    {
+      "name": "Cohere",
+      "products": ["Command"],
+      "category": "enterprise-ai",
+      "website": "https://cohere.com"
+    },
+    {
+      "name": "Hugging Face",
+      "products": [
+        "Model Hub",
+        "Datasets",
+        "Spaces"
+      ],
+      "category": "ai-platform",
+      "website": "https://huggingface.co"
+    },
+    {
+      "name": "Amazon Web Services",
+      "products": [
+        "Amazon Bedrock",
+        "Amazon SageMaker"
+      ],
+      "category": "ai-cloud-platform",
+      "website": "https://aws.amazon.com"
+    },
+    {
+      "name": "IBM",
+      "products": ["watsonx"],
+      "category": "enterprise-ai",
+      "website": "https://www.ibm.com"
+    },
+    {
+      "name": "Oracle",
+      "products": ["Oracle Cloud AI"],
+      "category": "ai-cloud-platform",
+      "website": "https://www.oracle.com"
+    },
+    {
+      "name": "Apple",
+      "products": ["Apple Intelligence"],
+      "category": "consumer-ai",
+      "website": "https://www.apple.com"
+    },
+    {
+      "name": "Adobe",
+      "products": ["Adobe Firefly"],
+      "category": "generative-ai",
+      "website": "https://www.adobe.com"
+    },
+    {
+      "name": "Perplexity",
+      "products": ["Perplexity"],
+      "category": "ai-search",
+      "website": "https://www.perplexity.ai"
+    },
+    {
+      "name": "Alibaba Cloud",
+      "products": ["Qwen"],
+      "category": "frontier-ai",
+      "website": "https://www.alibabacloud.com"
+    },
+    {
+      "name": "DeepSeek",
+      "products": ["DeepSeek Models"],
+      "category": "frontier-ai",
+      "website": "https://www.deepseek.com"
+    }
+  ],
+
+  "technologyLayers": [
+    "artificial-intelligence",
+    "large-language-models",
+    "generative-ai",
+    "ai-compute",
+    "cloud-ai",
+    "robotics",
+    "virtual-reality",
+    "augmented-reality",
+    "mixed-reality"
+  ],
+
+  "accessPolicy": {
+    "publicInformationOnly": true,
+    "officialPublicApisAllowed": true,
+    "privateSystems": false,
+    "credentialDiscovery": false,
+    "securityProbing": false
+  }
+}
