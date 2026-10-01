@@ -1,0 +1,79 @@
+{
+  "project": {
+    "name": "Worldsandbox13",
+    "version": "0.1.0",
+    "mode": "multi-hazard-sandbox",
+    "description": "Global multi-hazard simulation and monitoring configuration."
+  },
+  "eventSchema": {
+    "required": [
+      "event_id",
+      "hazard_type",
+      "timestamp",
+      "latitude",
+      "longitude",
+      "severity",
+      "source"
+    ],
+    "hazard_types": [
+      "earthquake",
+      "tsunami",
+      "tornado",
+      "volcano",
+      "microburst"
+    ]
+  },
+  "hazardEngines": {
+    "earthquake": {
+      "enabled": true,
+      "source": "USGS",
+      "adapter": "geojson",
+      "simulation": true
+    },
+    "tsunami": {
+      "enabled": true,
+      "source": "NOAA/NWS",
+      "adapter": "cap-json",
+      "simulation": true
+    },
+    "tornado": {
+      "enabled": true,
+      "source": "NOAA/NWS",
+      "adapter": "cap-json",
+      "simulation": true
+    },
+    "volcano": {
+      "enabled": true,
+      "source": "Smithsonian Global Volcanism Program",
+      "adapter": "geojson",
+      "simulation": true
+    },
+    "microburst": {
+      "enabled": true,
+      "source": "NOAA/NWS",
+      "adapter": "cap-json",
+      "simulation": true
+    }
+  },
+  "pipeline": [
+    "source-connectors",
+    "normalizer",
+    "event-bus",
+    "hazard-engines",
+    "impact-engine",
+    "map-renderer",
+    "alert-engine"
+  ],
+  "security": {
+    "commitSecrets": false,
+    "apiKeys": "environment-variables-only",
+    "httpsOnly": true
+  },
+  "ui": {
+    "worldMap": true,
+    "liveEventLayers": true,
+    "simulationControls": true,
+    "severityFiltering": true,
+    "eventTimeline": true
+  }
+}
