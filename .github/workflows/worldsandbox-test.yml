@@ -91,6 +91,5 @@ jobs:
           curl --fail --silent \
             http://127.0.0.1:3000/api/nuclear-risk
 
-      - name: Test government information registry
-        run: |
-          curl --fail --
+           - name: Test government information registry
+        run: curl --fail --silent http://127.0.0.1:3000/api/government
