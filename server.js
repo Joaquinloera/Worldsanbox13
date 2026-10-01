@@ -14,6 +14,14 @@ const {
 const PORT = Number(process.env.PORT) || 3000;
 const HOST = process.env.HOST || "0.0.0.0";
 const ROOT = __dirname;
+const PUBLIC_DIR =
+  path.join(ROOT, "public");
+
+const INDEX_FILE =
+  path.join(
+    PUBLIC_DIR,
+    "index.html"
+  );
 const CACHE_MS = 30000;
 
 let cache = {
@@ -144,38 +152,36 @@ const server = http.createServer(
         loadRegistries();
 
       if (url.pathname === "/") {
-        return sendJSON(
-          res,
-          200,
-          {
-            project: "Worldsandbox13",
-            status: "online",
 
-            layers: [
-              "natural-hazards",
-              "global-banking",
-              "ai-technology",
-              "nuclear-risk",
-              "government-information"
-            ],
+  if (!fs.existsSync(INDEX_FILE)) {
+    return sendJSON(
+      res,
+      404,
+      {
+        error:
+          "Command center UI not found"
+      }
+    );
+  }
 
-            endpoints: [
-              "/api/status",
-              "/api/hazards",
-              "/api/earthquakes",
-              "/api/alerts",
-              "/api/tornadoes",
-              "/api/tsunamis",
-              "/api/microbursts",
-              "/api/institutions",
-              "/api/banks",
-              "/api/ai-companies",
-              "/api/security",
-              "/api/nuclear-risk",
-              "/api/government"
-            ]
-          }
-        );
+  const html =
+    fs.readFileSync(
+      INDEX_FILE,
+      "utf8"
+    );
+
+  res.writeHead(
+    200,
+    {
+      "Content-Type":
+        "text/html; charset=utf-8",
+
+      "Cache-Control":
+        "no-cache"
+    }
+  );
+
+  return res.end(html);
       }
 
       if (url.pathname === "/api/status") {
