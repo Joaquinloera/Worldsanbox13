@@ -1,0 +1,198 @@
+{
+  "schemaVersion": "1.1.0",
+  "registry": {
+    "id": "global-shipping-agriculture-registry",
+    "name": "Global Shipping, Agriculture & Transportation Registry",
+    "mode": "sandbox",
+    "defaultStatus": "directory_only"
+  },
+  "statuses": {
+    "directory_only": {
+      "connected": false,
+      "controlEnabled": false,
+      "description": "Directory and public-information record only."
+    },
+    "integration_available": {
+      "connected": false,
+      "controlEnabled": false,
+      "description": "Authorized integration may be configured."
+    },
+    "live_connected": {
+      "connected": true,
+      "controlEnabled": false,
+      "description": "Authorized live-data integration is active."
+    }
+  },
+  "sectors": [
+    {
+      "sectorId": "global-maritime-shipping",
+      "name": "Global Maritime Shipping & Ports",
+      "category": "maritime",
+      "scope": "global",
+      "status": "directory_only",
+      "systems": [
+        "cargo-ships",
+        "container-ships",
+        "bulk-carriers",
+        "tankers",
+        "refrigerated-shipping",
+        "ports",
+        "container-terminals",
+        "shipping-lanes",
+        "canals",
+        "commercial-vessels"
+      ],
+      "capabilities": {
+        "portDirectory": true,
+        "publicVesselInformation": true,
+        "publicShippingRoutes": true,
+        "publicPortStatus": true,
+        "privateCargoData": false,
+        "vesselControl": false,
+        "portControl": false
+      }
+    },
+    {
+      "sectorId": "global-rail-network",
+      "name": "Global Train & Rail Network",
+      "category": "rail",
+      "scope": "global",
+      "status": "directory_only",
+      "systems": [
+        "passenger-trains",
+        "freight-trains",
+        "high-speed-rail",
+        "commuter-rail",
+        "metro-systems",
+        "rail-stations",
+        "freight-yards",
+        "intermodal-terminals"
+      ],
+      "capabilities": {
+        "railDirectory": true,
+        "publicRouteInformation": true,
+        "publicScheduleInformation": true,
+        "publicStationInformation": true,
+        "privatePassengerData": false,
+        "trainControl": false,
+        "signalingControl": false
+      }
+    },
+    {
+      "sectorId": "global-airport-network",
+      "name": "Global Airports & Air Cargo Network",
+      "category": "aviation",
+      "scope": "global",
+      "status": "directory_only",
+      "systems": [
+        "international-airports",
+        "regional-airports",
+        "cargo-airports",
+        "air-cargo-terminals",
+        "passenger-terminals",
+        "airport-logistics",
+        "commercial-flight-directory"
+      ],
+      "capabilities": {
+        "airportDirectory": true,
+        "publicFlightInformation": true,
+        "publicAirportStatus": true,
+        "publicCargoFacilityInformation": true,
+        "privatePassengerData": false,
+        "airTrafficControl": false,
+        "aircraftControl": false,
+        "restrictedAirportAccess": false
+      }
+    },
+    {
+      "sectorId": "global-ground-freight-network",
+      "name": "Global Ground Freight & Logistics",
+      "category": "logistics",
+      "scope": "global",
+      "status": "directory_only",
+      "systems": [
+        "truck-freight",
+        "warehouses",
+        "distribution-centers",
+        "cold-chain",
+        "intermodal-terminals",
+        "parcel-hubs",
+        "cargo-hubs"
+      ],
+      "capabilities": {
+        "facilityDirectory": true,
+        "publicRouteInformation": true,
+        "publicCarrierInformation": true,
+        "privateShipmentData": false,
+        "vehicleControl": false,
+        "warehouseControl": false
+      }
+    },
+    {
+      "sectorId": "global-agriculture-network",
+      "name": "Global Agriculture Network",
+      "category": "agriculture",
+      "scope": "global",
+      "status": "directory_only",
+      "systems": [
+        "farms",
+        "ranches",
+        "greenhouses",
+        "orchards",
+        "grain-production",
+        "fruit-production",
+        "vegetable-production",
+        "livestock",
+        "dairy",
+        "poultry",
+        "aquaculture"
+      ],
+      "capabilities": {
+        "producerDirectory": true,
+        "cropClassification": true,
+        "livestockClassification": true,
+        "publicProductionData": true,
+        "privateFarmData": false,
+        "equipmentControl": false
+      }
+    },
+    {
+      "sectorId": "global-food-supply-chain",
+      "name": "Global Food Supply Chain",
+      "category": "food-supply",
+      "scope": "global",
+      "status": "directory_only",
+      "systems": [
+        "grain-storage",
+        "silos",
+        "food-processing",
+        "packing-facilities",
+        "refrigerated-storage",
+        "food-distribution",
+        "wholesale-markets",
+        "export-terminals"
+      ],
+      "capabilities": {
+        "facilityDirectory": true,
+        "publicSupplyInformation": true,
+        "publicTradeInformation": true,
+        "privateInventoryData": false,
+        "facilityControl": false
+      }
+    }
+  ],
+  "integrationPolicy": {
+    "requireAuthorization": true,
+    "directoryRecordDoesNotImplyIntegration": true,
+    "allowPrivateCredentialImport": false,
+    "credentialsClientSide": false,
+    "serverSideCredentialsOnly": true,
+    "liveDataRequiresAuthorizedConnector": true,
+    "unauthorizedShipmentTracking": false,
+    "unauthorizedVehicleControl": false,
+    "unauthorizedPortControl": false,
+    "unauthorizedRailControl": false,
+    "unauthorizedAirportControl": false,
+    "unauthorizedAgriculturalControl": false
+  }
+}
