@@ -1,33 +1,63 @@
 /**
- * Worldsandbox13 — HTTP API Server
+ * Worldsandbox13 — Unified API Server
  * Node.js 18+
  */
 
 const http = require("http");
+const fs = require("fs");
+const path = require("path");
 
 const {
   getHazardSnapshot
 } = require("./hazard-sources");
 
-const PORT =
-  Number(process.env.PORT) || 3000;
-
-const HOST =
-  process.env.HOST || "0.0.0.0";
-
-const CACHE_MS = 30_000;
+const PORT = Number(process.env.PORT) || 3000;
+const HOST = process.env.HOST || "0.0.0.0";
+const ROOT = __dirname;
+const CACHE_MS = 30000;
 
 let cache = {
   timestamp: 0,
   snapshot: null
 };
 
+function readJSON(filename) {
+  return JSON.parse(
+    fs.readFileSync(
+      path.join(ROOT, filename),
+      "utf8"
+    )
+  );
+}
+
+function loadRegistries() {
+  return {
+    institutions: readJSON(
+      "global-institutions.json"
+    ),
+
+    ai: readJSON(
+      "ai-technology.json"
+    ),
+
+    security: readJSON(
+      "global-security.json"
+    ),
+
+    government: readJSON(
+      "america-gov.connector.json"
+    )
+  };
+}
+
 function sendJSON(res, status, data) {
   res.writeHead(status, {
     "Content-Type":
       "application/json; charset=utf-8",
+
     "Cache-Control":
       "no-store",
+
     "Access-Control-Allow-Origin":
       "*"
   });
@@ -37,7 +67,7 @@ function sendJSON(res, status, data) {
   );
 }
 
-async function snapshot() {
+async function getSnapshot() {
   const now = Date.now();
 
   if (
@@ -58,6 +88,13 @@ async function snapshot() {
   return data;
 }
 
+function filterHazards(events, type) {
+  return events.filter(
+    event =>
+      event.hazard_type === type
+  );
+}
+
 function hazardCounts(events) {
   const counts = {};
 
@@ -72,274 +109,355 @@ function hazardCounts(events) {
   return counts;
 }
 
-function filterHazards(events, type) {
-  return events.filter(
-    event =>
-      event.hazard_type === type
-  );
-}
+const server = http.createServer(
+  async (req, res) => {
 
-const server =
-  http.createServer(
-    async (req, res) => {
+    const url = new URL(
+      req.url,
+      `http://${req.headers.host || "localhost"}`
+    );
 
-      const url =
-        new URL(
-          req.url,
-          `http://${req.headers.host || "localhost"}`
-        );
+    if (req.method === "OPTIONS") {
+      res.writeHead(204, {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods":
+          "GET, OPTIONS",
+        "Access-Control-Allow-Headers":
+          "Content-Type"
+      });
 
-      if (req.method === "OPTIONS") {
-        res.writeHead(204, {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods":
-            "GET, OPTIONS",
-          "Access-Control-Allow-Headers":
-            "Content-Type"
-        });
+      return res.end();
+    }
 
-        return res.end();
-      }
+    if (req.method !== "GET") {
+      return sendJSON(
+        res,
+        405,
+        {
+          error: "Method not allowed"
+        }
+      );
+    }
 
-      if (req.method !== "GET") {
+    try {
+      const registries =
+        loadRegistries();
+
+      if (url.pathname === "/") {
         return sendJSON(
           res,
-          405,
+          200,
           {
-            error:
-              "Method not allowed"
+            project: "Worldsandbox13",
+            status: "online",
+
+            layers: [
+              "natural-hazards",
+              "global-banking",
+              "ai-technology",
+              "nuclear-risk",
+              "government-information"
+            ],
+
+            endpoints: [
+              "/api/status",
+              "/api/hazards",
+              "/api/earthquakes",
+              "/api/alerts",
+              "/api/tornadoes",
+              "/api/tsunamis",
+              "/api/microbursts",
+              "/api/institutions",
+              "/api/banks",
+              "/api/ai-companies",
+              "/api/security",
+              "/api/nuclear-risk",
+              "/api/government"
+            ]
           }
         );
       }
 
-      try {
-
-        if (url.pathname === "/") {
-          return sendJSON(
-            res,
-            200,
-            {
-              project:
-                "Worldsandbox13",
-
-              status:
-                "online",
-
-              endpoints: [
-                "/api/status",
-                "/api/hazards",
-                "/api/earthquakes",
-                "/api/alerts",
-                "/api/tornadoes",
-                "/api/tsunamis",
-                "/api/microbursts"
-              ]
-            }
-          );
-        }
-
-        if (
-          url.pathname ===
-          "/api/status"
-        ) {
-          return sendJSON(
-            res,
-            200,
-            {
-              project:
-                "Worldsandbox13",
-
-              status:
-                "online",
-
-              runtime:
-                process.version,
-
-              timestamp:
-                new Date()
-                  .toISOString()
-            }
-          );
-        }
-
-        const data =
-          await snapshot();
-
-        const events =
-          data.events || [];
-
-        if (
-          url.pathname ===
-          "/api/hazards"
-        ) {
-          return sendJSON(
-            res,
-            200,
-            {
-              generated_at:
-                data.generated_at,
-
-              sources:
-                data.sources,
-
-              counts:
-                hazardCounts(events),
-
-              events
-            }
-          );
-        }
-
-        if (
-          url.pathname ===
-          "/api/earthquakes"
-        ) {
-          const earthquakes =
-            filterHazards(
-              events,
-              "earthquake"
-            );
-
-          return sendJSON(
-            res,
-            200,
-            {
-              count:
-                earthquakes.length,
-
-              events:
-                earthquakes
-            }
-          );
-        }
-
-        if (
-          url.pathname ===
-          "/api/alerts"
-        ) {
-          const alerts =
-            events.filter(
-              event =>
-                event.source ===
-                "NOAA/NWS"
-            );
-
-          return sendJSON(
-            res,
-            200,
-            {
-              count:
-                alerts.length,
-
-              events:
-                alerts
-            }
-          );
-        }
-
-        if (
-          url.pathname ===
-          "/api/tornadoes"
-        ) {
-          const tornadoes =
-            filterHazards(
-              events,
-              "tornado"
-            );
-
-          return sendJSON(
-            res,
-            200,
-            {
-              count:
-                tornadoes.length,
-
-              events:
-                tornadoes
-            }
-          );
-        }
-
-        if (
-          url.pathname ===
-          "/api/tsunamis"
-        ) {
-          const tsunamis =
-            filterHazards(
-              events,
-              "tsunami"
-            );
-
-          return sendJSON(
-            res,
-            200,
-            {
-              count:
-                tsunamis.length,
-
-              events:
-                tsunamis
-            }
-          );
-        }
-
-        if (
-          url.pathname ===
-          "/api/microbursts"
-        ) {
-          const microbursts =
-            filterHazards(
-              events,
-              "microburst"
-            );
-
-          return sendJSON(
-            res,
-            200,
-            {
-              count:
-                microbursts.length,
-
-              events:
-                microbursts
-            }
-          );
-        }
-
+      if (url.pathname === "/api/status") {
         return sendJSON(
           res,
-          404,
+          200,
           {
-            error:
-              "Endpoint not found"
-          }
-        );
+            project: "Worldsandbox13",
+            status: "online",
+            runtime: process.version,
 
-      } catch (error) {
-
-        console.error(
-          "API ERROR:",
-          error
-        );
-
-        return sendJSON(
-          res,
-          503,
-          {
-            status:
-              "degraded",
-
-            error:
-              "Hazard data temporarily unavailable",
+            registries: {
+              banking: true,
+              aiTechnology: true,
+              nuclearRisk: true,
+              governmentInformation: true,
+              hazards: true
+            },
 
             timestamp:
-              new Date()
-                .toISOString()
+              new Date().toISOString()
           }
         );
       }
+
+      if (
+        url.pathname ===
+        "/api/institutions"
+      ) {
+        return sendJSON(
+          res,
+          200,
+          registries.institutions
+        );
+      }
+
+      if (url.pathname === "/api/banks") {
+        const institutions =
+          registries.institutions;
+
+        return sendJSON(
+          res,
+          200,
+          {
+            globalFinancialInstitutions:
+              institutions
+                .globalFinancialInstitutions ||
+              [],
+
+            centralBanks:
+              institutions.centralBanks ||
+              []
+          }
+        );
+      }
+
+      if (
+        url.pathname ===
+        "/api/ai-companies"
+      ) {
+        return sendJSON(
+          res,
+          200,
+          registries.ai
+        );
+      }
+
+      if (
+        url.pathname ===
+        "/api/security"
+      ) {
+        return sendJSON(
+          res,
+          200,
+          registries.security
+        );
+      }
+
+      if (
+        url.pathname ===
+        "/api/nuclear-risk"
+      ) {
+        return sendJSON(
+          res,
+          200,
+          {
+            registry:
+              registries.security.registry,
+
+            nuclearRisk:
+              registries.security
+                .nuclearRisk,
+
+            sandboxLayers:
+              registries.security
+                .sandboxLayers
+          }
+        );
+      }
+
+      if (
+        url.pathname ===
+        "/api/government"
+      ) {
+        return sendJSON(
+          res,
+          200,
+          registries.government
+        );
+      }
+
+      const data =
+        await getSnapshot();
+
+      const events =
+        data.events || [];
+
+      if (
+        url.pathname ===
+        "/api/hazards"
+      ) {
+        return sendJSON(
+          res,
+          200,
+          {
+            generated_at:
+              data.generated_at,
+
+            sources:
+              data.sources,
+
+            counts:
+              hazardCounts(events),
+
+            events
+          }
+        );
+      }
+
+      if (
+        url.pathname ===
+        "/api/earthquakes"
+      ) {
+        const earthquakes =
+          filterHazards(
+            events,
+            "earthquake"
+          );
+
+        return sendJSON(
+          res,
+          200,
+          {
+            count:
+              earthquakes.length,
+
+            events:
+              earthquakes
+          }
+        );
+      }
+
+      if (
+        url.pathname ===
+        "/api/alerts"
+      ) {
+        const alerts =
+          events.filter(
+            event =>
+              event.source ===
+              "NOAA/NWS"
+          );
+
+        return sendJSON(
+          res,
+          200,
+          {
+            count:
+              alerts.length,
+
+            events:
+              alerts
+          }
+        );
+      }
+
+      if (
+        url.pathname ===
+        "/api/tornadoes"
+      ) {
+        const eventsFiltered =
+          filterHazards(
+            events,
+            "tornado"
+          );
+
+        return sendJSON(
+          res,
+          200,
+          {
+            count:
+              eventsFiltered.length,
+
+            events:
+              eventsFiltered
+          }
+        );
+      }
+
+      if (
+        url.pathname ===
+        "/api/tsunamis"
+      ) {
+        const eventsFiltered =
+          filterHazards(
+            events,
+            "tsunami"
+          );
+
+        return sendJSON(
+          res,
+          200,
+          {
+            count:
+              eventsFiltered.length,
+
+            events:
+              eventsFiltered
+          }
+        );
+      }
+
+      if (
+        url.pathname ===
+        "/api/microbursts"
+      ) {
+        const eventsFiltered =
+          filterHazards(
+            events,
+            "microburst"
+          );
+
+        return sendJSON(
+          res,
+          200,
+          {
+            count:
+              eventsFiltered.length,
+
+            events:
+              eventsFiltered
+          }
+        );
+      }
+
+      return sendJSON(
+        res,
+        404,
+        {
+          error: "Endpoint not found"
+        }
+      );
+
+    } catch (error) {
+      console.error(
+        "WORLD SANDBOX API ERROR:",
+        error
+      );
+
+      return sendJSON(
+        res,
+        500,
+        {
+          status: "degraded",
+          error: error.message,
+          timestamp:
+            new Date().toISOString()
+        }
+      );
     }
-  );
+  }
+);
 
 server.listen(
   PORT,
@@ -353,7 +471,9 @@ server.listen(
 
 module.exports = {
   server,
-  snapshot,
+  readJSON,
+  loadRegistries,
+  getSnapshot,
   hazardCounts,
   filterHazards
 };
