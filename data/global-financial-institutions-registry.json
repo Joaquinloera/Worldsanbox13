@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "1.0.0",
+  "registry": {
+    "id": "worldsandbox-global-financial-institutions",
+    "name": "WorldSandbox13 Global Financial Institutions Registry",
+    "owner": "WorldSandbox13",
+    "enabled": true,
+    "credentialsStoredInRepository": false,
+    "executionAuthority": "sonoraport-banking"
+  },
+  "institutions": [
+    {
+      "id": "blackrock",
+      "name": "BlackRock",
+      "category": "asset-management",
+      "registered": true,
+      "connectionState": "not-configured",
+      "externalSystemAccess": false,
+      "credentialsStoredInRepository": false,
+      "capabilities": {
+        "institutionRegistry": true,
+        "publicInformationReference": true,
+        "authorizedApiIntegration": false,
+        "accountAccess": false,
+        "assetMovement": false,
+        "credentialAccess": false
+      }
+    },
+    {
+      "id": "vanguard",
+      "name": "Vanguard",
+      "category": "investment-management",
+      "registered": true,
+      "connectionState": "not-configured",
+      "externalSystemAccess": false,
+      "credentialsStoredInRepository": false,
+      "capabilities": {
+        "institutionRegistry": true,
+        "publicInformationReference": true,
+        "authorizedApiIntegration": false,
+        "accountAccess": false,
+        "assetMovement": false,
+        "credentialAccess": false
+      }
+    },
+    {
+      "id": "state-street",
+      "name": "State Street",
+      "category": "financial-services",
+      "registered": true,
+      "connectionState": "not-configured",
+      "externalSystemAccess": false,
+      "credentialsStoredInRepository": false,
+      "capabilities": {
+        "institutionRegistry": true,
+        "publicInformationReference": true,
+        "authorizedApiIntegration": false,
+        "accountAccess": false,
+        "assetMovement": false,
+        "credentialAccess": false
+      }
+    },
+    {
+      "id": "jpmorgan-chase",
+      "name": "JPMorganChase",
+      "category": "banking-financial-services",
+      "registered": true,
+      "connectionState": "not-configured",
+      "externalSystemAccess": false,
+      "credentialsStoredInRepository": false,
+      "capabilities": {
+        "institutionRegistry": true,
+        "publicInformationReference": true,
+        "authorizedApiIntegration": false,
+        "accountAccess": false,
+        "assetMovement": false,
+        "credentialAccess": false
+      }
+    },
+    {
+      "id": "bayer-monsanto",
+      "name": "Bayer / Monsanto",
+      "category": "agriculture-life-sciences",
+      "registered": true,
+      "connectionState": "not-configured",
+      "externalSystemAccess": false,
+      "credentialsStoredInRepository": false,
+      "corporateContext": {
+        "monsantoIndependentCompany": false,
+        "parentOrganization": "Bayer",
+        "historicalEntity": "Monsanto"
+      },
+      "capabilities": {
+        "institutionRegistry": true,
+        "publicInformationReference": true,
+        "authorizedApiIntegration": false,
+        "accountAccess": false,
+        "assetMovement": false,
+        "credentialAccess": false
+      }
+    }
+  ],
+  "sonoraportBankingBoundary": {
+    "authority": "sonoraport-banking",
+    "registryAuthority": "WorldSandbox13",
+    "authorizedInstitutionConnections": false,
+    "directAccountAccess": false,
+    "directAssetMovement": false,
+    "credentialRead": false,
+    "requireAuthentication": true,
+    "requireAuthorization": true,
+    "requireInstitutionVerification": true,
+    "requireAuditReceipt": true
+  },
+  "security": {
+    "credentialsStoredInRepository": false,
+    "privateKeysStoredInRepository": false,
+    "institutionSecretsStoredInRepository": false,
+    "accountCredentialsStoredInRepository": false,
+    "serverToServerOnly": true,
+    "requireHttpsInProduction": true,
+    "failClosed": true,
+    "auditRequests": true
+  },
+  "connectionPolicy": {
+    "registryPresenceDoesNotEqualInstitutionConnection": true,
+    "institutionConnectionMustBeAuthorized": true,
+    "institutionConnectionMustBeVerified": true,
+    "unverifiedAccountAccessProhibited": true,
+    "unverifiedAssetMovementProhibited": true
+  },
+  "connectionState": {
+    "blackRock": "not-configured",
+    "vanguard": "not-configured",
+    "stateStreet": "not-configured",
+    "jpmorganChase": "not-configured",
+    "bayerMonsanto": "not-configured"
+  }
+}
