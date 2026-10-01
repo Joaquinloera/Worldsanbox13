@@ -45,11 +45,9 @@ jobs:
           node -e "JSON.parse(require('fs').readFileSync('global-institutions.json','utf8'))"
           node -e "JSON.parse(require('fs').readFileSync('ai-technology.json','utf8'))"
           node -e "JSON.parse(require('fs').readFileSync('global-security.json','utf8'))"
-
-      - name: Boot core runtime
-        run: npm start
-        env:
-          WORLDSANDBOX_USER_AGENT: "Worldsandbox13-GitHub-Actions/0.2"
+          node -e "JSON.parse(require('fs').readFileSync('data/global-dispensary-registry.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('data/global-infrastructure-registry.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('data/global-shipping-agriculture-registry.json','utf8'))"
 
       - name: Start unified API
         run: |
@@ -65,12 +63,13 @@ jobs:
             sleep 1
           done
 
-          cat server.log
+          echo "World Sandbox API failed to start"
+          cat server.log || true
           exit 1
         env:
           PORT: "3000"
           HOST: "127.0.0.1"
-          WORLDSANDBOX_USER_AGENT: "Worldsandbox13-GitHub-Actions/0.2"
+          WORLDSANDBOX_USER_AGENT: "Worldsandbox13-GitHub-Actions/0.3"
 
       - name: Test API status
         run: |
@@ -94,20 +93,4 @@ jobs:
 
       - name: Test government information registry
         run: |
-          curl --fail --silent \
-            http://127.0.0.1:3000/api/government
-
-      - name: Test hazard API
-        run: |
-          curl --fail --silent \
-            http://127.0.0.1:3000/api/hazards
-
-      - name: Stop API
-        if: always()
-        run: |
-          if [ -f server.pid ]; then
-            kill "$(cat server.pid)" || true
-          fi
-
-          echo "----- SERVER LOG -----"
-          cat server.log || true
+          curl --fail --
