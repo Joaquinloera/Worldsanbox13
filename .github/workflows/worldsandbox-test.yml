@@ -1,0 +1,46 @@
+name: World Sandbox Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Verify World Sandbox
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Show runtime
+        run: |
+          node --version
+          npm --version
+
+      - name: Validate JavaScript
+        run: npm run check
+
+      - name: Validate JSON
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('worldsandbox.config.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('america-gov.connector.json','utf8'))"
+
+      - name: Boot World Sandbox
+        run: npm start
+        env:
+          WORLDSANDBOX_USER_AGENT: "Worldsandbox13-GitHub-Actions/0.1"
