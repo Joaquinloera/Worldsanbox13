@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0.0",
+  "registry": {
+    "id": "global-infrastructure-registry",
+    "name": "Global Infrastructure Registry",
+    "mode": "sandbox",
+    "defaultStatus": "directory_only"
+  },
+  "statuses": {
+    "directory_only": {
+      "connected": false,
+      "controlEnabled": false,
+      "description": "Infrastructure directory record only."
+    },
+    "integration_available": {
+      "connected": false,
+      "controlEnabled": false,
+      "description": "Authorized integration may be configured."
+    },
+    "live_connected": {
+      "connected": true,
+      "controlEnabled": false,
+      "description": "Authorized live data integration is active."
+    }
+  },
+  "infrastructure": [
+    {
+      "infrastructureId": "global-5g-cellular-network",
+      "name": "Global 5G & Cellular Tower Network",
+      "category": "telecommunications",
+      "scope": "global",
+      "status": "directory_only",
+      "enabled": true,
+      "capabilities": {
+        "towerDirectory": true,
+        "coverageMapping": true,
+        "networkStatus": false,
+        "deviceTracking": false,
+        "privateSubscriberData": false,
+        "networkControl": false
+      }
+    }
+  ],
+  "integrationPolicy": {
+    "requireAuthorization": true,
+    "directoryRecordDoesNotImplyIntegration": true,
+    "allowPrivateCredentialImport": false,
+    "credentialsClientSide": false,
+    "serverSideCredentialsOnly": true,
+    "unauthorizedDeviceTracking": false,
+    "unauthorizedNetworkControl": false,
+    "liveDataRequiresAuthorizedConnector": true
+  }
+}
