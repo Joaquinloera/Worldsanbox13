@@ -1,0 +1,86 @@
+{
+  "registry": {
+    "name": "Worldsandbox13 Global Security Layer",
+    "version": "1.0.1",
+    "mode": "public-risk-monitoring",
+    "classification": "public-information-only"
+  },
+
+  "nuclearRisk": {
+    "enabled": true,
+    "purpose": "High-level public monitoring of nuclear arsenals, policy developments, treaties, testing reports, and risk indicators.",
+
+    "nuclearArmedStates": [
+      "United States",
+      "Russia",
+      "United Kingdom",
+      "France",
+      "China",
+      "India",
+      "Pakistan",
+      "Israel"
+    ],
+
+    "excludedFromSandbox": [
+      "North Korea",
+      "Iran"
+    ],
+
+    "publicSources": [
+      {
+        "name": "SIPRI",
+        "type": "research",
+        "website": "https://www.sipri.org"
+      },
+      {
+        "name": "International Atomic Energy Agency",
+        "code": "IAEA",
+        "type": "international-organization",
+        "website": "https://www.iaea.org"
+      },
+      {
+        "name": "Comprehensive Nuclear-Test-Ban Treaty Organization",
+        "code": "CTBTO",
+        "type": "international-organization",
+        "website": "https://www.ctbto.org"
+      },
+      {
+        "name": "United Nations Office for Disarmament Affairs",
+        "code": "UNODA",
+        "type": "international-organization",
+        "website": "https://disarmament.unoda.org"
+      }
+    ],
+
+    "monitoringCategories": [
+      "public-arsenal-estimates",
+      "nuclear-policy",
+      "arms-control",
+      "treaties",
+      "public-test-reports",
+      "nonproliferation",
+      "international-inspections",
+      "public-risk-assessments"
+    ]
+  },
+
+  "sandboxLayers": [
+    "nuclear-risk-overview",
+    "country-status",
+    "treaty-status",
+    "public-events",
+    "historical-testing",
+    "risk-timeline"
+  ],
+
+  "safety": {
+    "weaponConstruction": false,
+    "targeting": false,
+    "launchPlanning": false,
+    "commandAndControlAccess": false,
+    "classifiedInformation": false,
+    "credentialDiscovery": false,
+    "securityBypass": false,
+    "publicResearchOnly": true
+  }
+}
