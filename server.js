@@ -1,6 +1,6 @@
 /**
  * Worldsandbox13 — Unified API Server
- * Node.js 18+
+ * Node.js 20+
  */
 
 const http = require("http");
@@ -13,9 +13,11 @@ const {
 
 const PORT = Number(process.env.PORT) || 3000;
 const HOST = process.env.HOST || "0.0.0.0";
+
 const ROOT = __dirname;
 const PUBLIC_DIR = path.join(ROOT, "public");
 const INDEX_FILE = path.join(PUBLIC_DIR, "index.html");
+
 const CACHE_MS = 30000;
 
 let cache = {
@@ -60,6 +62,10 @@ function loadRegistries() {
 
     shippingAgriculture: readJSON(
       "data/global-shipping-agriculture-registry.json"
+    ),
+
+    bankingBridge: readJSON(
+      "data/sonoraport-banking-bridge.json"
     )
   };
 }
@@ -73,7 +79,10 @@ function sendJSON(res, status, data) {
       "no-store",
 
     "Access-Control-Allow-Origin":
-      "*"
+      "*",
+
+    "X-Content-Type-Options":
+      "nosniff"
   });
 
   res.end(
@@ -123,6 +132,112 @@ function hazardCounts(events) {
   return counts;
 }
 
+/*
+ * SonoraPort Banking Bridge
+ *
+ * Secrets remain in deployment environment variables.
+ * They are never returned to API clients.
+ */
+
+function getBankingBridgeConfig() {
+  const baseUrl =
+    process.env.SONORAPORT_BANKING_API_URL || "";
+
+  const token =
+    process.env.SONORAPORT_BANKING_BRIDGE_TOKEN || "";
+
+  return {
+    configured:
+      Boolean(baseUrl && token),
+
+    baseUrl:
+      baseUrl.replace(/\/+$/, ""),
+
+    token
+  };
+}
+
+async function requestBankingService(endpoint) {
+  const config =
+    getBankingBridgeConfig();
+
+  if (!config.configured) {
+    return {
+      ok: false,
+      configured: false,
+      status: "not_configured",
+      message:
+        "SonoraPort Banking runtime URL and bridge token are not configured."
+    };
+  }
+
+  const controller =
+    new AbortController();
+
+  const timeout =
+    setTimeout(
+      () => controller.abort(),
+      5000
+    );
+
+  try {
+    const response =
+      await fetch(
+        `${config.baseUrl}${endpoint}`,
+        {
+          method: "GET",
+
+          headers: {
+            Accept: "application/json",
+
+            Authorization:
+              `Bearer ${config.token}`,
+
+            "User-Agent":
+              "Worldsandbox13-Banking-Bridge/1.0"
+          },
+
+          signal: controller.signal
+        }
+      );
+
+    const text =
+      await response.text();
+
+    let body;
+
+    try {
+      body = JSON.parse(text);
+    } catch {
+      body = {
+        raw: text
+      };
+    }
+
+    return {
+      ok: response.ok,
+      configured: true,
+      upstreamStatus:
+        response.status,
+      data: body
+    };
+
+  } catch (error) {
+    return {
+      ok: false,
+      configured: true,
+      status: "unavailable",
+      error:
+        error.name === "AbortError"
+          ? "Banking service request timed out."
+          : "Banking service unavailable."
+    };
+
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
 const server = http.createServer(
   async (req, res) => {
 
@@ -134,8 +249,10 @@ const server = http.createServer(
     if (req.method === "OPTIONS") {
       res.writeHead(204, {
         "Access-Control-Allow-Origin": "*",
+
         "Access-Control-Allow-Methods":
           "GET, OPTIONS",
+
         "Access-Control-Allow-Headers":
           "Content-Type"
       });
@@ -148,7 +265,8 @@ const server = http.createServer(
         res,
         405,
         {
-          error: "Method not allowed"
+          error:
+            "Method not allowed"
         }
       );
     }
@@ -190,23 +308,41 @@ const server = http.createServer(
       }
 
       if (url.pathname === "/api/status") {
+        const banking =
+          getBankingBridgeConfig();
+
         return sendJSON(
           res,
           200,
           {
-            project: "Worldsandbox13",
-            status: "online",
-            runtime: process.version,
+            project:
+              "Worldsandbox13",
+
+            status:
+              "online",
+
+            runtime:
+              process.version,
 
             registries: {
               banking: true,
+              bankingBridge: true,
               aiTechnology: true,
               nuclearRisk: true,
               governmentInformation: true,
               hazards: true,
               globalDispensaries: true,
               globalInfrastructure: true,
-              shippingAgricultureTransportation: true
+              shippingAgricultureTransportation:
+                true
+            },
+
+            bankingBridge: {
+              configured:
+                banking.configured,
+
+              credentialsExposed:
+                false
             },
 
             timestamp:
@@ -280,12 +416,10 @@ const server = http.createServer(
               registries.security.registry,
 
             nuclearRisk:
-              registries.security
-                .nuclearRisk,
+              registries.security.nuclearRisk,
 
             sandboxLayers:
-              registries.security
-                .sandboxLayers
+              registries.security.sandboxLayers
           }
         );
       }
@@ -331,6 +465,96 @@ const server = http.createServer(
           res,
           200,
           registries.shippingAgriculture
+        );
+      }
+
+      /*
+       * Banking bridge configuration.
+       * Does NOT expose environment secrets.
+       */
+
+      if (
+        url.pathname ===
+        "/api/banking-bridge"
+      ) {
+        const config =
+          getBankingBridgeConfig();
+
+        return sendJSON(
+          res,
+          200,
+          {
+            bridge:
+              registries.bankingBridge,
+
+            runtime: {
+              configured:
+                config.configured,
+
+              credentialsExposed:
+                false
+            }
+          }
+        );
+      }
+
+      /*
+       * Banking service health proxy.
+       */
+
+      if (
+        url.pathname ===
+        "/api/banking/health"
+      ) {
+        const result =
+          await requestBankingService(
+            "/api/health"
+          );
+
+        return sendJSON(
+          res,
+          result.ok ? 200 : 503,
+          result
+        );
+      }
+
+      /*
+       * Banking capability proxy.
+       */
+
+      if (
+        url.pathname ===
+        "/api/banking/capabilities"
+      ) {
+        const result =
+          await requestBankingService(
+            "/api/capabilities"
+          );
+
+        return sendJSON(
+          res,
+          result.ok ? 200 : 503,
+          result
+        );
+      }
+
+      /*
+       * Banking bridge status proxy.
+       */
+
+      if (
+        url.pathname ===
+        "/api/banking/status"
+      ) {
+        const result =
+          await requestBankingService(
+            "/api/world-sandbox/status"
+          );
+
+        return sendJSON(
+          res,
+          result.ok ? 200 : 503,
+          result
         );
       }
 
@@ -482,7 +706,8 @@ const server = http.createServer(
         res,
         404,
         {
-          error: "Endpoint not found"
+          error:
+            "Endpoint not found"
         }
       );
 
@@ -496,8 +721,12 @@ const server = http.createServer(
         res,
         500,
         {
-          status: "degraded",
-          error: error.message,
+          status:
+            "degraded",
+
+          error:
+            error.message,
+
           timestamp:
             new Date().toISOString()
         }
@@ -522,5 +751,7 @@ module.exports = {
   loadRegistries,
   getSnapshot,
   hazardCounts,
-  filterHazards
+  filterHazards,
+  getBankingBridgeConfig,
+  requestBankingService
 };
