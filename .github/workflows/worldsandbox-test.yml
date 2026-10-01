@@ -59,7 +59,6 @@ jobs:
               echo "World Sandbox API is online"
               exit 0
             fi
-
             sleep 1
           done
 
@@ -69,27 +68,41 @@ jobs:
         env:
           PORT: "3000"
           HOST: "127.0.0.1"
-          WORLDSANDBOX_USER_AGENT: "Worldsandbox13-GitHub-Actions/0.3"
+          WORLDSANDBOX_USER_AGENT: "Worldsandbox13-GitHub-Actions/0.4"
 
       - name: Test API status
-        run: |
-          curl --fail --silent \
-            http://127.0.0.1:3000/api/status
+        run: curl --fail --silent http://127.0.0.1:3000/api/status
 
       - name: Test global banking registry
-        run: |
-          curl --fail --silent \
-            http://127.0.0.1:3000/api/banks
+        run: curl --fail --silent http://127.0.0.1:3000/api/banks
 
       - name: Test AI technology registry
-        run: |
-          curl --fail --silent \
-            http://127.0.0.1:3000/api/ai-companies
+        run: curl --fail --silent http://127.0.0.1:3000/api/ai-companies
 
       - name: Test nuclear risk registry
-        run: |
-          curl --fail --silent \
-            http://127.0.0.1:3000/api/nuclear-risk
+        run: curl --fail --silent http://127.0.0.1:3000/api/nuclear-risk
 
-           - name: Test government information registry
+      - name: Test government information registry
         run: curl --fail --silent http://127.0.0.1:3000/api/government
+
+      - name: Test global dispensary registry
+        run: curl --fail --silent http://127.0.0.1:3000/api/dispensaries
+
+      - name: Test global infrastructure registry
+        run: curl --fail --silent http://127.0.0.1:3000/api/infrastructure
+
+      - name: Test shipping agriculture transportation registry
+        run: curl --fail --silent http://127.0.0.1:3000/api/shipping-agriculture
+
+      - name: Test hazard API
+        run: curl --fail --silent http://127.0.0.1:3000/api/hazards
+
+      - name: Stop API
+        if: always()
+        run: |
+          if [ -f server.pid ]; then
+            kill "$(cat server.pid)" || true
+          fi
+
+          echo "----- SERVER LOG -----"
+          cat server.log || true
