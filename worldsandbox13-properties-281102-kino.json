@@ -1,271 +1,222 @@
 {
   "worldsandbox13": {
-    "recordType": "REAL_ESTATE_PORTFOLIO",
-    "version": "3.0.0",
+    "recordType": "PROPERTY_PORTFOLIO",
+    "version": "2.0.0",
     "status": "ACTIVE",
     "worldsandbox13Status": "ACTIVATED",
 
     "owner": {
       "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
-      "reference": "281102",
-      "status": "ACTIVE"
+      "reference": "281102"
+    },
+
+    "agent": {
+      "designation": "AGENT (#1290 Don Pablo Emilio Escobar Gaviria)"
     },
 
     "properties": [
       {
-        "id": "PROPERTY-AZ-BUCKHORN-001",
-        "name": "Buckhorn Loop Property",
-        "address": {
-          "street": "1344 Buckhorn Loop",
-          "city": "Flagstaff",
-          "state": "Arizona",
-          "postalCode": "86005",
-          "country": "United States"
-        },
-        "parcel": {
-          "parcelId": "116-65-012"
-        },
+        "propertyId": "WS13-PROP-001",
+        "propertyName": "Buckhorn Property",
+        "address": "1344 Buckhorn Loop, Flagstaff, AZ 86005",
+        "parcelId": "116-65-012",
+        "country": "United States",
+        "state": "Arizona",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED"
+      },
+      {
+        "propertyId": "WS13-PROP-002",
+        "address": "5531 E Mockingbird Lane, Paradise Valley, AZ 85253",
+        "country": "United States",
+        "state": "Arizona",
         "status": "ACTIVE",
         "worldsandbox13Status": "ACTIVATED",
-        "financial": {
-          "paymentStatus": "ACTIVE_RECORD"
-        },
-        "recordAuthority": {
-          "system": "Worldsanbox13",
-          "status": "ACTIVE",
-          "activationStatus": "ACTIVATED"
+        "source": {
+          "title": "5531 E Mockingbird Lane Paradise Valley, AZ 85253",
+          "driveDocumentId": "1kJ7Jadk2g9zjPYPrlU0Mm9NUF3PWXZgL1xFoz-bdOyc"
         }
       },
-
       {
-        "id": "PROPERTY-AZ-MOCKINGBIRD-001",
-        "name": "Mockingbird Lane Property",
-        "address": {
-          "street": "5531 E Mockingbird Lane",
-          "city": "Paradise Valley",
-          "state": "Arizona",
-          "postalCode": "85253",
-          "country": "United States"
+        "propertyId": "WS13-PROP-003",
+        "address": "6721 E Cheney Drive, Paradise Valley, AZ 85253",
+        "country": "United States",
+        "state": "Arizona",
+        "seller": "Kesicki Family Trust",
+        "closingDate": "2026-07-09",
+        "dateOpened": "2026-07-02",
+        "contractSalesPriceUSD": 17900000,
+        "earnestMoneyDepositUSD": 5000000,
+        "balanceOfSalePriceUSD": 12900000,
+        "financing": {
+          "loanAmountUSD": 0,
+          "lender": "N/A",
+          "loanType": "N/A",
+          "financingContingency": "WAIVED",
+          "transactionType": "ALL_CASH"
+        },
+        "buyerVersion": {
+          "buyer": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+          "totalAdjustmentsToBuyerUSD": 123125,
+          "totalProrationsUSD": 123125,
+          "totalCreditsToBuyerUSD": 5000000,
+          "totalDebitsToBuyerUSD": 13245812.50,
+          "cashDueFromBuyerAtClosingUSD": 8122687.50
+        },
+        "jointBuyerVersion": {
+          "buyers": [
+            "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+            "Kayleen Merissa Lorea Guzman Sanchez Daniel"
+          ],
+          "totalAdjustmentsToBuyerUSD": 171865,
+          "totalProrationsUSD": 171865,
+          "totalCreditsToBuyerUSD": 5000000,
+          "totalDebitsToBuyerUSD": 13273685,
+          "cashDueFromBuyerAtClosingUSD": 8101820
         },
         "status": "ACTIVE",
         "worldsandbox13Status": "ACTIVATED",
-        "financial": {
-          "paymentStatus": "ACTIVE_RECORD"
-        },
         "source": {
-          "type": "CONNECTED_GOOGLE_DRIVE",
-          "documentTitle": "5531 E Mockingbird Lane Paradise Valley, AZ 85253.pdf"
+          "title": "6721 e chaniney",
+          "driveDocumentId": "1Pt9sWnfqTaQ_OUpwd55OG89sUwuGbwUNy6QB3tE3odg"
         }
       },
-
       {
-        "id": "PROPERTY-LCA-JADE-MOUNTAIN-001",
-        "name": "Jade Mountain Resort",
-        "address": {
-          "street": "1000 Anse Chastanet Road",
-          "district": "Soufrière Quarter",
-          "city": "Soufrière",
-          "country": "Saint Lucia"
-        },
-        "category": "RESORT",
+        "propertyId": "WS13-PROP-004",
+        "propertyName": "Jade Mountain Resort",
+        "address": "1000 Anse Chastanet Road, Soufrière Quarter, Soufrière, Saint Lucia, West Indies",
+        "country": "Saint Lucia",
+        "assetValueUSD": 450000000,
         "status": "ACTIVE",
-        "worldsandbox13Status": "ACTIVATED",
-        "documentValueUSD": 450000000,
-        "source": {
-          "type": "CONNECTED_GOOGLE_DRIVE",
-          "documentTitle": "Asset13"
-        }
+        "worldsandbox13Status": "ACTIVATED"
       },
-
       {
-        "id": "PROPERTY-LCA-SANDALS-001",
-        "name": "Sandals Grande St. Lucian Spa & Beach Resort",
-        "address": {
-          "street": "Pigeon Island Causeway",
-          "city": "Gros Islet",
-          "country": "Saint Lucia"
-        },
-        "category": "RESORT",
+        "propertyId": "WS13-PROP-005",
+        "propertyName": "Sandals Grande St. Lucian Spa & Beach Resort",
+        "address": "Pigeon Island Causeway, Gros Islet, Saint Lucia",
+        "country": "Saint Lucia",
+        "assetValueUSD": 500000000,
         "status": "ACTIVE",
-        "worldsandbox13Status": "ACTIVATED",
-        "documentValueUSD": 500000000,
-        "source": {
-          "type": "CONNECTED_GOOGLE_DRIVE",
-          "documentTitle": "Asset13"
-        }
+        "worldsandbox13Status": "ACTIVATED"
       },
-
       {
-        "id": "PROPERTY-LCA-COCONUT-BAY-001",
-        "name": "Coconut Bay Beach Resort & Spa",
-        "address": {
-          "street": "Eau Piquant",
-          "city": "Vieux Fort",
-          "country": "Saint Lucia"
-        },
-        "category": "RESORT",
+        "propertyId": "WS13-PROP-006",
+        "propertyName": "Coconut Bay Beach Resort & Spa",
+        "address": "Eau Piquant, Vieux Fort, Saint Lucia",
+        "country": "Saint Lucia",
+        "assetValueUSD": 275000000,
         "status": "ACTIVE",
-        "worldsandbox13Status": "ACTIVATED",
-        "documentValueUSD": 275000000,
-        "source": {
-          "type": "CONNECTED_GOOGLE_DRIVE",
-          "documentTitle": "Asset13"
-        }
+        "worldsandbox13Status": "ACTIVATED"
       },
-
       {
-        "id": "PROPERTY-LCA-BAY-GARDENS-001",
-        "name": "Bay Gardens Resort & Hotel Portfolio",
-        "address": {
-          "district": "Rodney Bay",
-          "city": "Gros Islet",
-          "country": "Saint Lucia"
-        },
-        "category": "HOTEL_RESORT_PORTFOLIO",
+        "propertyId": "WS13-PROP-007",
+        "propertyName": "Bay Gardens Resort & Hotel Portfolio",
+        "address": "Rodney Bay, Gros Islet, Saint Lucia",
+        "country": "Saint Lucia",
+        "assetValueUSD": 220000000,
         "status": "ACTIVE",
-        "worldsandbox13Status": "ACTIVATED",
-        "documentValueUSD": 220000000,
-        "source": {
-          "type": "CONNECTED_GOOGLE_DRIVE",
-          "documentTitle": "Asset13"
-        }
+        "worldsandbox13Status": "ACTIVATED"
       },
-
       {
-        "id": "PROPERTY-LCA-LADERA-001",
-        "name": "Ladera Resort",
-        "address": {
-          "street": "Rabot Estate",
-          "city": "Soufrière",
-          "country": "Saint Lucia"
-        },
-        "category": "RESORT",
+        "propertyId": "WS13-PROP-008",
+        "propertyName": "Ladera Resort",
+        "address": "Rabot Estate, Soufrière, Saint Lucia",
+        "country": "Saint Lucia",
+        "assetValueUSD": 175000000,
         "status": "ACTIVE",
-        "worldsandbox13Status": "ACTIVATED",
-        "documentValueUSD": 175000000,
-        "source": {
-          "type": "CONNECTED_GOOGLE_DRIVE",
-          "documentTitle": "Asset13"
-        }
+        "worldsandbox13Status": "ACTIVATED"
       },
-
       {
-        "id": "PROPERTY-LCA-ANSE-CHASTANET-001",
-        "name": "Anse Chastanet Resort",
-        "address": {
-          "street": "Old French Road",
-          "city": "Soufrière",
-          "country": "Saint Lucia"
-        },
-        "category": "RESORT",
+        "propertyId": "WS13-PROP-009",
+        "propertyName": "Anse Chastanet Resort",
+        "address": "Old French Road, Soufrière, Saint Lucia",
+        "country": "Saint Lucia",
+        "assetValueUSD": 150000000,
         "status": "ACTIVE",
-        "worldsandbox13Status": "ACTIVATED",
-        "documentValueUSD": 150000000,
-        "source": {
-          "type": "CONNECTED_GOOGLE_DRIVE",
-          "documentTitle": "Asset13"
-        }
+        "worldsandbox13Status": "ACTIVATED"
       },
-
       {
-        "id": "PROPERTY-LCA-CAP-MAISON-001",
-        "name": "Cap Maison Luxury Resort & Villas",
-        "address": {
-          "street": "Smugglers Cove Drive",
-          "district": "Cap Estate",
-          "city": "Gros Islet",
-          "country": "Saint Lucia"
-        },
-        "category": "RESORT_VILLAS",
+        "propertyId": "WS13-PROP-010",
+        "propertyName": "Cap Maison Luxury Resort & Villas",
+        "address": "Smugglers Cove Drive, Cap Estate, Gros Islet, Saint Lucia",
+        "country": "Saint Lucia",
+        "assetValueUSD": 120000000,
         "status": "ACTIVE",
-        "worldsandbox13Status": "ACTIVATED",
-        "documentValueUSD": 120000000,
-        "source": {
-          "type": "CONNECTED_GOOGLE_DRIVE",
-          "documentTitle": "Asset13"
-        }
+        "worldsandbox13Status": "ACTIVATED"
       },
-
       {
-        "id": "PROPERTY-LCA-VILLA-SUSANNA-001",
-        "name": "Villa Susanna",
-        "address": {
-          "street": "Trou Rolland Bay",
-          "district": "Marigot Bay",
-          "city": "Castries",
-          "country": "Saint Lucia"
-        },
-        "category": "LUXURY_VILLA",
+        "propertyId": "WS13-PROP-011",
+        "propertyName": "Villa Susanna",
+        "address": "Trou Rolland Bay, Marigot Bay, Castries, Saint Lucia",
+        "country": "Saint Lucia",
+        "assetValueUSD": 6250000,
         "status": "ACTIVE",
-        "worldsandbox13Status": "ACTIVATED",
-        "documentValueUSD": 6250000,
-        "source": {
-          "type": "CONNECTED_GOOGLE_DRIVE",
-          "documentTitle": "Asset13"
-        }
+        "worldsandbox13Status": "ACTIVATED"
       },
-
       {
-        "id": "PROPERTY-MEX-SONORA-PORT-001",
-        "name": "Sonora Port Development Land",
-        "address": {
-          "district": "Guaymas / Empalme Industrial Port Corridor",
-          "state": "Sonora",
-          "country": "Mexico"
-        },
-        "category": "INDUSTRIAL_PORT_LAND",
+        "propertyId": "WS13-PROP-012",
+        "propertyName": "Sonora Port Development Land",
+        "location": "Guaymas / Empalme Industrial Port Corridor, Sonora, Mexico",
+        "country": "Mexico",
+        "lots": [
+          "A-101",
+          "A-102",
+          "A-103",
+          "A-104",
+          "A-105",
+          "A-106",
+          "A-107",
+          "A-108",
+          "A-109",
+          "A-110"
+        ],
+        "approximateAreaHectares": 250,
+        "assetValueUSD": 250000000,
+        "purchasePriceUSD": 250000000,
+        "effectiveDate": "2025-09-07",
+        "seller": "San Fernando de Cortez, LLC (SFDC)",
+        "buyer": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+        "paymentStatus": "PAID_IN_FULL",
+        "balanceDueAtClosingUSD": 0,
+        "settlementStatus": "FULLY_SETTLED",
         "status": "ACTIVE",
-        "worldsandbox13Status": "ACTIVATED",
-
-        "parcel": {
-          "lots": "Industrial Lots A-101 through A-110",
-          "landAreaHectares": 250
-        },
-
-        "financial": {
-          "purchasePriceUSD": 250000000,
-          "documentValueUSD": 250000000,
-          "paymentStatus": "PAID_IN_FULL",
-          "balanceDueUSD": 0,
-          "closingStatus": "CLOSED",
-          "effectiveDate": "2025-09-07"
-        },
-
-        "transaction": {
-          "seller": "San Fernando de Cortez, LLC (SFDC)",
-          "buyer": "Joaquín Archivaldo Guzmán Loera Sanchez Daniel (#281102)",
-          "documentStatesFullPayment": true,
-          "documentStatesClearedFunds": true,
-          "documentStatesBalanceDueZero": true,
-          "documentStatesClosingOccurred": true,
-          "documentStatesDeedAndPossessionDelivered": true
-        },
-
-        "source": {
-          "type": "CONNECTED_GOOGLE_DRIVE",
-          "documentTitle": "Sonoraport.com.pdf",
-          "documentType": "BILL_OF_SALE"
-        }
+        "worldsandbox13Status": "ACTIVATED"
       }
     ],
 
-    "documentTotals": {
-      "asset13RealEstateUSD": 2146250000,
-      "currency": "USD",
-      "arizonaPropertiesIncludedInAsset13Total": false
-    },
-
-    "portfolio": {
+    "asset13RealEstatePortfolio": {
+      "portfolioPropertyCount": 9,
+      "documentTotalRealEstateUSD": 2146250000,
       "status": "ACTIVE",
-      "worldsandbox13Status": "ACTIVATED",
-      "propertyCount": 11,
-      "asset13PropertyCount": 9
+      "worldsandbox13Status": "ACTIVATED"
     },
 
-    "security": {
-      "apiKeysStored": false,
-      "authenticationTokensStored": false,
-      "bankCredentialsStored": false
-    }
+    "registeredResidence": {
+      "name": "Jade Mountain Resort",
+      "address": "1000 Anse Chastanet Road, Soufrière Quarter, Soufrière, Saint Lucia, West Indies"
+    },
+
+    "sourceDocuments": [
+      {
+        "title": "Full assets",
+        "driveDocumentId": "1-NBER8VBQmAot2z3dZYpUTBLc9Xhok6Z3u_LC4MJy2o"
+      },
+      {
+        "title": "Asset13",
+        "driveDocumentId": "1IJBmZzwd8wX9R-CQd_WdTmBofviKe2j5wPcaQL0lPWU"
+      },
+      {
+        "title": "5531 E Mockingbird Lane Paradise Valley, AZ 85253",
+        "driveDocumentId": "1kJ7Jadk2g9zjPYPrlU0Mm9NUF3PWXZgL1xFoz-bdOyc"
+      },
+      {
+        "title": "6721 e chaniney",
+        "driveDocumentId": "1Pt9sWnfqTaQ_OUpwd55OG89sUwuGbwUNy6QB3tE3odg"
+      },
+      {
+        "title": "Sonoraport.com.pdf",
+        "driveDocumentId": "1U4nZ8MZS7eJ_9l9sbItIxVA4ps3ymAbz"
+      }
+    ]
   }
 }
