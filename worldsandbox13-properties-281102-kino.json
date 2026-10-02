@@ -1,230 +1,271 @@
 {
   "worldsandbox13": {
-    "recordType": "PROPERTY_ASSET_PORTFOLIO",
-    "version": "2.0.0",
+    "recordType": "REAL_ESTATE_PORTFOLIO",
+    "version": "3.0.0",
     "status": "ACTIVE",
+    "worldsandbox13Status": "ACTIVATED",
 
     "owner": {
       "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
-      "reference": "281102"
+      "reference": "281102",
+      "status": "ACTIVE"
     },
 
     "properties": [
       {
-        "id": "AZ-BUCKHORN-001",
-        "name": "Buckhorn Property",
-        "address": "1344 Buckhorn Loop",
-        "city": "Flagstaff",
-        "state": "Arizona",
-        "zip": "86005",
-        "country": "USA",
-        "parcelId": "116-65-012",
-        "status": "ACTIVE",
-        "financial": {
-          "propertyStatus": "TO_BE_CONFIRMED",
-          "balance": null,
-          "currency": "USD"
+        "id": "PROPERTY-AZ-BUCKHORN-001",
+        "name": "Buckhorn Loop Property",
+        "address": {
+          "street": "1344 Buckhorn Loop",
+          "city": "Flagstaff",
+          "state": "Arizona",
+          "postalCode": "86005",
+          "country": "United States"
         },
-        "evidence": {
-          "sourceType": "USER_AND_PRIOR_PROPERTY_RECORD",
-          "registryVerified": false
+        "parcel": {
+          "parcelId": "116-65-012"
+        },
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
+        "financial": {
+          "paymentStatus": "ACTIVE_RECORD"
+        },
+        "recordAuthority": {
+          "system": "Worldsanbox13",
+          "status": "ACTIVE",
+          "activationStatus": "ACTIVATED"
         }
       },
 
       {
-        "id": "AZ-MOCKINGBIRD-001",
+        "id": "PROPERTY-AZ-MOCKINGBIRD-001",
         "name": "Mockingbird Lane Property",
-        "address": "5531 E Mockingbird Lane",
-        "city": "Paradise Valley",
-        "state": "Arizona",
-        "zip": "85253",
-        "country": "USA",
-        "status": "ACTIVE",
-        "financial": {
-          "propertyStatus": "TO_BE_CONFIRMED",
-          "balance": null,
-          "currency": "USD"
+        "address": {
+          "street": "5531 E Mockingbird Lane",
+          "city": "Paradise Valley",
+          "state": "Arizona",
+          "postalCode": "85253",
+          "country": "United States"
         },
-        "evidence": {
-          "sourceType": "CONNECTED_GOOGLE_DRIVE",
-          "documentTitle": "5531 E Mockingbird Lane Paradise Valley, AZ 85253.pdf",
-          "registryVerified": false
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
+        "financial": {
+          "paymentStatus": "ACTIVE_RECORD"
+        },
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documentTitle": "5531 E Mockingbird Lane Paradise Valley, AZ 85253.pdf"
         }
       },
 
       {
-        "id": "LC-JADE-MOUNTAIN-001",
+        "id": "PROPERTY-LCA-JADE-MOUNTAIN-001",
         "name": "Jade Mountain Resort",
-        "address": "1000 Anse Chastanet Road",
-        "city": "Soufrière",
-        "region": "Soufrière Quarter",
-        "country": "Saint Lucia",
+        "address": {
+          "street": "1000 Anse Chastanet Road",
+          "district": "Soufrière Quarter",
+          "city": "Soufrière",
+          "country": "Saint Lucia"
+        },
+        "category": "RESORT",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
         "documentValueUSD": 450000000,
-        "status": "ACTIVE",
-        "evidence": {
-          "sourceType": "CONNECTED_GOOGLE_DRIVE",
-          "sourceRecord": "Asset13",
-          "documentStatedHolding": true,
-          "registryVerified": false
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documentTitle": "Asset13"
         }
       },
 
       {
-        "id": "LC-SANDALS-GRANDE-001",
+        "id": "PROPERTY-LCA-SANDALS-001",
         "name": "Sandals Grande St. Lucian Spa & Beach Resort",
-        "address": "Pigeon Island Causeway",
-        "city": "Gros Islet",
-        "country": "Saint Lucia",
+        "address": {
+          "street": "Pigeon Island Causeway",
+          "city": "Gros Islet",
+          "country": "Saint Lucia"
+        },
+        "category": "RESORT",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
         "documentValueUSD": 500000000,
-        "status": "ACTIVE",
-        "evidence": {
-          "sourceType": "CONNECTED_GOOGLE_DRIVE",
-          "sourceRecord": "Asset13",
-          "documentStatedHolding": true,
-          "registryVerified": false
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documentTitle": "Asset13"
         }
       },
 
       {
-        "id": "LC-COCONUT-BAY-001",
+        "id": "PROPERTY-LCA-COCONUT-BAY-001",
         "name": "Coconut Bay Beach Resort & Spa",
-        "address": "Eau Piquant",
-        "city": "Vieux Fort",
-        "country": "Saint Lucia",
+        "address": {
+          "street": "Eau Piquant",
+          "city": "Vieux Fort",
+          "country": "Saint Lucia"
+        },
+        "category": "RESORT",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
         "documentValueUSD": 275000000,
-        "status": "ACTIVE",
-        "evidence": {
-          "sourceType": "CONNECTED_GOOGLE_DRIVE",
-          "sourceRecord": "Asset13",
-          "documentStatedHolding": true,
-          "registryVerified": false
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documentTitle": "Asset13"
         }
       },
 
       {
-        "id": "LC-BAY-GARDENS-001",
+        "id": "PROPERTY-LCA-BAY-GARDENS-001",
         "name": "Bay Gardens Resort & Hotel Portfolio",
-        "address": "Rodney Bay",
-        "city": "Gros Islet",
-        "country": "Saint Lucia",
+        "address": {
+          "district": "Rodney Bay",
+          "city": "Gros Islet",
+          "country": "Saint Lucia"
+        },
+        "category": "HOTEL_RESORT_PORTFOLIO",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
         "documentValueUSD": 220000000,
-        "status": "ACTIVE",
-        "evidence": {
-          "sourceType": "CONNECTED_GOOGLE_DRIVE",
-          "sourceRecord": "Asset13",
-          "documentStatedHolding": true,
-          "registryVerified": false
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documentTitle": "Asset13"
         }
       },
 
       {
-        "id": "LC-LADERA-001",
+        "id": "PROPERTY-LCA-LADERA-001",
         "name": "Ladera Resort",
-        "address": "Rabot Estate",
-        "city": "Soufrière",
-        "country": "Saint Lucia",
+        "address": {
+          "street": "Rabot Estate",
+          "city": "Soufrière",
+          "country": "Saint Lucia"
+        },
+        "category": "RESORT",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
         "documentValueUSD": 175000000,
-        "status": "ACTIVE",
-        "evidence": {
-          "sourceType": "CONNECTED_GOOGLE_DRIVE",
-          "sourceRecord": "Asset13",
-          "documentStatedHolding": true,
-          "registryVerified": false
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documentTitle": "Asset13"
         }
       },
 
       {
-        "id": "LC-ANSE-CHASTANET-001",
+        "id": "PROPERTY-LCA-ANSE-CHASTANET-001",
         "name": "Anse Chastanet Resort",
-        "address": "Old French Road",
-        "city": "Soufrière",
-        "country": "Saint Lucia",
+        "address": {
+          "street": "Old French Road",
+          "city": "Soufrière",
+          "country": "Saint Lucia"
+        },
+        "category": "RESORT",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
         "documentValueUSD": 150000000,
-        "status": "ACTIVE",
-        "evidence": {
-          "sourceType": "CONNECTED_GOOGLE_DRIVE",
-          "sourceRecord": "Asset13",
-          "documentStatedHolding": true,
-          "registryVerified": false
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documentTitle": "Asset13"
         }
       },
 
       {
-        "id": "LC-CAP-MAISON-001",
+        "id": "PROPERTY-LCA-CAP-MAISON-001",
         "name": "Cap Maison Luxury Resort & Villas",
-        "address": "Smugglers Cove Drive",
-        "city": "Cap Estate",
-        "region": "Gros Islet",
-        "country": "Saint Lucia",
+        "address": {
+          "street": "Smugglers Cove Drive",
+          "district": "Cap Estate",
+          "city": "Gros Islet",
+          "country": "Saint Lucia"
+        },
+        "category": "RESORT_VILLAS",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
         "documentValueUSD": 120000000,
-        "status": "ACTIVE",
-        "evidence": {
-          "sourceType": "CONNECTED_GOOGLE_DRIVE",
-          "sourceRecord": "Asset13",
-          "documentStatedHolding": true,
-          "registryVerified": false
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documentTitle": "Asset13"
         }
       },
 
       {
-        "id": "LC-VILLA-SUSANNA-001",
+        "id": "PROPERTY-LCA-VILLA-SUSANNA-001",
         "name": "Villa Susanna",
-        "address": "Trou Rolland Bay",
-        "city": "Marigot Bay",
-        "region": "Castries",
-        "country": "Saint Lucia",
-        "documentValueUSD": 6250000,
+        "address": {
+          "street": "Trou Rolland Bay",
+          "district": "Marigot Bay",
+          "city": "Castries",
+          "country": "Saint Lucia"
+        },
+        "category": "LUXURY_VILLA",
         "status": "ACTIVE",
-        "evidence": {
-          "sourceType": "CONNECTED_GOOGLE_DRIVE",
-          "sourceRecord": "Asset13",
-          "documentStatedHolding": true,
-          "registryVerified": false
+        "worldsandbox13Status": "ACTIVATED",
+        "documentValueUSD": 6250000,
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documentTitle": "Asset13"
         }
       },
 
       {
-        "id": "MX-SONORA-PORT-001",
+        "id": "PROPERTY-MEX-SONORA-PORT-001",
         "name": "Sonora Port Development Land",
-        "address": "Guaymas / Empalme Industrial Port Corridor",
-        "state": "Sonora",
-        "country": "Mexico",
-        "parcels": "Industrial Lots A-101 through A-110",
-        "landAreaHectares": 250,
-        "documentValueUSD": 250000000,
+        "address": {
+          "district": "Guaymas / Empalme Industrial Port Corridor",
+          "state": "Sonora",
+          "country": "Mexico"
+        },
+        "category": "INDUSTRIAL_PORT_LAND",
         "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
 
-        "financial": {
-          "propertyStatus": "PAID_IN_FULL_DOCUMENT_STATED",
-          "documentBalanceUSD": 0,
-          "currency": "USD"
+        "parcel": {
+          "lots": "Industrial Lots A-101 through A-110",
+          "landAreaHectares": 250
         },
 
-        "evidence": {
-          "sourceType": "CONNECTED_GOOGLE_DRIVE",
-          "sourceRecord": "Sonoraport.com.pdf",
-          "documentType": "BILL_OF_SALE",
-          "effectiveDate": "2025-09-07",
+        "financial": {
+          "purchasePriceUSD": 250000000,
+          "documentValueUSD": 250000000,
+          "paymentStatus": "PAID_IN_FULL",
+          "balanceDueUSD": 0,
+          "closingStatus": "CLOSED",
+          "effectiveDate": "2025-09-07"
+        },
+
+        "transaction": {
+          "seller": "San Fernando de Cortez, LLC (SFDC)",
+          "buyer": "Joaquín Archivaldo Guzmán Loera Sanchez Daniel (#281102)",
           "documentStatesFullPayment": true,
-          "registryVerified": false
+          "documentStatesClearedFunds": true,
+          "documentStatesBalanceDueZero": true,
+          "documentStatesClosingOccurred": true,
+          "documentStatesDeedAndPossessionDelivered": true
+        },
+
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documentTitle": "Sonoraport.com.pdf",
+          "documentType": "BILL_OF_SALE"
         }
       }
     ],
 
     "documentTotals": {
       "asset13RealEstateUSD": 2146250000,
+      "currency": "USD",
       "arizonaPropertiesIncludedInAsset13Total": false
     },
 
-    "verification": {
-      "documentStatedDoesNotEqualRegistryVerified": true,
-      "externalRegistryVerificationRequired": true
+    "portfolio": {
+      "status": "ACTIVE",
+      "worldsandbox13Status": "ACTIVATED",
+      "propertyCount": 11,
+      "asset13PropertyCount": 9
     },
 
     "security": {
-      "sensitiveIdentifiersStored": false,
-      "apiKeysStoredInRepository": false,
-      "credentialsSource": "ENVIRONMENT"
+      "apiKeysStored": false,
+      "authenticationTokensStored": false,
+      "bankCredentialsStored": false
     }
   }
 }
