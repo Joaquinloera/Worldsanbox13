@@ -1,0 +1,33 @@
+{
+  "worldsandbox13": {
+    "recordType": "PROPERTY_ASSET",
+    "status": "ACTIVE",
+    "property": {
+      "address": "870 S Tusa Rd",
+      "city": "Maricopa",
+      "state": "AZ",
+      "zip": "85139",
+      "county": "Pinal"
+    },
+    "ownership": {
+      "owner": "Ms. Kayleen Merissa Loera Guzman Sanchez Daniel",
+      "role": "BUYER",
+      "status": "NEW_BUYER"
+    },
+    "financial": {
+      "propertyStatus": "PAID_OFF",
+      "balance": 0,
+      "currency": "USD"
+    },
+    "integration": {
+      "parcelProvider": "PINAL_COUNTY",
+      "queryFormat": "JSON",
+      "parcelId": null,
+      "receptionNumber": null
+    },
+    "security": {
+      "secretsInRepository": false,
+      "credentialsSource": "ENVIRONMENT"
+    }
+  }
+}
