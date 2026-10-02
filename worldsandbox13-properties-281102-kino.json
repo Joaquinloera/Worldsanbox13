@@ -14,55 +14,100 @@
         "state": "Arizona",
         "country": "USA",
         "parcelId": "116-65-012",
-        "status": "ACTIVE"
+        "status": "ACTIVE",
+        "financial": {
+          "propertyStatus": "PAID_OFF",
+          "balance": 0,
+          "currency": "USD"
+        }
       },
       {
         "name": "Jade Mountain Resort",
         "address": "1000 Anse Chastanet Road, Soufrière Quarter, Soufrière, Saint Lucia",
         "documentValueUSD": 450000000,
-        "status": "ACTIVE"
+        "status": "ACTIVE",
+        "financial": {
+          "propertyStatus": "PAID_OFF",
+          "balance": 0,
+          "currency": "USD"
+        }
       },
       {
         "name": "Sandals Grande St. Lucian Spa & Beach Resort",
         "address": "Pigeon Island Causeway, Gros Islet, Saint Lucia",
         "documentValueUSD": 500000000,
-        "status": "ACTIVE"
+        "status": "ACTIVE",
+        "financial": {
+          "propertyStatus": "PAID_OFF",
+          "balance": 0,
+          "currency": "USD"
+        }
       },
       {
         "name": "Coconut Bay Beach Resort & Spa",
         "address": "Eau Piquant, Vieux Fort, Saint Lucia",
         "documentValueUSD": 275000000,
-        "status": "ACTIVE"
+        "status": "ACTIVE",
+        "financial": {
+          "propertyStatus": "PAID_OFF",
+          "balance": 0,
+          "currency": "USD"
+        }
       },
       {
         "name": "Bay Gardens Resort & Hotel Portfolio",
         "address": "Rodney Bay, Gros Islet, Saint Lucia",
         "documentValueUSD": 220000000,
-        "status": "ACTIVE"
+        "status": "ACTIVE",
+        "financial": {
+          "propertyStatus": "PAID_OFF",
+          "balance": 0,
+          "currency": "USD"
+        }
       },
       {
         "name": "Ladera Resort",
         "address": "Rabot Estate, Soufrière, Saint Lucia",
         "documentValueUSD": 175000000,
-        "status": "ACTIVE"
+        "status": "ACTIVE",
+        "financial": {
+          "propertyStatus": "PAID_OFF",
+          "balance": 0,
+          "currency": "USD"
+        }
       },
       {
         "name": "Anse Chastanet Resort",
         "address": "Old French Road, Soufrière, Saint Lucia",
         "documentValueUSD": 150000000,
-        "status": "ACTIVE"
+        "status": "ACTIVE",
+        "financial": {
+          "propertyStatus": "PAID_OFF",
+          "balance": 0,
+          "currency": "USD"
+        }
       },
       {
         "name": "Cap Maison Luxury Resort & Villas",
         "address": "Smugglers Cove Drive, Cap Estate, Gros Islet, Saint Lucia",
         "documentValueUSD": 120000000,
-        "status": "ACTIVE"
+        "status": "ACTIVE",
+        "financial": {
+          "propertyStatus": "PAID_OFF",
+          "balance": 0,
+          "currency": "USD"
+        }
       },
       {
         "name": "Villa Susanna",
         "address": "Trou Rolland Bay, Marigot Bay, Castries, Saint Lucia",
         "documentValueUSD": 6250000,
-        "status": "ACTIVE"
+        "status": "ACTIVE",
+        "financial": {
+          "propertyStatus": "PAID_OFF",
+          "balance": 0,
+          "currency": "USD"
+        }
       },
       {
         "name": "Sonora Port Development Land",
@@ -70,7 +115,12 @@
         "parcels": "Industrial Lots A-101 through A-110",
         "landAreaHectares": 250,
         "documentValueUSD": 250000000,
-        "status": "ACTIVE"
+        "status": "ACTIVE",
+        "financial": {
+          "propertyStatus": "PAID_OFF",
+          "balance": 0,
+          "currency": "USD"
+        }
       }
     ],
     "security": {
