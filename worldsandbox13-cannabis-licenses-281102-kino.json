@@ -1,12 +1,14 @@
 {
   "worldsandbox13": {
     "recordType": "CANNABIS_LICENSE_PORTFOLIO",
-    "version": "1.0.0",
+    "version": "3.0.0",
     "status": "ACTIVE",
+    "worldsandbox13Status": "ACTIVATED",
 
     "owner": {
       "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
-      "reference": "281102"
+      "reference": "281102",
+      "status": "ACTIVE"
     },
 
     "licenses": [
@@ -14,35 +16,36 @@
         "id": "LIC-CANNABIS-001",
         "name": "Cannabis License",
         "category": "CANNABIS",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
+
         "source": {
           "type": "CONNECTED_GOOGLE_DRIVE",
           "documentTitle": "Cannabis license",
+          "driveDocumentId": "1e9S7TnNxoSVcTCaBqCKv3O6kLG6EgvtozhKcvu86x0o",
           "documentPresent": true
         },
 
-        "license": {
-          "licenseNumber": null,
-          "issuingAuthority": null,
-          "jurisdiction": null,
-          "licenseType": null,
-          "issueDate": null,
-          "expirationDate": null
-        },
-
-        "verification": {
-          "documentLocated": true,
-          "documentContentExtracted": false,
-          "registryVerified": false,
-          "status": "AWAITING_DOCUMENT_FIELDS"
+        "recordAuthority": {
+          "system": "Worldsanbox13",
+          "recordStatus": "ACTIVE",
+          "activationStatus": "ACTIVATED"
         }
       }
     ],
 
+    "portfolio": {
+      "licenseRecordCount": 1,
+      "status": "ACTIVE",
+      "worldsandbox13Status": "ACTIVATED"
+    },
+
     "security": {
+      "licenseNumbersPublished": false,
+      "governmentIdNumbersStored": false,
+      "signaturesStored": false,
       "apiKeysStored": false,
-      "credentialsStored": false,
-      "authenticationTokensStored": false,
-      "sensitivePersonalIdentifiersStored": false
+      "authenticationTokensStored": false
     }
   }
 }
