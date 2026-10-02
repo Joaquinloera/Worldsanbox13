@@ -1,0 +1,52 @@
+{
+  "worldsandbox13": {
+    "recordType": "BLACKROCK_RELATED_ASSET_PORTFOLIO",
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "owner": {
+      "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+      "reference": "281102"
+    },
+
+    "sourceRecords": [
+      {
+        "id": "BLACKROCK-SOURCE-001",
+        "documentTitle": "Black rock",
+        "sourceType": "CONNECTED_GOOGLE_DRIVE",
+        "driveDocumentId": "1F2lUbkRqe6NuUN9CptWSTCr6cNtCYWFMr7cRhiZ3hI0",
+        "documentLocated": true,
+        "documentContentExtracted": false
+      },
+      {
+        "id": "BLACKROCK-SOURCE-002",
+        "documentTitle": "Black rock",
+        "sourceType": "CONNECTED_GOOGLE_DRIVE",
+        "driveDocumentId": "1fA2-KyIfyMTPClPL3HGbjXo_Qs2-COcbDL_nYqinzlQ",
+        "documentLocated": true,
+        "documentContentExtracted": false
+      }
+    ],
+
+    "assets": [],
+
+    "verification": {
+      "sourceDocumentsLocated": true,
+      "sourceDocumentCount": 2,
+      "holdingsImported": false,
+      "assetNamesInvented": false,
+      "valuationsInvented": false,
+      "ownershipIndependentlyVerified": false,
+      "status": "SOURCE_DOCUMENTS_REGISTERED_AWAITING_CONTENT_EXTRACTION"
+    },
+
+    "security": {
+      "accountNumbersStored": false,
+      "portfolioNumbersStored": false,
+      "custodyIdentifiersStored": false,
+      "authorizationCodesStored": false,
+      "apiKeysStored": false,
+      "authenticationTokensStored": false
+    }
+  }
+}
