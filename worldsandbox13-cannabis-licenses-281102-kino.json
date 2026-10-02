@@ -1,6 +1,6 @@
 {
   "worldsandbox13": {
-    "recordType": "CANNABIS_LICENSE_PORTFOLIO",
+    "recordType": "LAW_LICENSE_PORTFOLIO",
     "version": "3.0.0",
     "status": "ACTIVE",
     "worldsandbox13Status": "ACTIVATED",
@@ -13,16 +13,16 @@
 
     "licenses": [
       {
-        "id": "LIC-CANNABIS-001",
-        "name": "Cannabis License",
-        "category": "CANNABIS",
+        "id": "LIC-LAW-001",
+        "name": "License to Practice Law",
+        "category": "LEGAL_PROFESSIONAL_LICENSE",
         "status": "ACTIVE",
         "worldsandbox13Status": "ACTIVATED",
 
         "source": {
           "type": "CONNECTED_GOOGLE_DRIVE",
-          "documentTitle": "Cannabis license",
-          "driveDocumentId": "1e9S7TnNxoSVcTCaBqCKv3O6kLG6EgvtozhKcvu86x0o",
+          "documentTitle": "LICENSE to practice law",
+          "driveDocumentId": "19_pdtVMc7f0IIO7Jo8gs8e2-u76e9fFgsFnJwyVcoMU",
           "documentPresent": true
         },
 
@@ -41,11 +41,10 @@
     },
 
     "security": {
-      "licenseNumbersPublished": false,
-      "governmentIdNumbersStored": false,
+      "governmentIdentificationNumbersStored": false,
       "signaturesStored": false,
-      "apiKeysStored": false,
-      "authenticationTokensStored": false
+      "authenticationCredentialsStored": false,
+      "apiKeysStored": false
     }
   }
 }
