@@ -1,0 +1,72 @@
+{
+  "worldsandbox13": {
+    "recordType": "BANKING_PORTFOLIO",
+    "owner": {
+      "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+      "reference": "281102"
+    },
+    "source": "CONNECTED_GOOGLE_DRIVE",
+    "banks": [
+      {
+        "institution": "Goldman Sachs Private Wealth Management",
+        "accountReference": "REDACTED",
+        "documentBalanceUSD": 4444382917442
+      },
+      {
+        "institution": "JPMorgan Chase Private Bank",
+        "accountReference": "REDACTED",
+        "documentBalanceUSD": 996847192661
+      },
+      {
+        "institution": "Citi Private Bank",
+        "accountReference": "REDACTED",
+        "documentBalanceUSD": 987224661038
+      },
+      {
+        "institution": "Bank of America",
+        "accountReference": "REDACTED",
+        "documentBalanceUSD": 955184226991
+      },
+      {
+        "institution": "Western Alliance Bank",
+        "accountReference": "REDACTED",
+        "documentBalanceUSD": 955903441227
+      },
+      {
+        "institution": "Armed Forces Bank",
+        "accountReference": "REDACTED",
+        "documentBalanceUSD": 898144902771
+      },
+      {
+        "institution": "Cayman Private Treasury Reserve",
+        "accountReference": "REDACTED",
+        "documentBalanceUSD": 900621844017
+      },
+      {
+        "institution": "CIBC FirstCaribbean International Bank",
+        "accountReference": "REDACTED",
+        "documentBalanceUSD": 60382771902
+      },
+      {
+        "institution": "Bank of Saint Lucia",
+        "accountReference": "REDACTED",
+        "documentBalanceUSD": 850000000
+      },
+      {
+        "institution": "1st National Bank St. Lucia Limited",
+        "accountReference": "REDACTED",
+        "documentBalanceUSD": 950000000
+      }
+    ],
+    "documentTotals": {
+      "totalBankingUSD": 10198691957049,
+      "deployableLiquidityUSD": 10260491957049
+    },
+    "security": {
+      "accountNumbersInRepository": false,
+      "routingNumbersInRepository": false,
+      "apiKeysInRepository": false,
+      "credentialsSource": "SECURE_SECRET_STORE"
+    }
+  }
+}
