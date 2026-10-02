@@ -1,0 +1,100 @@
+{
+  "worldsandbox13": {
+    "recordType": "BANKING_PORTFOLIO",
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "owner": {
+      "canonicalName": "Kayleen Merissa Loera Guzman Sanchez Daniel",
+      "reference": "1335",
+      "sourceNameVariants": [
+        "Kayleen Merissa Lorea Guzman Sanchez Daniel"
+      ]
+    },
+
+    "bankingRelationships": [
+      {
+        "id": "BANK-1335-JPM-JOINT-001",
+        "institution": "JPMorgan Chase Private Bank",
+        "relationshipType": "JOINT_CLIENT",
+
+        "jointClient": {
+          "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+          "reference": "281102"
+        },
+
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documentTitle": "Jp Morgan joint account",
+          "documentDate": "2026-06-29"
+        },
+
+        "documentStatements": {
+          "relationshipStatus": "ACTIVE_PRIVATE_BANKING_CLIENTS",
+          "accountStatus": "ACTIVE_UNRESTRICTED_IN_GOOD_STANDING",
+          "fundAccessibility": "IMMEDIATE_ACCESS_AUTHORIZED",
+          "transactionAuthority": "FULL_JOINT_AUTHORITY"
+        },
+
+        "accounts": [
+          {
+            "id": "JPM-JOINT-001",
+            "name": "Primary Treasury Reserve",
+            "documentBalanceUSD": 996000000000
+          },
+          {
+            "id": "JPM-JOINT-002",
+            "name": "Strategic Reserve",
+            "documentBalanceUSD": 966000000000
+          },
+          {
+            "id": "JPM-JOINT-003",
+            "name": "Global Liquidity Reserve",
+            "documentBalanceUSD": 899000000000
+          },
+          {
+            "id": "JPM-JOINT-004",
+            "name": "Institutional Reserve",
+            "documentBalanceUSD": 751000000000
+          },
+          {
+            "id": "JPM-JOINT-005",
+            "name": "Capital Reserve",
+            "documentBalanceUSD": 657000000000
+          },
+          {
+            "id": "JPM-JOINT-006",
+            "name": "Private Asset Reserve",
+            "documentBalanceUSD": null,
+            "status": "SOURCE_CONTINUES_BEYOND_EXTRACTED_SECTION"
+          }
+        ],
+
+        "verification": {
+          "documentLocated": true,
+          "personNamedInDocument": true,
+          "jointAuthorityStatedInDocument": true,
+          "balancesAreDocumentStated": true,
+          "independentlyBankVerified": false
+        }
+      }
+    ],
+
+    "knownExtractedTotals": {
+      "firstFiveAccountsUSD": 4269000000000,
+      "note": "Subtotal only. Account 6 and any later accounts require complete source extraction before a portfolio total is recorded."
+    },
+
+    "security": {
+      "accountNumbersStored": false,
+      "accountReferencesStored": false,
+      "routingNumbersStored": false,
+      "swiftCodesStored": false,
+      "treasuryLedgerIdsStored": false,
+      "settlementCodesStored": false,
+      "authorizationCodesStored": false,
+      "apiKeysStored": false,
+      "authenticationTokensStored": false
+    }
+  }
+}
