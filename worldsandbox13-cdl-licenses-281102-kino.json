@@ -1,0 +1,58 @@
+{
+  "worldsandbox13": {
+    "recordType": "COMMERCIAL_DRIVER_LICENSE_PORTFOLIO",
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "owner": {
+      "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+      "reference": "281102"
+    },
+
+    "licenses": [
+      {
+        "id": "LIC-CDL-001",
+        "name": "Commercial Driver License",
+        "category": "COMMERCIAL_DRIVER",
+
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documentTitle": "CDL LICENSE",
+          "documentPresent": true
+        },
+
+        "license": {
+          "licenseNumber": "REDACTED",
+          "issuingAuthority": null,
+          "jurisdiction": null,
+          "class": null,
+          "endorsements": [],
+          "restrictions": [],
+          "issueDate": null,
+          "expirationDate": null
+        },
+
+        "verification": {
+          "documentLocated": true,
+          "documentContentExtracted": false,
+          "registryVerified": false,
+          "status": "AWAITING_DOCUMENT_FIELDS"
+        },
+
+        "repositoryPolicy": {
+          "publicRepository": true,
+          "exposeLicenseNumber": false,
+          "exposePersonalIdentifiers": false
+        }
+      }
+    ],
+
+    "security": {
+      "driverLicenseNumberStored": false,
+      "apiKeysStored": false,
+      "credentialsStored": false,
+      "authenticationTokensStored": false,
+      "signaturesStored": false
+    }
+  }
+}
