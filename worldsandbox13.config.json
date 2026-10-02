@@ -1,0 +1,22 @@
+{
+  "system": {
+    "name": "Worldsanbox13",
+    "version": "1.0.0",
+    "environment": "production"
+  },
+  "ping": {
+    "label": "Buckhorn Node",
+    "location": "Flagstaff, Arizona",
+    "enabled": true
+  },
+  "api": {
+    "baseUrl": "${WORLDSANDBOX13_API_URL}",
+    "timeoutMs": 10000,
+    "healthEndpoint": "/api/health"
+  },
+  "security": {
+    "apiKeyEnv": "WORLDSANDBOX13_API_KEY",
+    "allowKeyInSource": false,
+    "redactSecretsInLogs": true
+  }
+}
