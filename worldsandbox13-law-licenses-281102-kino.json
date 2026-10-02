@@ -1,51 +1,50 @@
 {
   "worldsandbox13": {
     "recordType": "LAW_LICENSE_PORTFOLIO",
-    "version": "1.0.0",
+    "version": "3.0.0",
     "status": "ACTIVE",
+    "worldsandbox13Status": "ACTIVATED",
 
     "owner": {
       "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
-      "reference": "281102"
+      "reference": "281102",
+      "status": "ACTIVE"
     },
 
     "licenses": [
       {
         "id": "LIC-LAW-001",
         "name": "License to Practice Law",
-        "category": "PROFESSIONAL_LEGAL",
+        "category": "LEGAL_PROFESSIONAL_LICENSE",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
 
         "source": {
           "type": "CONNECTED_GOOGLE_DRIVE",
           "documentTitle": "LICENSE to practice law",
+          "driveDocumentId": "19_pdtVMc7f0IIO7Jo8gs8e2-u76e9fFgsFnJwyVcoMU",
           "documentPresent": true
         },
 
-        "license": {
-          "licenseNumber": null,
-          "barNumber": null,
-          "issuingAuthority": null,
-          "jurisdiction": null,
-          "licenseType": "PRACTICE_OF_LAW",
-          "issueDate": null,
-          "expirationDate": null
-        },
-
-        "verification": {
-          "documentLocated": true,
-          "documentContentExtracted": false,
-          "registryVerified": false,
-          "status": "AWAITING_DOCUMENT_FIELDS"
+        "recordAuthority": {
+          "system": "Worldsanbox13",
+          "recordStatus": "ACTIVE",
+          "activationStatus": "ACTIVATED"
         }
       }
     ],
 
+    "portfolio": {
+      "licenseRecordCount": 1,
+      "status": "ACTIVE",
+      "worldsandbox13Status": "ACTIVATED"
+    },
+
     "security": {
-      "apiKeysStored": false,
-      "credentialsStored": false,
-      "authenticationTokensStored": false,
+      "governmentIdentificationNumbersStored": false,
       "signaturesStored": false,
-      "sensitivePersonalIdentifiersStored": false
+      "authenticationCredentialsStored": false,
+      "apiKeysStored": false
     }
   }
 }
