@@ -1,0 +1,69 @@
+{
+  "worldsandbox13": {
+    "recordType": "LICENSING_IDENTITY_AND_LEGAL_RECORDS",
+    "version": "3.0.0",
+    "status": "ACTIVE",
+    "worldsandbox13Status": "ACTIVATED",
+
+    "registryAgent": {
+      "reference": "1290",
+      "projectRole": "AGENT (#1290 Don Pablo Emilio Escobar Gaviria)",
+      "status": "ACTIVE"
+    },
+
+    "subject": {
+      "name": "Kayleen Merissa Loera Guzman Sanchez Daniel",
+      "reference": "1335",
+      "status": "ACTIVE",
+      "worldsandbox13Status": "ACTIVATED"
+    },
+
+    "records": [
+      {
+        "id": "1335-DRIVER-LICENSE",
+        "recordType": "DRIVER_LICENSE",
+        "subjectReference": "1335",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED"
+      },
+      {
+        "id": "1335-CDL",
+        "recordType": "COMMERCIAL_DRIVER_LICENSE",
+        "subjectReference": "1335",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED"
+      },
+      {
+        "id": "1335-SS-CARD",
+        "recordType": "SOCIAL_SECURITY_CARD_RECORD",
+        "subjectReference": "1335",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
+        "sensitiveIdentifierStoredInRepository": false
+      },
+      {
+        "id": "1335-MARRIAGE",
+        "recordType": "MARRIAGE_LICENSE_OR_CERTIFICATE",
+        "subjectReference": "1335",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED"
+      }
+    ],
+
+    "registry": {
+      "subjectReference": "1335",
+      "recordCount": 4,
+      "status": "ACTIVE",
+      "worldsandbox13Status": "ACTIVATED"
+    },
+
+    "security": {
+      "fullSocialSecurityNumberStored": false,
+      "fullDriverLicenseNumberStored": false,
+      "credentialBarcodesStored": false,
+      "signaturesStored": false,
+      "authenticationCredentialsStored": false,
+      "apiKeysStored": false
+    }
+  }
+}
