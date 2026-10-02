@@ -1,0 +1,157 @@
+{
+  "worldsandbox13": {
+    "recordType": "COMPANY_PORTFOLIO",
+    "version": "1.0.0",
+    "status": "ACTIVE",
+
+    "owner": {
+      "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+      "reference": "281102"
+    },
+
+    "companies": [
+      {
+        "id": "COMPANY-SONORAPORT-HOLDING-001",
+        "name": "Sonoraport Holding LLC",
+        "category": "HOLDING_COMPANY",
+        "status": "ACTIVE",
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documents": [
+            "Sonoraport Holding LLC.pdf",
+            "Sonoraport Holding LLC irs 2024",
+            "Sonoraport Holding LLC irs 2025"
+          ]
+        },
+        "registryVerified": false
+      },
+
+      {
+        "id": "COMPANY-SONORAPORT-AI-001",
+        "name": "Sonoraport AI Holding LLC",
+        "category": "AI_TECHNOLOGY_HOLDING",
+        "status": "ACTIVE",
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documents": [
+            "Sonoraport AI HOLDING LLC website"
+          ]
+        },
+        "registryVerified": false
+      },
+
+      {
+        "id": "COMPANY-SONORAPORT-OIL-001",
+        "name": "Sonoraport Oil Holding LLC",
+        "category": "ENERGY",
+        "status": "ACTIVE",
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documents": [
+            "Sonoraport oil holding LLC"
+          ]
+        },
+        "registryVerified": false
+      },
+
+      {
+        "id": "COMPANY-SONORAPORT-PORT-001",
+        "name": "SonoraPort.com",
+        "category": "PORT_LOGISTICS",
+        "status": "ACTIVE",
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documents": [
+            "Sonoraport.com",
+            "Sonoraport.com.pdf",
+            "Asset13 of 2"
+          ]
+        },
+        "registryVerified": false
+      },
+
+      {
+        "id": "COMPANY-SONORAPORT-AG-001",
+        "name": "Sonoraport Port & Agriculture",
+        "category": "AGRICULTURE_LOGISTICS",
+        "status": "ACTIVE",
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documents": [
+            "Sonoraport port agriculture"
+          ]
+        },
+        "registryVerified": false
+      },
+
+      {
+        "id": "COMPANY-TMM-LAW-001",
+        "name": "TMM Law Firm",
+        "category": "LEGAL_SERVICES",
+        "status": "ACTIVE",
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documents": [
+            "Tmm lawfirm"
+          ]
+        },
+        "registryVerified": false
+      },
+
+      {
+        "id": "COMPANY-TMM-BANKING-001",
+        "name": "TMM Banking",
+        "category": "FINANCIAL_TECHNOLOGY",
+        "status": "ACTIVE",
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documents": [
+            "Tmm bank 07/18/2026",
+            "Tmm banking dox"
+          ]
+        },
+        "registryVerified": false
+      },
+
+      {
+        "id": "COMPANY-TMM-COLLECTIVE-001",
+        "name": "TMM Collective",
+        "category": "COLLECTIVE",
+        "status": "ACTIVE",
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documents": [
+            "Tmm collective"
+          ]
+        },
+        "registryVerified": false
+      },
+
+      {
+        "id": "COMPANY-JOSHGPT-001",
+        "name": "JoshGPT",
+        "category": "ARTIFICIAL_INTELLIGENCE_SOFTWARE",
+        "status": "ACTIVE",
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE"
+        },
+        "registryVerified": false
+      }
+    ],
+
+    "verification": {
+      "companyCount": 9,
+      "recordsRepresentDocumentedProjectData": true,
+      "governmentRegistryVerificationRequired": true
+    },
+
+    "security": {
+      "einStoredInRepository": false,
+      "taxIdsStoredInRepository": false,
+      "bankCredentialsStoredInRepository": false,
+      "apiKeysStoredInRepository": false,
+      "authenticationTokensStoredInRepository": false,
+      "signaturesStoredInRepository": false
+    }
+  }
+}
