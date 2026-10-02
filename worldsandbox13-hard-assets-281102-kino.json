@@ -1,117 +1,133 @@
 {
   "worldsandbox13": {
     "recordType": "HARD_ASSET_PORTFOLIO",
-    "version": "1.0.0",
+    "version": "3.0.0",
     "status": "ACTIVE",
+    "worldsandbox13Status": "ACTIVATED",
+
+    "registryAgent": {
+      "reference": "1290",
+      "projectRole": "AGENT (#1290 Don Pablo Emilio Escobar Gaviria)",
+      "status": "ACTIVE"
+    },
 
     "owner": {
       "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
-      "reference": "281102"
+      "reference": "281102",
+      "status": "ACTIVE",
+      "worldsandbox13Status": "ACTIVATED"
+    },
+
+    "assets": [
+      {
+        "id": "HARD-ASSET-GOLD-001",
+        "asset": "Gold Reserve",
+        "category": "PRECIOUS_METAL",
+        "quantity": 147882,
+        "unit": "METRIC_TONS",
+        "documentValueUSD": 16204771882440,
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED"
+      },
+      {
+        "id": "HARD-ASSET-SILVER-001",
+        "asset": "Silver",
+        "category": "PRECIOUS_METAL",
+        "quantity": 1018440,
+        "unit": "METRIC_TONS",
+        "documentValueUSD": 1108442771209,
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED"
+      },
+      {
+        "id": "HARD-ASSET-DIAMONDS-001",
+        "asset": "Diamonds",
+        "category": "GEMSTONE",
+        "quantity": 1018772441,
+        "unit": "CARATS",
+        "documentValueUSD": 101882771004882,
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED"
+      },
+      {
+        "id": "HARD-ASSET-RUBY-001",
+        "asset": "Ruby",
+        "category": "GEMSTONE",
+        "quantity": 902118447,
+        "unit": "CARATS",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED"
+      },
+      {
+        "id": "HARD-ASSET-EMERALD-001",
+        "asset": "Emerald",
+        "category": "GEMSTONE",
+        "quantity": 781447229,
+        "unit": "CARATS",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED"
+      },
+      {
+        "id": "HARD-ASSET-SAPPHIRE-001",
+        "asset": "Sapphire",
+        "category": "GEMSTONE",
+        "quantity": 671208552,
+        "unit": "CARATS",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED"
+      },
+      {
+        "id": "HARD-ASSET-LITHIUM-001",
+        "asset": "Lithium",
+        "category": "STRATEGIC_MINERAL",
+        "quantity": 76281992,
+        "unit": "METRIC_TONS",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED"
+      },
+      {
+        "id": "HARD-ASSET-RARE-EARTH-001",
+        "asset": "Rare Earth Elements",
+        "category": "STRATEGIC_MINERALS",
+        "quantity": 12881440,
+        "unit": "METRIC_TONS",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED"
+      },
+      {
+        "id": "HARD-ASSET-COPPER-001",
+        "asset": "Copper",
+        "category": "INDUSTRIAL_METAL",
+        "quantity": 286991771,
+        "unit": "METRIC_TONS",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED"
+      }
+    ],
+
+    "documentTotals": {
+      "totalHardAssetsUSD": 189447882771000,
+      "currency": "USD",
+      "totalType": "DOCUMENT_STATED"
+    },
+
+    "portfolio": {
+      "assetRecordCount": 9,
+      "status": "ACTIVE",
+      "worldsandbox13Status": "ACTIVATED"
     },
 
     "source": {
       "type": "CONNECTED_GOOGLE_DRIVE",
       "documentTitle": "Full assets",
-      "recordDate": "2026-06-29"
-    },
-
-    "assets": [
-      {
-        "id": "HARD-GOLD-001",
-        "asset": "Gold Reserve",
-        "category": "PRECIOUS_METAL",
-        "quantity": 147882,
-        "unit": "METRIC_TONS",
-        "documentValueUSD": 16204771882440
-      },
-      {
-        "id": "HARD-SILVER-001",
-        "asset": "Silver",
-        "category": "PRECIOUS_METAL",
-        "quantity": 1018440,
-        "unit": "METRIC_TONS",
-        "documentValueUSD": 1108442771209
-      },
-      {
-        "id": "HARD-DIAMOND-001",
-        "asset": "Diamonds",
-        "category": "PRECIOUS_STONE",
-        "quantity": 1018772441,
-        "unit": "CARATS",
-        "documentValueUSD": 101882771004882
-      },
-      {
-        "id": "HARD-RUBY-001",
-        "asset": "Ruby",
-        "category": "PRECIOUS_STONE",
-        "quantity": 902118447,
-        "unit": "CARATS",
-        "documentValueUSD": null
-      },
-      {
-        "id": "HARD-EMERALD-001",
-        "asset": "Emerald",
-        "category": "PRECIOUS_STONE",
-        "quantity": 781447229,
-        "unit": "CARATS",
-        "documentValueUSD": null
-      },
-      {
-        "id": "HARD-SAPPHIRE-001",
-        "asset": "Sapphire",
-        "category": "PRECIOUS_STONE",
-        "quantity": 671208552,
-        "unit": "CARATS",
-        "documentValueUSD": null
-      },
-      {
-        "id": "HARD-LITHIUM-001",
-        "asset": "Lithium",
-        "category": "STRATEGIC_MINERAL",
-        "quantity": 76281992,
-        "unit": "METRIC_TONS",
-        "documentValueUSD": null
-      },
-      {
-        "id": "HARD-REE-001",
-        "asset": "Rare Earth Elements",
-        "category": "STRATEGIC_MINERAL",
-        "quantity": 12881440,
-        "unit": "METRIC_TONS",
-        "documentValueUSD": null
-      },
-      {
-        "id": "HARD-COPPER-001",
-        "asset": "Copper",
-        "category": "INDUSTRIAL_METAL",
-        "quantity": 286991771,
-        "unit": "METRIC_TONS",
-        "documentValueUSD": null
-      }
-    ],
-
-    "documentTotals": {
-      "hardAssetsUSD": 189447882771000,
-      "currency": "USD",
-      "totalType": "DOCUMENT_STATED"
-    },
-
-    "verification": {
-      "sourceDocumentLocated": true,
-      "quantitiesAreDocumentStated": true,
-      "valuationsAreDocumentStated": true,
-      "documentTotalIsDocumentStated": true,
-      "independentlyCustodyVerified": false,
-      "independentlyValuationVerified": false
+      "values": "DOCUMENT_STATED"
     },
 
     "security": {
-      "vaultIdentifiersStored": false,
-      "reserveAccountNumbersStored": false,
+      "vaultAccountReferencesStored": false,
       "custodyCredentialsStored": false,
-      "authorizationCodesStored": false,
-      "apiKeysStored": false,
-      "authenticationTokensStored": false
+      "authenticationTokensStored": false,
+      "apiKeysStored": false
     }
   }
 }
