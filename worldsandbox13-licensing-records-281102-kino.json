@@ -1,0 +1,98 @@
+{
+  "worldsandbox13": {
+    "recordType": "LICENSING_IDENTITY_AND_LEGAL_RECORDS",
+    "version": "3.0.0",
+    "status": "ACTIVE",
+    "worldsandbox13Status": "ACTIVATED",
+
+    "registryAgent": {
+      "reference": "1290",
+      "projectRole": "AGENT (#1290 Don Pablo Emilio Escobar Gaviria)",
+      "status": "ACTIVE"
+    },
+
+    "subject": {
+      "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+      "reference": "281102",
+      "status": "ACTIVE",
+      "worldsandbox13Status": "ACTIVATED"
+    },
+
+    "records": [
+      {
+        "id": "281102-DRIVER-LICENSE",
+        "recordType": "DRIVER_LICENSE",
+        "subjectReference": "281102",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED"
+      },
+      {
+        "id": "281102-CDL",
+        "recordType": "COMMERCIAL_DRIVER_LICENSE",
+        "subjectReference": "281102",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documentTitle": "CDL LICENSE",
+          "driveDocumentId": "1BC-FdG6GfjlxotvwuP5TcI7aVoUweB6HyVk0aE7Ya7M"
+        }
+      },
+      {
+        "id": "281102-SS-CARD",
+        "recordType": "SOCIAL_SECURITY_CARD_RECORD",
+        "subjectReference": "281102",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
+        "sensitiveIdentifierStoredInRepository": false
+      },
+      {
+        "id": "281102-MARRIAGE",
+        "recordType": "MARRIAGE_LICENSE_OR_CERTIFICATE",
+        "subjectReference": "281102",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED"
+      },
+      {
+        "id": "281102-CANNABIS",
+        "recordType": "CANNABIS_LICENSE",
+        "subjectReference": "281102",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documentTitle": "Cannabis license",
+          "driveDocumentId": "1e9S7TnNxoSVcTCaBqCKv3O6kLG6EgvtozhKcvu86x0o"
+        }
+      },
+      {
+        "id": "281102-LAW",
+        "recordType": "LICENSE_TO_PRACTICE_LAW",
+        "subjectReference": "281102",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
+        "source": {
+          "type": "CONNECTED_GOOGLE_DRIVE",
+          "documentTitle": "LICENSE to practice law",
+          "driveDocumentId": "19_pdtVMc7f0IIO7Jo8gs8e2-u76e9fFgsFnJwyVcoMU"
+        }
+      }
+    ],
+
+    "registry": {
+      "subjectReference": "281102",
+      "recordCount": 6,
+      "status": "ACTIVE",
+      "worldsandbox13Status": "ACTIVATED"
+    },
+
+    "security": {
+      "fullSocialSecurityNumberStored": false,
+      "fullDriverLicenseNumberStored": false,
+      "credentialBarcodesStored": false,
+      "signaturesStored": false,
+      "authenticationCredentialsStored": false,
+      "apiKeysStored": false
+    }
+  }
+}
