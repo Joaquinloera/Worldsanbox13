@@ -1,154 +1,508 @@
 {
-  "worldsandbox13": {
-    "recordType": "BANKING_PORTFOLIO",
-    "version": "2.0.0",
+  "recordType": "WORLDSANBOX13_MASTER_BANKING_CARD_AND_PAYMENTS_SYSTEM",
+  "version": "4.0.0",
+  "status": "ACTIVE",
+  "worldsandbox13Status": "ACTIVATED",
+  "owner": {
+    "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+    "reference": "281102"
+  },
+  "scope": {
+    "currentPass": "NON_JPMORGAN_BANKING_REBUILD",
+    "jpmorganExpansionDeferred": true,
+    "conflictingSourceSnapshotsPreservedSeparately": true,
+    "sourceClaimsAreNotIndependentBankVerification": true
+  },
+  "bankingRecords": [
+    {
+      "institution": "Goldman Sachs Private Wealth Management",
+      "sourceSnapshot": "FULL_ASSETS",
+      "balanceUSD": 4444382917442,
+      "status": "ACTIVE",
+      "sourceStatus": "SOURCE_STATED",
+      "sourceDocumentId": "1-NBER8VBQmAot2z3dZYpUTBLc9Xhok6Z3u_LC4MJy2o"
+    },
+    {
+      "institution": "Bank of America",
+      "sourceSnapshot": "FULL_ASSETS",
+      "balanceUSD": 955184226991,
+      "status": "ACTIVE",
+      "sourceStatus": "SOURCE_STATED",
+      "sourceDocumentId": "1-NBER8VBQmAot2z3dZYpUTBLc9Xhok6Z3u_LC4MJy2o"
+    },
+    {
+      "institution": "Bank of America Global Corporate & Investment Banking",
+      "sourceSnapshot": "CORPORATE_TREASURY_DOSSIER",
+      "balanceUSD": 955000000000,
+      "liquidCashUSD": 255000000000,
+      "treasuryReserveUSD": 400000000000,
+      "strategicAssetsUSD": 300000000000,
+      "status": "ACTIVE",
+      "sourceStatus": "ACTIVE_AND_UNRESTRICTED",
+      "maximumImmediateSettlementUSD": 10000000000,
+      "dailySettlementUSD": 50000000000,
+      "transactionAuthority": "FULL_CORPORATE_AUTHORITY",
+      "sourceDocumentId": "1Ah8jBEgAEvQUlG8CFb7KQlkNUNDNaU0fjzSIfHLHMkw"
+    },
+    {
+      "institution": "Western Alliance Bank",
+      "sourceSnapshot": "FULL_ASSETS",
+      "balanceUSD": 955903441227,
+      "status": "ACTIVE",
+      "sourceStatus": "SOURCE_STATED",
+      "sourceDocumentId": "1-NBER8VBQmAot2z3dZYpUTBLc9Xhok6Z3u_LC4MJy2o"
+    },
+    {
+      "institution": "Western Alliance Bank",
+      "sourceSnapshot": "CORPORATE_TREASURY_DOSSIER",
+      "balanceUSD": 955000000000,
+      "liquidCashUSD": 255000000000,
+      "treasuryReserveUSD": 400000000000,
+      "strategicAssetsUSD": 300000000000,
+      "status": "ACTIVE",
+      "sourceStatus": "ACTIVE_AND_UNRESTRICTED",
+      "maximumImmediateSettlementUSD": 10000000000,
+      "dailySettlementUSD": 50000000000,
+      "transactionAuthority": "FULL_CORPORATE_AUTHORITY",
+      "sourceDocumentId": "1D5T6H8K76o93yOGMLqdaAuABwD37S5cQiiW7FHbNTi8"
+    },
+    {
+      "institution": "Armed Forces Bank",
+      "sourceSnapshot": "FULL_ASSETS",
+      "balanceUSD": 898144902771,
+      "status": "ACTIVE",
+      "sourceStatus": "SOURCE_STATED",
+      "sourceDocumentId": "1-NBER8VBQmAot2z3dZYpUTBLc9Xhok6Z3u_LC4MJy2o"
+    },
+    {
+      "institution": "Armed Forces Bank",
+      "sourceSnapshot": "BANKING_RELATIONSHIP_LETTER",
+      "accountType": "PRIVATE_BANKING_STRATEGIC_RESERVE",
+      "balanceUSD": 898000000000,
+      "status": "ACTIVE",
+      "sourceStatus": "IN_GOOD_STANDING",
+      "services": [
+        "DOMESTIC_WIRES",
+        "INTERNATIONAL_WIRES",
+        "TREASURY_MANAGEMENT",
+        "COMMERCIAL_BANKING",
+        "LIQUIDITY_MANAGEMENT",
+        "HIGH_VALUE_SETTLEMENT"
+      ],
+      "sourceDocumentId": "1O2-sae4xWVfbtyp199kpgTovU_-BQc1aC7x1CbgECAk"
+    },
+    {
+      "institution": "Citi Private Bank",
+      "sourceSnapshot": "FULL_ASSETS",
+      "balanceUSD": 987224661038,
+      "status": "ACTIVE",
+      "sourceStatus": "SOURCE_STATED",
+      "sourceDocumentId": "1-NBER8VBQmAot2z3dZYpUTBLc9Xhok6Z3u_LC4MJy2o"
+    },
+    {
+      "institution": "Cayman Private Treasury Reserve",
+      "sourceSnapshot": "FULL_ASSETS",
+      "balanceUSD": 900621844017,
+      "status": "ACTIVE",
+      "sourceStatus": "SOURCE_STATED",
+      "sourceDocumentId": "1-NBER8VBQmAot2z3dZYpUTBLc9Xhok6Z3u_LC4MJy2o"
+    },
+    {
+      "institution": "CIBC FirstCaribbean International Bank",
+      "sourceSnapshot": "FULL_ASSETS",
+      "balanceUSD": 60382771902,
+      "status": "ACTIVE",
+      "sourceStatus": "SOURCE_STATED",
+      "sourceDocumentId": "1-NBER8VBQmAot2z3dZYpUTBLc9Xhok6Z3u_LC4MJy2o"
+    },
+    {
+      "institution": "CIBC FirstCaribbean International Bank",
+      "sourceSnapshot": "LIQUIDITY_DISCLOSURE",
+      "balanceUSD": 60000000000,
+      "status": "ACTIVE",
+      "sourceStatus": "SOURCE_STATED",
+      "accountReference": "FCIB-XXXX-9732",
+      "sourceDocumentId": "1vobzC9uSCu99SA3huK8A2WLVT-NRpXq3ZpnqhQIXGeg"
+    },
+    {
+      "institution": "CIBC FirstCaribbean International Bank — Cayman",
+      "sourceSnapshot": "LIQUIDITY_DISCLOSURE",
+      "balanceUSD": 950000000,
+      "status": "ACTIVE",
+      "sourceStatus": "SOURCE_STATED",
+      "accountReference": "CAY-104-XXXXX-987",
+      "sourceDocumentId": "1vobzC9uSCu99SA3huK8A2WLVT-NRpXq3ZpnqhQIXGeg"
+    },
+    {
+      "institution": "Bank of Saint Lucia",
+      "sourceSnapshot": "LIQUIDITY_DISCLOSURE",
+      "accountType": "PRIVATE_WEALTH_RESERVE",
+      "balanceUSD": 850000000,
+      "status": "ACTIVE",
+      "sourceStatus": "SOURCE_STATED",
+      "accountReference": "XXXX-4582",
+      "sourceDocumentId": "1vobzC9uSCu99SA3huK8A2WLVT-NRpXq3ZpnqhQIXGeg"
+    },
+    {
+      "institution": "Bank of Saint Lucia Limited",
+      "sourceSnapshot": "BOSL_2_CAPITAL_MATRIX",
+      "balanceUSD": 850000000,
+      "liquidCashUSD": 220000000,
+      "treasuryReserveUSD": 280000000,
+      "strategicAssetsUSD": 350000000,
+      "maximumImmediateSettlementUSD": 100000000,
+      "status": "ACTIVE",
+      "sourceStatus": "VERIFIED_PENDING_FINAL_AUTHORIZATION_SOURCE_LABEL",
+      "sourceDocumentId": "1ZjRGrivE7yC8Z6cTkJaJoRcJKRbt4n5h9wXGp0bZ9qA"
+    },
+    {
+      "institution": "1st National Bank St. Lucia Limited",
+      "sourceSnapshot": "LIQUIDITY_DISCLOSURE",
+      "balanceUSD": 950000000,
+      "status": "ACTIVE",
+      "sourceStatus": "SOURCE_STATED",
+      "accountReference": "104-XXXXX-987",
+      "sourceDocumentId": "1vobzC9uSCu99SA3huK8A2WLVT-NRpXq3ZpnqhQIXGeg"
+    },
+    {
+      "institution": "1st National Bank St. Lucia",
+      "sourceSnapshot": "INHERITANCE_CONFIRMATION_PACKAGE",
+      "allocationUSD": 979000000000,
+      "status": "ACTIVE",
+      "sourceStatus": "VERIFIED_PENDING_BENEFICIARY_AUTHORIZATION_SOURCE_LABEL",
+      "classification": "TREASURY_RESERVE_INSTITUTIONAL_LIQUIDITY_ACQUISITION_CAPITAL",
+      "sourceDocumentId": "1KXEo93lLWXyw_wv8m3E4q-elw5lOfx3mL6PjH5NCRQQ"
+    },
+    {
+      "institution": "Service Credit Union",
+      "division": "CORPORATE_BANKING_AND_WEALTH",
+      "accountType": "STRATEGIC_LIQUIDITY_RESERVE_PRIVATE_BANKING",
+      "balanceUSD": 222000000000,
+      "status": "ACTIVE",
+      "sourceStatus": "SOURCE_STATED",
+      "sourceAggregateBeforeUSD": 1027750000000,
+      "sourceAggregateAfterUSD": 1249750000000,
+      "sourceTreasuryReserveUSD": 61800000000,
+      "sourceImmediatelyDeployableLiquidityUSD": 1311550000000,
+      "sourceDocumentId": "17OvjsA5GkK9ye7vfaQxn4YTSbaHXsgf29l0P7DUrt_M"
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "name": "FULL_ASSETS_BANKING_SCHEDULE",
+      "totalBankingUSD": 10198691957049,
+      "deployableLiquidityUSD": 10260491957049,
+      "settlementCapacityPerTransactionUSD": 10000000000,
+      "dailySettlementCapacityUSD": 50000000000,
+      "dailySettlementCapacityQualifier": "PLUS",
+      "sourceDocumentId": "1-NBER8VBQmAot2z3dZYpUTBLc9Xhok6Z3u_LC4MJy2o"
+    },
+    {
+      "name": "SAINT_LUCIA_CIBC_LIQUIDITY_DISCLOSURE",
+      "aggregateLiquidBankingAssetsUSD": 62750000000,
+      "treasuryReserveUSD": 61800000000,
+      "immediatelyDeployableLiquidityUSD": 124550000000,
+      "sourceDocumentId": "1vobzC9uSCu99SA3huK8A2WLVT-NRpXq3ZpnqhQIXGeg"
+    },
+    {
+      "name": "SERVICE_CREDIT_UNION_UPDATED_LIQUIDITY",
+      "aggregateLiquidBankingAssetsUSD": 1249750000000,
+      "treasuryReserveUSD": 61800000000,
+      "immediatelyDeployableLiquidityUSD": 1311550000000,
+      "sourceDocumentId": "17OvjsA5GkK9ye7vfaQxn4YTSbaHXsgf29l0P7DUrt_M"
+    }
+  ],
+  "pathwardSonoraPortIntegration": {
+    "recordType": "PATHWARD_SONORAPORT_BANKING_AND_CARD_INTEGRATION",
+    "version": "1.0.0",
     "status": "ACTIVE",
     "worldsandbox13Status": "ACTIVATED",
-
-    "owner": {
-      "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
-      "reference": "281102"
+    "provider": "Pathward",
+    "client": "SonoraPort",
+    "sourceEnvironment": "PRODUCTION",
+    "sourceGeneratedDate": "2026-09-07",
+    "sourceDocument": {
+      "title": "Pathward / Sonoraport",
+      "driveId": "1eDr5WcWbxWoOs3rlouaTd-3KQQsZjz0r2aFkvlwJUV0",
+      "sourceFormat": "GOOGLE_DOC_WITH_EMBEDDED_IMAGES",
+      "pagesRecovered": [1, 2, 3, 4, 6],
+      "page5Present": false
     },
-
-    "agent": {
-      "designation": "AGENT (#1290 Don Pablo Emilio Escobar Gaviria)"
+    "authentication": {
+      "method": "OAUTH2_CLIENT_CREDENTIALS_WITH_MTLS",
+      "tokenEndpoint": "api.pathward.com/oauth/token",
+      "scopes": [
+        "cards",
+        "accounts",
+        "transactions",
+        "disputes",
+        "webhooks"
+      ],
+      "tokenExpirationSeconds": 3600,
+      "automaticRefresh": true,
+      "refreshBeforeExpirySeconds": 300,
+      "mTLSRequired": true,
+      "certificatePath": "/etc/ssl/pathward/client-cert.pem",
+      "privateKeyPath": "/etc/ssl/pathward/client-key.pem",
+      "chainPath": "/etc/ssl/pathward/chain.pem"
     },
-
-    "bankingRecords": [
+    "secretBindings": {
+      "clientId": "${PATHWARD_CLIENT_ID}",
+      "clientSecret": "${PATHWARD_CLIENT_SECRET}",
+      "apiKey": "${PATHWARD_API_KEY}",
+      "accountTenantId": "${PATHWARD_ACCOUNT_TENANT_ID}",
+      "issuerProcessorId": "${PATHWARD_ISSUER_PROCESSOR_ID}",
+      "programId": "${PATHWARD_PROGRAM_ID}",
+      "debitProductId": "${PATHWARD_DEBIT_PRODUCT_ID}",
+      "prepaidProductId": "${PATHWARD_PREPAID_PRODUCT_ID}",
+      "webhookSecret": "${PATHWARD_WEBHOOK_SECRET}"
+    },
+    "api": {
+      "productionHost": "api.pathward.com",
+      "sandboxHost": "sandbox.api.pathward.com",
+      "cardsPath": "/v1/cards",
+      "accountsPath": "/v1/accounts",
+      "transactionsPath": "/v1/transactions",
+      "disputesPath": "/v1/disputes",
+      "eventsPath": "/v1/events",
+      "healthPath": "/health"
+    },
+    "webhook": {
+      "host": "sonoraportaiholdingllc.com",
+      "path": "/api/webhooks/pathward",
+      "method": "POST",
+      "contentType": "application/json",
+      "timeoutSeconds": 30,
+      "maxPayloadMB": 5,
+      "retryAttempts": 5,
+      "retrySchedule": [
+        "IMMEDIATE",
+        "30_SECONDS",
+        "2_MINUTES",
+        "10_MINUTES",
+        "30_MINUTES"
+      ],
+      "events": [
+        "card.issued",
+        "card.activated",
+        "card.status_changed",
+        "transaction.authorized",
+        "transaction.settled",
+        "transaction.declined",
+        "dispute.created",
+        "dispute.updated",
+        "dispute.closed",
+        "account.updated",
+        "kyc.status_changed"
+      ],
+      "signatureAlgorithm": "HMAC-SHA256",
+      "canonicalPayload": "timestamp:event_id:raw_request_body",
+      "replayWindowSeconds": 300
+    },
+    "cardProgram": {
+      "products": [
+        "DEBIT",
+        "PREPAID"
+      ],
+      "sourceCardType": "VISA_DEBIT_AND_PREPAID",
+      "sourceBINRange": "457173",
+      "sourceBrand": "Visa",
+      "currency": "USD",
+      "lifecycle": [
+        "ISSUE",
+        "ACTIVATE",
+        "MANAGE",
+        "SUSPEND",
+        "REPLACE",
+        "CLOSE"
+      ],
+      "kycRequired": true,
+      "addressVerification": true,
+      "instantIssueSupported": true,
+      "digitalWallets": [
+        "APPLE_PAY",
+        "GOOGLE_PAY",
+        "SAMSUNG_PAY"
+      ],
+      "physicalDelivery": [
+        "STANDARD",
+        "EXPEDITED"
+      ],
+      "expirationYears": 4,
+      "panStorage": "TOKENIZED_NO_PAN_STORED"
+    },
+    "transactions": {
+      "authorizePath": "/v1/transactions/authorize",
+      "capturePath": "/v1/transactions/capture",
+      "voidPath": "/v1/transactions/void",
+      "refundPath": "/v1/transactions/refund",
+      "types": [
+        "PURCHASE",
+        "CASH_ADVANCE",
+        "REFUND",
+        "REVERSAL",
+        "ADJUSTMENT"
+      ],
+      "authorizationTimeLimitSeconds": 30,
+      "captureWindowDays": 7,
+      "idempotencyHeader": "Idempotency-Key",
+      "idempotencyRequiredForPost": true,
+      "settlementCurrency": "USD",
+      "partialAuthorization": true,
+      "incrementalAuthorizationUseCases": [
+        "HOSPITALITY",
+        "FUEL",
+        "RENTAL"
+      ],
+      "softDescriptor": "SONORAPORT",
+      "hardDescriptor": "SONORAPORT*CARD"
+    },
+    "settlement": {
+      "frequency": "DAILY",
+      "timeUTC": "04:00",
+      "fundingMethod": "ACH_TO_PROGRAM_FUNDING_ACCOUNT",
+      "reportPath": "/v1/settlements",
+      "reportFormats": [
+        "JSON",
+        "CSV"
+      ],
+      "returnsAndAdjustments": "NEXT_SETTLEMENT_CYCLE",
+      "statementDescriptor": "SONORAPORT PAYMENTS"
+    },
+    "rateLimits": {
+      "defaultRequestsPerMinute": 1000,
+      "burstRequestsPerMinute": 2000,
+      "burstWindowSeconds": 60,
+      "throttleStatusCode": 429
+    },
+    "sourceProductionReadiness": {
+      "apiCredentialsConfigured": true,
+      "mTLSCertificatesInstalled": true,
+      "webhookEndpointLiveAndVerified": true,
+      "signatureVerificationTested": true,
+      "cardIssuanceFlowTested": true,
+      "transactionAuthorizationTested": true,
+      "disputeWorkflowTested": true,
+      "monitoringAndAlertingEnabled": true,
+      "goLiveApprovalReceivedFromPathward": true,
+      "ticket": "PW-AC37AB12EE",
+      "date": "2026-09-07",
+      "classification": "SOURCE_STATED_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    "missingSourceMaterial": {
+      "page": 5,
+      "status": "NOT_PRESENT_IN_DRIVE_DOCUMENT",
+      "handling": "DO_NOT_INVENT"
+    }
+  },
+  "cardAndCredentialSources": {
+    "status": "ACTIVE",
+    "sensitivePaymentCredentialDocuments": [
       {
-        "bankRecordId": "WS13-BANK-001",
-        "institution": "JPMorgan Chase Private Bank",
-        "division": "Phoenix Division",
-        "assetClassification": [
-          "Corporate Treasury Reserve",
-          "Strategic Liquidity",
-          "Institutional Capital"
-        ],
-        "clearanceTier": "Private Banking — Ultra High Net Worth Tier VII",
-        "primaryAccount": {
-          "classification": "Strategic Treasury Reserve",
-          "availableBalanceUSD": 996000000000,
-          "availableLiquidCashUSD": 180000000000
-        },
-        "dateOfExecution": "2026-06-29",
-        "status": "ACTIVE",
-        "worldsandbox13Status": "ACTIVATED",
-        "source": {
-          "title": "Jp Morgan 90b",
-          "driveDocumentId": "1U6HBcH6rAq7XloLMvaIg3p6s-hEBRCE6HHB8bPGsq50"
-        }
+        "driveId": "11R16nXYHVVVzu7TY5RQCSt2ufA-zqbI4jewJLRCGd8E",
+        "handling": "REDACT_PAN_AND_SECURITY_CODE"
       },
-
       {
-        "bankRecordId": "WS13-BANK-002",
-        "institution": "Goldman Sachs Private Wealth Management",
-        "division": "Private Wealth Division",
-        "assetClassification": [
-          "Corporate Treasury Reserve",
-          "Strategic Liquidity",
-          "Institutional Capital"
-        ],
-        "clearanceTier": "Private Wealth Banking — Ultra High Net Worth Tier VIII",
-        "primaryGlobalTreasuryAccount": {
-          "availableBalanceUSD": 4444000000000,
-          "availableLiquidCashUSD": 944000000000,
-          "treasuryReserveHoldingsUSD": 2000000000000,
-          "strategicAssetHoldingsUSD": 1500000000000,
-          "totalAccountValueUSD": 4444000000000
-        },
-        "dateOfExecution": "2026-06-29",
-        "status": "ACTIVE",
-        "worldsandbox13Status": "ACTIVATED",
-        "source": {
-          "title": "Goldman Sachs Private Wealth Management Bank",
-          "driveDocumentId": "1aentcDm6C2sI6xXRK6CwLInC0wPYP8tIdITU_xIxZb4"
-        }
-      },
-
-      {
-        "bankRecordId": "WS13-BANK-003",
-        "institution": "Bank of Saint Lucia Limited",
-        "assetClassification": [
-          "Private Wealth Reserve",
-          "Treasury Liquidity",
-          "Beneficiary Capital"
-        ],
-        "clearanceTier": "Quantum Black — Level VII",
-        "capitalMatrix": {
-          "availableBalanceUSD": 850000000,
-          "availableLiquidCashUSD": 220000000,
-          "treasuryReserveHoldingsUSD": 280000000,
-          "strategicAssetHoldingsUSD": 350000000,
-          "totalCapitalUSD": 850000000,
-          "maximumImmediateSettlementCapacityUSD": 100000000
-        },
-        "authorizedCapitalUse": [
-          "Real Estate Acquisitions",
-          "Hospitality Investments",
-          "Business Acquisitions",
-          "Escrow Settlement",
-          "Institutional Transfers"
-        ],
-        "dateOfExecution": "2025-09-15",
-        "status": "ACTIVE",
-        "worldsandbox13Status": "ACTIVATED",
-        "source": {
-          "title": "BOSL 2",
-          "driveDocumentId": "1ZjRGrivE7yC8Z6cTkJaJoRcJKRbt4n5h9wXGp0bZ9qA"
-        }
-      },
-
-      {
-        "bankRecordId": "WS13-BANK-004",
-        "institution": "Service Credit Union",
-        "division": "Corporate Banking & Wealth Division",
-        "location": "Portsmouth, New Hampshire, United States",
-        "accountType": "Strategic Liquidity Reserve / Private Banking",
-        "availableBalanceUSD": 222000000000,
-        "aggregateLiquiditySchedule": {
-          "previousAggregateLiquidBankingAssetsUSD": 1027750000000,
-          "serviceCreditUnionUSD": 222000000000,
-          "updatedAggregateLiquidBankingAssetsUSD": 1249750000000,
-          "treasuryReserveUSD": 61800000000,
-          "totalImmediatelyDeployableLiquidityUSD": 1311550000000
-        },
-        "status": "ACTIVE",
-        "worldsandbox13Status": "ACTIVATED",
-        "source": {
-          "title": "Service Credit Union",
-          "driveDocumentId": "17OvjsA5GkK9ye7vfaQxn4YTSbaHXsgf29l0P7DUrt_M"
-        }
+        "driveId": "1KyEowqCClRwTYACd4HH23IC6U_k04Zn5uolUBc3Ky3c",
+        "handling": "REDACT_PAN_AND_SECURITY_CODE"
       }
     ],
-
-    "jointBankingRecords": {
-      "status": "ACTIVE",
-      "worldsandbox13Status": "ACTIVATED",
-      "primaryHolder": {
-        "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
-        "reference": "281102"
-      },
-      "jointHolder": {
-        "name": "Kayleen Merissa Lorea Guzman Sanchez Daniel",
-        "reference": "1335"
-      },
-      "source": {
-        "title": "Jp Morgan joint account",
-        "driveDocumentId": "1xVGO5ISaIMmSSEISh3oPqBsOgJzfc3VE6EQM14c_PMw"
-      }
+    "externalVisaAuthorizationVerified": false,
+    "externalIssuerOrBINSponsorshipVerified": false,
+    "note": "Pathward source states Visa debit and prepaid configuration; this registry preserves the source record without independently asserting network authorization."
+  },
+  "licensingSources": [
+    {
+      "driveId": "1LYAxd0TnMX4b_n5lSU71DA1_dg5SefIn",
+      "title": "Sonoraport Holding LLC.pdf",
+      "readability": "NO_SEARCHABLE_TEXT_RECOVERED",
+      "licenseDetailsInvented": false
     },
-
-    "security": {
-      "sensitiveBankCredentialsStoredInRepository": false,
-      "excludedFields": [
-        "Full Account Numbers",
-        "Routing Numbers",
-        "SWIFT/BIC Codes",
-        "Security Tokens",
-        "Settlement Authorization Codes",
-        "Treasury Ledger Credentials",
-        "Signatures"
-      ]
+    {
+      "driveId": "1zKjAe2MREZJrRkTLSkK3BGlPEJ4eBuql",
+      "title": "Sonoraport Holding LLC irs 2024.pdf",
+      "readability": "NO_SEARCHABLE_TEXT_RECOVERED",
+      "licenseDetailsInvented": false
     }
-  }
+  ],
+  "unreadableBankingSources": [
+    {
+      "driveId": "1RNNr5KDfXh3JasjvistFZPe8NomxjAiNBudc7f3yJtg",
+      "title": "Tmm bank 07/18/2026",
+      "status": "REGISTERED_SOURCE",
+      "contentHandling": "NO_CONTENT_INVENTED"
+    },
+    {
+      "driveId": "1wEHJfzZObI-cGVj3Ut8n8rkzaY3T6-0dWPf1ciM5oFg",
+      "title": "Tmm banking dox",
+      "status": "REGISTERED_SOURCE",
+      "contentHandling": "NO_CONTENT_INVENTED"
+    },
+    {
+      "driveId": "1dk8MYFc0og-EV3FFly3SmUD5BbTIX9GKQhNZml_n3Qk",
+      "title": "Commerical banking",
+      "status": "REGISTERED_SOURCE",
+      "contentHandling": "NO_CONTENT_INVENTED"
+    },
+    {
+      "driveId": "1ZCYzkewaQsEsi5VfPr1qAKYTKDfwrSDGacx5iEb8ECw",
+      "title": "Bank api keys",
+      "status": "REGISTERED_SENSITIVE_SOURCE",
+      "contentHandling": "SECRET_VALUES_NOT_EXPORTED"
+    }
+  ],
+  "apiInfrastructure": {
+    "status": "ACTIVE",
+    "secretStorage": "ENVIRONMENT_VARIABLES_OR_SECRET_MANAGER",
+    "secretsCommittedToRepository": false,
+    "credentialDocumentsContainSensitiveValues": true,
+    "credentialValuesExportedToJson": false,
+    "bindings": [
+      "${PATHWARD_CLIENT_ID}",
+      "${PATHWARD_CLIENT_SECRET}",
+      "${PATHWARD_API_KEY}",
+      "${PATHWARD_ACCOUNT_TENANT_ID}",
+      "${PATHWARD_ISSUER_PROCESSOR_ID}",
+      "${PATHWARD_PROGRAM_ID}",
+      "${PATHWARD_DEBIT_PRODUCT_ID}",
+      "${PATHWARD_PREPAID_PRODUCT_ID}",
+      "${PATHWARD_WEBHOOK_SECRET}",
+      "${PAYMENTS_PUBLISHABLE_KEY}",
+      "${PAYMENTS_RESTRICTED_KEY}",
+      "${PAYMENTS_SECRET_KEY}",
+      "${PAYMENTS_WEBHOOK_SECRET}",
+      "${TWILIO_API_KEY}",
+      "${RESEND_API_KEY}",
+      "${SUPABASE_URL}",
+      "${SUPABASE_ANON_KEY}",
+      "${SUPABASE_SERVICE_ROLE_KEY}",
+      "${GEMINI_API_KEY}"
+    ]
+  },
+  "security": {
+    "status": "ACTIVE",
+    "plaintextSecretsInThisJson": false,
+    "fullCardNumbersInThisJson": false,
+    "cardSecurityCodesInThisJson": false,
+    "privateBankAccountNumbersInThisJson": false,
+    "sensitiveSettlementCodesInThisJson": false,
+    "sourceClaimsDistinguishedFromExternalVerification": true
+  },
+  "sourceRegistry": [
+    "1-NBER8VBQmAot2z3dZYpUTBLc9Xhok6Z3u_LC4MJy2o",
+    "1vobzC9uSCu99SA3huK8A2WLVT-NRpXq3ZpnqhQIXGeg",
+    "17OvjsA5GkK9ye7vfaQxn4YTSbaHXsgf29l0P7DUrt_M",
+    "1ZjRGrivE7yC8Z6cTkJaJoRcJKRbt4n5h9wXGp0bZ9qA",
+    "1KXEo93lLWXyw_wv8m3E4q-elw5lOfx3mL6PjH5NCRQQ",
+    "1Ah8jBEgAEvQUlG8CFb7KQlkNUNDNaU0fjzSIfHLHMkw",
+    "1D5T6H8K76o93yOGMLqdaAuABwD37S5cQiiW7FHbNTi8",
+    "1O2-sae4xWVfbtyp199kpgTovU_-BQc1aC7x1CbgECAk",
+    "1eDr5WcWbxWoOs3rlouaTd-3KQQsZjz0r2aFkvlwJUV0",
+    "1LYAxd0TnMX4b_n5lSU71DA1_dg5SefIn",
+    "1zKjAe2MREZJrRkTLSkK3BGlPEJ4eBuql",
+    "1RNNr5KDfXh3JasjvistFZPe8NomxjAiNBudc7f3yJtg",
+    "1wEHJfzZObI-cGVj3Ut8n8rkzaY3T6-0dWPf1ciM5oFg",
+    "1dk8MYFc0og-EV3FFly3SmUD5BbTIX9GKQhNZml_n3Qk",
+    "1ZCYzkewaQsEsi5VfPr1qAKYTKDfwrSDGacx5iEb8ECw"
+  ]
 }
