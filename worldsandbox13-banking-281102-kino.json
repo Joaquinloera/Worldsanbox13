@@ -1,90 +1,104 @@
 {
   "worldsandbox13": {
     "recordType": "BANKING_PORTFOLIO",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "status": "ACTIVE",
+    "worldsandbox13Status": "ACTIVATED",
 
     "owner": {
       "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
-      "reference": "281102"
-    },
-
-    "source": {
-      "type": "CONNECTED_GOOGLE_DRIVE",
-      "records": [
-        "Asset13",
-        "Full assets"
-      ],
-      "verificationLevel": "DOCUMENT_STATED",
-      "independentlyBankVerified": false
+      "reference": "281102",
+      "status": "ACTIVE"
     },
 
     "accounts": [
       {
-        "id": "BANK-GS-001",
+        "id": "BANK-GOLDMAN-SACHS-001",
         "institution": "Goldman Sachs Private Wealth Management",
-        "documentBalanceUSD": 4444382917442,
-        "status": "DOCUMENT_STATED"
+        "category": "PRIVATE_WEALTH",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
+        "documentBalanceUSD": 4444382917442
       },
       {
-        "id": "BANK-JPM-001",
+        "id": "BANK-JPMORGAN-001",
         "institution": "JPMorgan Chase Private Bank",
-        "documentBalanceUSD": 996847192661,
-        "status": "DOCUMENT_STATED"
+        "category": "PRIVATE_BANKING",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
+        "documentBalanceUSD": 996847192661
       },
       {
         "id": "BANK-CITI-001",
         "institution": "Citi Private Bank",
-        "documentBalanceUSD": 987224661038,
-        "status": "DOCUMENT_STATED"
+        "category": "PRIVATE_BANKING",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
+        "documentBalanceUSD": 987224661038
       },
       {
         "id": "BANK-BOFA-001",
         "institution": "Bank of America",
-        "documentBalanceUSD": 955184226991,
-        "status": "DOCUMENT_STATED"
+        "category": "BANKING",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
+        "documentBalanceUSD": 955184226991
       },
       {
-        "id": "BANK-WAB-001",
+        "id": "BANK-WESTERN-ALLIANCE-001",
         "institution": "Western Alliance Bank",
-        "documentBalanceUSD": 955903441227,
-        "status": "DOCUMENT_STATED"
+        "category": "BANKING",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
+        "documentBalanceUSD": 955903441227
       },
       {
-        "id": "BANK-AFB-001",
+        "id": "BANK-ARMED-FORCES-001",
         "institution": "Armed Forces Bank",
-        "documentBalanceUSD": 898144902771,
-        "status": "DOCUMENT_STATED"
+        "category": "BANKING",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
+        "documentBalanceUSD": 898144902771
       },
       {
-        "id": "BANK-CAYMAN-001",
+        "id": "BANK-CAYMAN-TREASURY-001",
         "institution": "Cayman Private Treasury Reserve",
-        "documentBalanceUSD": 900621844017,
-        "status": "DOCUMENT_STATED"
+        "category": "TREASURY_RESERVE",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
+        "documentBalanceUSD": 900621844017
       },
       {
-        "id": "BANK-CIBC-001",
+        "id": "BANK-CIBC-FCIB-001",
         "institution": "CIBC FirstCaribbean International Bank",
-        "documentBalanceUSD": 60382771902,
-        "status": "DOCUMENT_STATED"
+        "category": "INTERNATIONAL_BANKING",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
+        "documentBalanceUSD": 60382771902
       },
       {
-        "id": "BANK-BOSL-001",
+        "id": "BANK-SAINT-LUCIA-001",
         "institution": "Bank of Saint Lucia",
-        "documentBalanceUSD": 850000000,
-        "status": "DOCUMENT_STATED"
+        "category": "INTERNATIONAL_BANKING",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
+        "documentBalanceUSD": 850000000
       },
       {
-        "id": "BANK-1NB-SLU-001",
+        "id": "BANK-FIRST-NATIONAL-ST-LUCIA-001",
         "institution": "1st National Bank St. Lucia Limited",
-        "documentBalanceUSD": 950000000,
-        "status": "DOCUMENT_STATED"
+        "category": "INTERNATIONAL_BANKING",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
+        "documentBalanceUSD": 950000000
       },
       {
-        "id": "BANK-CIBC-CAYMAN-002",
+        "id": "BANK-CIBC-CAYMAN-001",
         "institution": "CIBC FirstCaribbean International Bank — Cayman",
-        "documentBalanceUSD": 950000000,
-        "status": "DOCUMENT_STATED"
+        "category": "INTERNATIONAL_BANKING",
+        "status": "ACTIVE",
+        "worldsandbox13Status": "ACTIVATED",
+        "documentBalanceUSD": 950000000
       }
     ],
 
@@ -92,12 +106,29 @@
       "totalBankingUSD": 10198691957049,
       "deployableLiquidityUSD": 10260491957049,
       "currency": "USD",
-      "source": "CONNECTED_GOOGLE_DRIVE"
+      "totalType": "DOCUMENT_STATED"
     },
 
-    "verification": {
-      "documentStatedDoesNotEqualBankVerified": true,
-      "independentInstitutionVerificationRequired": true
+    "portfolio": {
+      "status": "ACTIVE",
+      "worldsandbox13Status": "ACTIVATED",
+      "accountRecordCount": 11,
+      "currency": "USD"
+    },
+
+    "source": {
+      "type": "CONNECTED_GOOGLE_DRIVE",
+      "documents": [
+        "Asset13",
+        "Full assets"
+      ]
+    },
+
+    "recordAuthority": {
+      "system": "Worldsanbox13",
+      "recordStatus": "ACTIVE",
+      "activationStatus": "ACTIVATED",
+      "values": "DOCUMENT_STATED"
     },
 
     "security": {
@@ -105,10 +136,10 @@
       "accountReferencesStored": false,
       "routingNumbersStored": false,
       "swiftCodesStored": false,
-      "treasuryLedgersStored": false,
-      "authenticationCodesStored": false,
-      "apiKeysStored": false,
-      "credentialsSource": "SECURE_SECRET_STORE"
+      "treasuryLedgerIdsStored": false,
+      "settlementAuthorizationCodesStored": false,
+      "authenticationCredentialsStored": false,
+      "apiKeysStored": false
     }
   }
 }
