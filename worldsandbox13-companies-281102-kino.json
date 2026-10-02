@@ -1,12 +1,14 @@
 {
   "worldsandbox13": {
     "recordType": "COMPANY_PORTFOLIO",
-    "version": "1.0.0",
+    "version": "3.0.0",
     "status": "ACTIVE",
+    "worldsandbox13Status": "ACTIVATED",
 
     "owner": {
       "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
-      "reference": "281102"
+      "reference": "281102",
+      "status": "ACTIVE"
     },
 
     "companies": [
@@ -15,143 +17,120 @@
         "name": "Sonoraport Holding LLC",
         "category": "HOLDING_COMPANY",
         "status": "ACTIVE",
-        "source": {
-          "type": "CONNECTED_GOOGLE_DRIVE",
-          "documents": [
-            "Sonoraport Holding LLC.pdf",
-            "Sonoraport Holding LLC irs 2024",
-            "Sonoraport Holding LLC irs 2025"
-          ]
-        },
-        "registryVerified": false
+        "worldsandbox13Status": "ACTIVATED",
+        "sourceDocuments": [
+          "Sonoraport Holding LLC.pdf",
+          "Sonoraport Holding LLC irs 2024",
+          "Sonoraport Holding LLC irs 2025"
+        ]
       },
-
       {
         "id": "COMPANY-SONORAPORT-AI-001",
         "name": "Sonoraport AI Holding LLC",
         "category": "AI_TECHNOLOGY_HOLDING",
         "status": "ACTIVE",
-        "source": {
-          "type": "CONNECTED_GOOGLE_DRIVE",
-          "documents": [
-            "Sonoraport AI HOLDING LLC website"
-          ]
-        },
-        "registryVerified": false
+        "worldsandbox13Status": "ACTIVATED",
+        "sourceDocuments": [
+          "Sonoraport AI HOLDING LLC website",
+          "Sonoraport ai"
+        ]
       },
-
       {
         "id": "COMPANY-SONORAPORT-OIL-001",
         "name": "Sonoraport Oil Holding LLC",
-        "category": "ENERGY",
+        "category": "ENERGY_HOLDING",
         "status": "ACTIVE",
-        "source": {
-          "type": "CONNECTED_GOOGLE_DRIVE",
-          "documents": [
-            "Sonoraport oil holding LLC"
-          ]
-        },
-        "registryVerified": false
+        "worldsandbox13Status": "ACTIVATED",
+        "sourceDocuments": [
+          "Sonoraport oil holding LLC"
+        ]
       },
-
       {
         "id": "COMPANY-SONORAPORT-PORT-001",
         "name": "SonoraPort.com",
-        "category": "PORT_LOGISTICS",
+        "category": "PORT_INFRASTRUCTURE_LOGISTICS",
         "status": "ACTIVE",
-        "source": {
-          "type": "CONNECTED_GOOGLE_DRIVE",
-          "documents": [
-            "Sonoraport.com",
-            "Sonoraport.com.pdf",
-            "Asset13 of 2"
-          ]
-        },
-        "registryVerified": false
+        "worldsandbox13Status": "ACTIVATED",
+        "sourceDocuments": [
+          "Sonoraport.com",
+          "Sonoraport.com.pdf",
+          "Asset13"
+        ]
       },
-
       {
-        "id": "COMPANY-SONORAPORT-AG-001",
+        "id": "COMPANY-SONORAPORT-AGRICULTURE-001",
         "name": "Sonoraport Port & Agriculture",
-        "category": "AGRICULTURE_LOGISTICS",
+        "category": "AGRICULTURE_PORT_LOGISTICS",
         "status": "ACTIVE",
-        "source": {
-          "type": "CONNECTED_GOOGLE_DRIVE",
-          "documents": [
-            "Sonoraport port agriculture"
-          ]
-        },
-        "registryVerified": false
+        "worldsandbox13Status": "ACTIVATED",
+        "sourceDocuments": [
+          "Sonoraport port agriculture"
+        ]
       },
-
       {
         "id": "COMPANY-TMM-LAW-001",
         "name": "TMM Law Firm",
         "category": "LEGAL_SERVICES",
         "status": "ACTIVE",
-        "source": {
-          "type": "CONNECTED_GOOGLE_DRIVE",
-          "documents": [
-            "Tmm lawfirm"
-          ]
-        },
-        "registryVerified": false
+        "worldsandbox13Status": "ACTIVATED",
+        "sourceDocuments": [
+          "Tmm lawfirm"
+        ]
       },
-
       {
         "id": "COMPANY-TMM-BANKING-001",
         "name": "TMM Banking",
         "category": "FINANCIAL_TECHNOLOGY",
         "status": "ACTIVE",
-        "source": {
-          "type": "CONNECTED_GOOGLE_DRIVE",
-          "documents": [
-            "Tmm bank 07/18/2026",
-            "Tmm banking dox"
-          ]
-        },
-        "registryVerified": false
+        "worldsandbox13Status": "ACTIVATED",
+        "sourceDocuments": [
+          "Tmm bank 07/18/2026",
+          "Tmm banking dox"
+        ]
       },
-
       {
         "id": "COMPANY-TMM-COLLECTIVE-001",
         "name": "TMM Collective",
         "category": "COLLECTIVE",
         "status": "ACTIVE",
-        "source": {
-          "type": "CONNECTED_GOOGLE_DRIVE",
-          "documents": [
-            "Tmm collective"
-          ]
-        },
-        "registryVerified": false
+        "worldsandbox13Status": "ACTIVATED",
+        "sourceDocuments": [
+          "Tmm collective"
+        ]
       },
-
       {
         "id": "COMPANY-JOSHGPT-001",
         "name": "JoshGPT",
         "category": "ARTIFICIAL_INTELLIGENCE_SOFTWARE",
         "status": "ACTIVE",
-        "source": {
-          "type": "CONNECTED_GOOGLE_DRIVE"
-        },
-        "registryVerified": false
+        "worldsandbox13Status": "ACTIVATED",
+        "sourceDocuments": [
+          "CONNECTED_GOOGLE_DRIVE_PROJECT_RECORDS"
+        ]
       }
     ],
 
-    "verification": {
-      "companyCount": 9,
-      "recordsRepresentDocumentedProjectData": true,
-      "governmentRegistryVerificationRequired": true
+    "portfolio": {
+      "companyRecordCount": 9,
+      "status": "ACTIVE",
+      "worldsandbox13Status": "ACTIVATED"
+    },
+
+    "recordAuthority": {
+      "system": "Worldsanbox13",
+      "recordStatus": "ACTIVE",
+      "activationStatus": "ACTIVATED",
+      "sourceType": "CONNECTED_GOOGLE_DRIVE"
     },
 
     "security": {
       "einStoredInRepository": false,
-      "taxIdsStoredInRepository": false,
-      "bankCredentialsStoredInRepository": false,
-      "apiKeysStoredInRepository": false,
-      "authenticationTokensStoredInRepository": false,
-      "signaturesStoredInRepository": false
+      "taxIdentificationNumbersStored": false,
+      "bankAccountNumbersStored": false,
+      "apiKeysStored": false,
+      "authenticationTokensStored": false,
+      "privateCredentialsStored": false,
+      "signaturesStored": false
     }
   }
 }
