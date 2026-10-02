@@ -1,71 +1,113 @@
 {
   "worldsandbox13": {
     "recordType": "BANKING_PORTFOLIO",
+    "version": "2.0.0",
+    "status": "ACTIVE",
+
     "owner": {
       "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
       "reference": "281102"
     },
-    "source": "CONNECTED_GOOGLE_DRIVE",
-    "banks": [
+
+    "source": {
+      "type": "CONNECTED_GOOGLE_DRIVE",
+      "records": [
+        "Asset13",
+        "Full assets"
+      ],
+      "verificationLevel": "DOCUMENT_STATED",
+      "independentlyBankVerified": false
+    },
+
+    "accounts": [
       {
+        "id": "BANK-GS-001",
         "institution": "Goldman Sachs Private Wealth Management",
-        "accountReference": "REDACTED",
-        "documentBalanceUSD": 4444382917442
+        "documentBalanceUSD": 4444382917442,
+        "status": "DOCUMENT_STATED"
       },
       {
+        "id": "BANK-JPM-001",
         "institution": "JPMorgan Chase Private Bank",
-        "accountReference": "REDACTED",
-        "documentBalanceUSD": 996847192661
+        "documentBalanceUSD": 996847192661,
+        "status": "DOCUMENT_STATED"
       },
       {
+        "id": "BANK-CITI-001",
         "institution": "Citi Private Bank",
-        "accountReference": "REDACTED",
-        "documentBalanceUSD": 987224661038
+        "documentBalanceUSD": 987224661038,
+        "status": "DOCUMENT_STATED"
       },
       {
+        "id": "BANK-BOFA-001",
         "institution": "Bank of America",
-        "accountReference": "REDACTED",
-        "documentBalanceUSD": 955184226991
+        "documentBalanceUSD": 955184226991,
+        "status": "DOCUMENT_STATED"
       },
       {
+        "id": "BANK-WAB-001",
         "institution": "Western Alliance Bank",
-        "accountReference": "REDACTED",
-        "documentBalanceUSD": 955903441227
+        "documentBalanceUSD": 955903441227,
+        "status": "DOCUMENT_STATED"
       },
       {
+        "id": "BANK-AFB-001",
         "institution": "Armed Forces Bank",
-        "accountReference": "REDACTED",
-        "documentBalanceUSD": 898144902771
+        "documentBalanceUSD": 898144902771,
+        "status": "DOCUMENT_STATED"
       },
       {
+        "id": "BANK-CAYMAN-001",
         "institution": "Cayman Private Treasury Reserve",
-        "accountReference": "REDACTED",
-        "documentBalanceUSD": 900621844017
+        "documentBalanceUSD": 900621844017,
+        "status": "DOCUMENT_STATED"
       },
       {
+        "id": "BANK-CIBC-001",
         "institution": "CIBC FirstCaribbean International Bank",
-        "accountReference": "REDACTED",
-        "documentBalanceUSD": 60382771902
+        "documentBalanceUSD": 60382771902,
+        "status": "DOCUMENT_STATED"
       },
       {
+        "id": "BANK-BOSL-001",
         "institution": "Bank of Saint Lucia",
-        "accountReference": "REDACTED",
-        "documentBalanceUSD": 850000000
+        "documentBalanceUSD": 850000000,
+        "status": "DOCUMENT_STATED"
       },
       {
+        "id": "BANK-1NB-SLU-001",
         "institution": "1st National Bank St. Lucia Limited",
-        "accountReference": "REDACTED",
-        "documentBalanceUSD": 950000000
+        "documentBalanceUSD": 950000000,
+        "status": "DOCUMENT_STATED"
+      },
+      {
+        "id": "BANK-CIBC-CAYMAN-002",
+        "institution": "CIBC FirstCaribbean International Bank — Cayman",
+        "documentBalanceUSD": 950000000,
+        "status": "DOCUMENT_STATED"
       }
     ],
+
     "documentTotals": {
       "totalBankingUSD": 10198691957049,
-      "deployableLiquidityUSD": 10260491957049
+      "deployableLiquidityUSD": 10260491957049,
+      "currency": "USD",
+      "source": "CONNECTED_GOOGLE_DRIVE"
     },
+
+    "verification": {
+      "documentStatedDoesNotEqualBankVerified": true,
+      "independentInstitutionVerificationRequired": true
+    },
+
     "security": {
-      "accountNumbersInRepository": false,
-      "routingNumbersInRepository": false,
-      "apiKeysInRepository": false,
+      "accountNumbersStored": false,
+      "accountReferencesStored": false,
+      "routingNumbersStored": false,
+      "swiftCodesStored": false,
+      "treasuryLedgersStored": false,
+      "authenticationCodesStored": false,
+      "apiKeysStored": false,
       "credentialsSource": "SECURE_SECRET_STORE"
     }
   }
