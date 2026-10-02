@@ -1,0 +1,81 @@
+{
+  "worldsandbox13": {
+    "recordType": "PROPERTY_ASSET_PORTFOLIO",
+    "status": "ACTIVE",
+    "owner": {
+      "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+      "reference": "281102"
+    },
+    "properties": [
+      {
+        "name": "Buckhorn Property",
+        "address": "1344 Buckhorn Loop, Flagstaff, AZ 86005",
+        "county": "Coconino",
+        "state": "Arizona",
+        "country": "USA",
+        "parcelId": "116-65-012",
+        "status": "ACTIVE"
+      },
+      {
+        "name": "Jade Mountain Resort",
+        "address": "1000 Anse Chastanet Road, Soufrière Quarter, Soufrière, Saint Lucia",
+        "documentValueUSD": 450000000,
+        "status": "ACTIVE"
+      },
+      {
+        "name": "Sandals Grande St. Lucian Spa & Beach Resort",
+        "address": "Pigeon Island Causeway, Gros Islet, Saint Lucia",
+        "documentValueUSD": 500000000,
+        "status": "ACTIVE"
+      },
+      {
+        "name": "Coconut Bay Beach Resort & Spa",
+        "address": "Eau Piquant, Vieux Fort, Saint Lucia",
+        "documentValueUSD": 275000000,
+        "status": "ACTIVE"
+      },
+      {
+        "name": "Bay Gardens Resort & Hotel Portfolio",
+        "address": "Rodney Bay, Gros Islet, Saint Lucia",
+        "documentValueUSD": 220000000,
+        "status": "ACTIVE"
+      },
+      {
+        "name": "Ladera Resort",
+        "address": "Rabot Estate, Soufrière, Saint Lucia",
+        "documentValueUSD": 175000000,
+        "status": "ACTIVE"
+      },
+      {
+        "name": "Anse Chastanet Resort",
+        "address": "Old French Road, Soufrière, Saint Lucia",
+        "documentValueUSD": 150000000,
+        "status": "ACTIVE"
+      },
+      {
+        "name": "Cap Maison Luxury Resort & Villas",
+        "address": "Smugglers Cove Drive, Cap Estate, Gros Islet, Saint Lucia",
+        "documentValueUSD": 120000000,
+        "status": "ACTIVE"
+      },
+      {
+        "name": "Villa Susanna",
+        "address": "Trou Rolland Bay, Marigot Bay, Castries, Saint Lucia",
+        "documentValueUSD": 6250000,
+        "status": "ACTIVE"
+      },
+      {
+        "name": "Sonora Port Development Land",
+        "address": "Guaymas / Empalme Industrial Port Corridor, Sonora, Mexico",
+        "parcels": "Industrial Lots A-101 through A-110",
+        "landAreaHectares": 250,
+        "documentValueUSD": 250000000,
+        "status": "ACTIVE"
+      }
+    ],
+    "security": {
+      "apiKeysStoredInRepository": false,
+      "credentialsSource": "ENVIRONMENT"
+    }
+  }
+}
