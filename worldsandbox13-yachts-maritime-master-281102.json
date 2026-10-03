@@ -1,0 +1,180 @@
+{
+  "worldsandbox13": {
+    "recordType": "WORLDSANBOX13_YACHTS_MARITIME_MASTER_REGISTRY",
+    "version": "1.0.0",
+    "status": "ACTIVE",
+    "registryReference": "281102",
+
+    "leadership": {
+      "ceo": {
+        "name": "Kayleen Merissa Loera Guzman Sanchez Daniel",
+        "title": "Chief Executive Officer",
+        "reference": "1335",
+        "status": "ACTIVE"
+      }
+    },
+
+    "principal": {
+      "name": "Joaquín Archivaldo Guzmán Loera Sanchez Daniel",
+      "reference": "281102",
+      "status": "ACTIVE"
+    },
+
+    "assetClass": "YACHTS_AND_MARITIME",
+
+    "registryPolicy": {
+      "projectQuantity": 50000,
+      "paymentStatus": "PAID IN FULL",
+      "balanceDueUSD": 0,
+      "pending": false,
+      "officialIdentifiers": "SOURCE_DOCUMENT_IDENTIFIERS_RETAINED",
+      "internalRegistryIdentifiers": "WORLDSANDBOX13_INTERNAL"
+    },
+
+    "fleet": {
+      "fleetId": "MAR-FEADSHIP-281102",
+      "assetType": "SUPER_YACHT_FLEET",
+
+      "projectQuantity": 50000,
+      "sourceDocumentQuantity": 500,
+
+      "builder": "Feadship",
+      "seller": "Feadship Yachts B.V.",
+
+      "sourceYacht": {
+        "name": "Breakthrough",
+        "builder": "Feadship",
+        "model": "118.8 Meter Superyacht",
+        "yearBuilt": 2025,
+        "hullNumber": "118B-2025",
+        "registrationNumber": "NL-2025-BREAK-001",
+        "flag": "Netherlands",
+        "location": "Port of Amsterdam, Netherlands"
+      },
+
+      "internalRegistrySeries": {
+        "prefix": "MAR-FEADSHIP-281102",
+        "start": 1,
+        "end": 50000,
+        "firstInternalId": "MAR-FEADSHIP-281102-00001",
+        "lastInternalId": "MAR-FEADSHIP-281102-50000"
+      },
+
+      "transaction": {
+        "agreementType": "SUPER YACHT PURCHASE AGREEMENT & BILL OF SALE",
+        "agreementDate": "2025-08-03",
+        "purchasePriceUSD": 645000000,
+        "depositPaidUSD": 64500000,
+        "depositDate": "2025-07-15",
+        "balancePaidUSD": 580500000,
+        "balancePaymentDate": "2025-08-03",
+        "closingDate": "2025-08-03",
+        "paymentStatus": "PAID IN FULL",
+        "balanceDueUSD": 0,
+        "pending": false
+      },
+
+      "sellerInformation": {
+        "name": "Feadship Yachts B.V.",
+        "address": "Aalsmeerderdijk 215, 1438 BV Oude Meer, The Netherlands",
+        "signatory": "Willem Van der Meer",
+        "signatoryTitle": "Sales Director, Feadship Yachts B.V.",
+        "signatureType": "Signed electronically",
+        "signatureDate": "2025-08-03"
+      },
+
+      "buyerInformation": {
+        "name": "Joaquín Archivaldo Guzmán Loera Sanchez Daniel",
+        "reference": "281102",
+        "acceptanceDate": "2025-08-03"
+      },
+
+      "witness": {
+        "name": "Maria Jansen",
+        "date": "2025-08-03"
+      },
+
+      "notary": {
+        "jurisdiction": "Netherlands",
+        "county": "Amsterdam",
+        "acknowledgmentDate": "2025-08-03",
+        "name": "Hendrik de Vries",
+        "commissionNumber": "NL-678945"
+      },
+
+      "terms": {
+        "saleAndTransfer": "Seller agrees to sell and Buyer agrees to buy the yacht described in the agreement for the Purchase Price.",
+        "condition": "Sold as-is except for agreed warranties documented separately.",
+        "title": "Seller guarantees good and marketable title free of liens or encumbrances.",
+        "inspection": "Buyer conducted and approved pre-delivery inspection and sea trials.",
+        "registration": "Seller provided documents for ownership transfer and registration.",
+        "riskAndInsurance": "Risk passed to Buyer upon closing; Buyer responsible for insurance from closing date.",
+        "governingLaw": "Netherlands"
+      },
+
+      "sourceFleetSchedule": {
+        "builder": "Feadship",
+        "sourceQuantity": 500,
+        "class": "Ultra-Luxury Superyacht Fleet",
+        "averageLengthMeters": "80-120",
+        "fleetRegistryId": "FSD-500-M281",
+        "sourceFleetValueUSD": 323771004118,
+
+        "configurationIncludes": [
+          "Helipad",
+          "Luxury Suites",
+          "Boardroom",
+          "Medical Bay",
+          "Infinity Pool",
+          "Security Command Deck",
+          "Submarine Dock"
+        ],
+
+        "primaryMaritimeCorridors": [
+          "Caribbean Sea",
+          "Gulf of Mexico",
+          "Pacific Coast",
+          "Mediterranean Sea",
+          "Persian Gulf"
+        ],
+
+        "logisticsSupport": "24 Months Extendable"
+      },
+
+      "sourceSnapshots": [
+        {
+          "source": "Super yacht",
+          "sourceQuantity": 500,
+          "yachtName": "Breakthrough",
+          "hullNumber": "118B-2025",
+          "registrationNumber": "NL-2025-BREAK-001",
+          "purchasePriceUSD": 645000000,
+          "paymentStatus": "PAID IN FULL",
+          "closingDate": "2025-08-03"
+        },
+        {
+          "source": "Asset13 of 2",
+          "asset": "Feadship Superyacht Fleet",
+          "sourceQuantity": 500,
+          "sourceFleetValueUSD": 323771004118
+        }
+      ]
+    },
+
+    "portfolioSnapshot": {
+      "source": "Asset13 of 2",
+      "aviationAndMaritime": {
+        "airbusA380VipFleetUSD": 301882774118,
+        "uh60BlackHawkFleetUSD": 18992774221,
+        "feadshipSuperyachtFleetUSD": 323771004118,
+        "totalUSD": 644646552457
+      }
+    },
+
+    "paymentSummary": {
+      "status": "PAID IN FULL",
+      "balanceDueUSD": 0,
+      "pending": false
+    }
+  }
+}
