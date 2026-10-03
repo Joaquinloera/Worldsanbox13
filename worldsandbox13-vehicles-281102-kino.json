@@ -1,56 +1,250 @@
 {
-  "worldsandbox13": {
-    "recordType": "VEHICLE_PORTFOLIO",
-    "version": "1.0.0",
-    "status": "ACTIVE",
-
-    "owner": {
-      "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
-      "reference": "281102"
-    },
-
-    "vehicles": [
-      {
-        "id": "VEHICLE-ROLLSROYCE-001",
-        "manufacturer": "Rolls-Royce",
-        "model": "Phantom EWB",
-        "category": "LUXURY_AUTOMOBILE",
-
-        "identifiers": {
-          "vin": null,
-          "licensePlate": null,
-          "titleNumber": null
-        },
-
-        "financial": {
-          "documentValueUSD": null,
-          "purchasePriceUSD": null,
-          "balanceUSD": null
-        },
-
-        "verification": {
-          "recordBasis": "PROJECT_DOCUMENT_REFERENCE",
-          "titleRegistryVerified": false,
-          "ownershipIndependentlyVerified": false,
-          "valuationVerified": false
-        }
+  "recordType": "WORLDSANBOX13_VEHICLE_ASSET_REGISTRY",
+  "version": "1.1.0",
+  "status": "ACTIVE",
+  "owner": {
+    "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+    "reference": "281102"
+  },
+  "projectUpdate": {
+    "quantity": 50000,
+    "paymentStatus": "PAID IN FULL",
+    "balanceDueUSD": 0,
+    "pending": false
+  },
+  "vehicles": [
+    {
+      "sourceDocument": "Luxury vehicle bill of sale certificate.png",
+      "sourceDocumentQuantity": 1,
+      "quantity": 50000,
+      "year": 2027,
+      "make": "Rolls-Royce",
+      "model": "Cullinan Base",
+      "vin": "SLA23HA04XUU236221",
+      "stockNumber": "RR0330",
+      "mileage": 23,
+      "exterior": "Burnout Grey Metallic",
+      "interior": "Phoenix Red Full Leather",
+      "engine": "6.75L V12 Twin-Turbo",
+      "horsepower": "563 HP",
+      "transmission": "8-speed automatic",
+      "drivetrain": "AWD",
+      "fuel": "Premium unleaded",
+      "bodyStyle": "SUV",
+      "doors": 4,
+      "seats": 5,
+      "seller": {
+        "name": "Rolls-Royce Motor Cars Scottsdale",
+        "address": "18089 N. Scottsdale Road, Phoenix, Arizona 85054",
+        "dealerLicenseNumber": "DLR-00088454-AZ"
+      },
+      "buyer": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+      "factoryOptions": [
+        "Black Badge Package",
+        "22\" Black Badge Alloy Wheels",
+        "Starlight Headliner",
+        "Bespoke Interior – Phoenix Red Full Leather",
+        "Advanced Security & Surveillance Suite",
+        "Rear Executive Lounge Seating",
+        "Champagne Cooler & Crystal Package",
+        "Armored Protection Package – B6 Level",
+        "Driver Assistance & Night Vision",
+        "Premium Audio System",
+        "Rolls-Royce Bespoke Commissions",
+        "Illuminated Treadplates – Black Badge",
+        "Embroidered RR Monogram to Headrests",
+        "Privacy Glass"
+      ],
+      "paymentStatus": "PAID IN FULL",
+      "balanceDueUSD": 0,
+      "pending": false,
+      "internalRegistrySeries": {
+        "prefix": "VEH-281102",
+        "start": 1,
+        "end": 50000
       }
-    ],
-
-    "sourceStatus": {
-      "connectedGoogleDriveSearched": true,
-      "completeVehicleScheduleExtracted": false,
-      "additionalVehicleRecordsMayExist": true
     },
-
-    "security": {
-      "vinStored": false,
-      "titleNumbersStored": false,
-      "driverLicenseNumbersStored": false,
-      "insurancePolicyNumbersStored": false,
-      "financingAccountNumbersStored": false,
-      "apiKeysStored": false,
-      "authenticationTokensStored": false
+    {
+      "sourceDocument": "Luxury vehicle bill of sale document.png",
+      "sourceDocumentQuantity": 1,
+      "quantity": 50000,
+      "year": 2027,
+      "make": "Rolls-Royce",
+      "model": "Cullinan Base",
+      "series": "Black Badge Series II",
+      "modelCode": "RR31",
+      "vin": "SLA23HA04XUU236221",
+      "stockNumber": "RR0330",
+      "mileage": 23,
+      "exterior": "Burnout Grey Metallic",
+      "exteriorCode": "N9E / Burnout Grey Metallic",
+      "interior": "Phoenix Red Full Leather",
+      "interiorCode": "RR Red / Phoenix Red",
+      "engine": "6.75L V12 Twin-Turbo",
+      "horsepower": "563 HP",
+      "transmission": "8-speed automatic",
+      "drivetrain": "AWD",
+      "fuel": "Premium unleaded",
+      "bodyStyle": "SUV",
+      "doors": 4,
+      "seats": 5,
+      "productionDate": "03/2027",
+      "countryOfOrigin": "United Kingdom",
+      "marketPriceUSD": 524050,
+      "discountUSD": -6000,
+      "dealerInstalledEquipmentUSD": 5490,
+      "dealerFeesUSD": 642,
+      "priceExcludingTaxAndGovernmentFeesUSD": 524082,
+      "totalPurchasePriceUSD": 524082,
+      "paymentMethod": "Wire Transfer / Cash",
+      "paymentStatus": "PAID IN FULL",
+      "balanceDueUSD": 0,
+      "pending": false,
+      "seller": "Rolls-Royce Motor Cars Scottsdale",
+      "buyer": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+      "internalRegistrySeries": {
+        "prefix": "VEH-281102",
+        "start": 1,
+        "end": 50000
+      }
+    },
+    {
+      "sourceDocument": "Luxury asset transfer certificate.png",
+      "sourceDocumentQuantity": 1,
+      "escrowFile": "EHG-2025-070226-001",
+      "dateOfSale": "2025-07-02",
+      "quantity": 50000,
+      "year": 2027,
+      "make": "Rolls-Royce",
+      "model": "Cullinan Base",
+      "vin": "SLA23HA04VU236221",
+      "stockNumber": "RR0300",
+      "mileage": 23,
+      "exterior": "Burnout Grey Metallic",
+      "interior": "Phoenix Red Full Leather",
+      "engine": "6.75L V12 Twin-Turbo",
+      "horsepower": "563 HP",
+      "transmission": "8-speed automatic",
+      "drivetrain": "AWD",
+      "fuel": "Premium unleaded",
+      "bodyStyle": "SUV",
+      "doors": 4,
+      "seats": 5,
+      "seller": "Rolls-Royce Motor Cars Scottsdale",
+      "buyer": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+      "paymentStatus": "PAID IN FULL",
+      "balanceDueUSD": 0,
+      "pending": false,
+      "internalRegistrySeries": {
+        "prefix": "VEH-281102",
+        "start": 1,
+        "end": 50000
+      }
+    },
+    {
+      "sourceDocument": "Ornate luxury vehicle bill of sale(1).png",
+      "sourceDocumentQuantity": 1,
+      "quantity": 50000,
+      "year": 2027,
+      "make": "Rolls-Royce",
+      "model": "Cullinan Base",
+      "series": "Black Badge Series II",
+      "modelCode": "RR31",
+      "vin": "SLA23HA04XUU236221",
+      "stockNumber": "RR0330",
+      "mileage": 23,
+      "exterior": "Burnout Grey Metallic",
+      "exteriorCode": "N9E / Burnout Grey Metallic",
+      "interior": "Phoenix Red Full Leather",
+      "interiorCode": "RR Red / Phoenix Red",
+      "productionDate": "03/2027",
+      "countryOfOrigin": "United Kingdom",
+      "marketPriceUSD": 524050,
+      "discountUSD": -6000,
+      "dealerInstalledEquipmentUSD": 5490,
+      "dealerFeesUSD": 642,
+      "totalPurchasePriceUSD": 524082,
+      "paymentMethod": "Wire Transfer / Cash",
+      "paymentStatus": "PAID IN FULL",
+      "balanceDueUSD": 0,
+      "pending": false,
+      "internalRegistrySeries": {
+        "prefix": "VEH-281102",
+        "start": 1,
+        "end": 50000
+      }
+    },
+    {
+      "sourceDocument": "Premium asset transfer bill of sale.png",
+      "sourceDocumentQuantity": 9,
+      "quantity": 50000,
+      "year": 2027,
+      "make": "Rolls-Royce",
+      "model": "Cullinan",
+      "modelDescription": "Black Badge Series II",
+      "vin": "SLA23HA01VU236201",
+      "stockNumber": "RR0300",
+      "exterior": "Burnout Grey Metallic",
+      "interior": "Phoenix Red Full Leather",
+      "pricingUSD": {
+        "basePriceNineUnits": 11250000,
+        "factoryOptionsAndBespokeCommission": 2750000,
+        "blackBadgePackage": 225000,
+        "b6ArmoredProtectionPackage": 4500000,
+        "deliveryAndLogistics": 125000,
+        "totalPurchasePrice": 19075000
+      },
+      "paymentStatus": "PAID IN FULL",
+      "paymentDate": "2025-07-02",
+      "paymentReference": "WF-2025-070226-281102",
+      "balanceDueUSD": 0,
+      "pending": false,
+      "internalRegistrySeries": {
+        "prefix": "VEH-281102",
+        "start": 1,
+        "end": 50000
+      }
+    },
+    {
+      "sourceDocument": "Escrow holdings group bill of sale.png",
+      "sourceDocumentQuantity": 9,
+      "quantity": 50000,
+      "year": 2027,
+      "make": "Rolls-Royce",
+      "model": "Cullinan",
+      "modelDescription": "Black Badge Series II",
+      "vin": "SLA23HA01VU236201",
+      "stockNumber": "RR0300",
+      "mileage": 23,
+      "exterior": "Burnout Grey Metallic",
+      "interior": "Phoenix Red Full Leather",
+      "paymentStatus": "PAID IN FULL",
+      "balanceDueUSD": 0,
+      "pending": false,
+      "internalRegistrySeries": {
+        "prefix": "VEH-281102",
+        "start": 1,
+        "end": 50000
+      }
     }
+  ],
+  "sourceRegistry": [
+    "Luxury vehicle bill of sale certificate.png",
+    "Luxury vehicle bill of sale document.png",
+    "Luxury asset transfer certificate.png",
+    "Ornate luxury vehicle bill of sale(1).png",
+    "Premium asset transfer bill of sale.png",
+    "Escrow holdings group bill of sale.png"
+  ],
+  "conflictingSourceValues": {
+    "vin": [
+      "SLA23HA04XUU236221",
+      "SLA23HA04VU236221",
+      "SLA23HA01VU236201"
+    ],
+    "stockNumber": [
+      "RR0330",
+      "RR0300"
+    ]
   }
 }
