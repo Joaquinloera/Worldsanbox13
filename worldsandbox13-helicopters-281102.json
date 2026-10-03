@@ -1,0 +1,121 @@
+{
+  "recordType": "WORLDSANBOX13_HELICOPTER_FLEET_REGISTRY",
+  "version": "1.0.0",
+  "status": "ACTIVE",
+  "registryReference": "281102",
+
+  "leadership": {
+    "ceo": {
+      "name": "Ms. Kayleen Merissa Loera Guzman Sanchez Daniel",
+      "title": "Chief Executive Officer",
+      "reference": "1335",
+      "status": "ACTIVE"
+    }
+  },
+
+  "principal": {
+    "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+    "reference": "281102"
+  },
+
+  "fleet": {
+    "assetClass": "HELICOPTER",
+    "aircraftModel": "UH-60M Black Hawk",
+    "configurationName": "Multi-Mission Utility Configuration",
+    "manufacturer": "Sikorsky Aircraft Division",
+
+    "projectQuantity": 50000,
+    "sourceDocumentQuantity": 500,
+
+    "sourceSerialNumberRange": {
+      "start": "70-00001",
+      "end": "70-00500"
+    },
+
+    "internalRegistrySeries": {
+      "prefix": "HELI-281102",
+      "start": 1,
+      "end": 50000
+    },
+
+    "configuration": [
+      "Troop Transport",
+      "MEDEVAC",
+      "SAR",
+      "Utility Cargo"
+    ],
+
+    "engines": {
+      "quantityPerAircraft": 2,
+      "model": "GE T700-GE-701D",
+      "type": "Turboshaft"
+    },
+
+    "deliverySchedule": {
+      "commencementYear": 2026,
+      "conclusionYear": 2030,
+      "method": "Tranches"
+    },
+
+    "includedSupport": [
+      "Aircraft",
+      "Pilot & Crew Training",
+      "Ground Support Equipment",
+      "Spare Parts",
+      "Technical Documentation",
+      "Long-Term Maintenance Support"
+    ],
+
+    "purchase": {
+      "sourcePurchasePriceUSD": 18750000000,
+      "paymentStatus": "PAID IN FULL",
+      "paymentDate": "2026-07-18",
+      "balanceDueUSD": 0,
+      "pending": false,
+      "closingDate": "2026-07-18"
+    },
+
+    "delivery": {
+      "terms": "FOB Origin",
+      "origin": "SonoraPort AI Holding LLC, Phoenix, Arizona, USA",
+      "sourceDocumentFinalDestination": "Caribbean Defense Council and Bolivarian Republic of Venezuela"
+    },
+
+    "seller": {
+      "name": "SonoraPort AI Holding LLC",
+      "address": {
+        "building": "One Renaissance Square",
+        "street": "2 N Central Ave",
+        "city": "Phoenix",
+        "state": "Arizona",
+        "postalCode": "85004",
+        "country": "USA"
+      }
+    },
+
+    "buyer": {
+      "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+      "reference": "281102"
+    },
+
+    "documentIdentifiers": {
+      "noticeId": "SAI-500-090725-01",
+      "portfolioSerialNumber": "SAI-UH-500-090725-01"
+    }
+  },
+
+  "sourceRecords": [
+    {
+      "sourceDocument": "Official bill of sale certificate.png",
+      "documentDate": "2026-07-18"
+    },
+    {
+      "sourceDocument": "Legal document for multi-mission helicopter fleet.png",
+      "documentDate": "2026-07-18"
+    },
+    {
+      "sourceDocument": "Luxury document with aircraft sale details.png",
+      "documentDate": "2026-07-18"
+    }
+  ]
+}
