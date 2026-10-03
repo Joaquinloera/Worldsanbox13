@@ -1,291 +1,107 @@
 {
-  "worldsandbox13": {
-    "recordType": "BLACKROCK_HARD_ASSET_PORTFOLIO",
-    "version": "2.0.0",
-    "status": "ACTIVE",
-    "worldsandbox13Status": "ACTIVATED",
-
-    "owner": {
-      "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
-      "reference": "281102"
+  "recordType": "WORLDSANBOX13_HARD_ASSET_MASTER_REGISTRY",
+  "version": "2.0.0",
+  "status": "ACTIVE",
+  "registryReference": "281102",
+  "leadership": {
+    "ceo": {
+      "name": "Ms. Kayleen Merissa Loera Guzman Sanchez Daniel",
+      "title": "Chief Executive Officer",
+      "reference": "1335",
+      "status": "ACTIVE"
+    }
+  },
+  "principal": {
+    "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+    "reference": "281102"
+  },
+  "sourceDocuments": [
+    "Asset13 of 2"
+  ],
+  "hardAssets": [
+    {
+      "assetClass": "GOLD",
+      "quantity": 147882,
+      "unit": "MT",
+      "reserveAccount": "GLD-440281-VT-11820",
+      "vaultReference": "VAULT-GLD-774291",
+      "valueUSD": 16204771882440,
+      "status": "ACTIVE"
     },
-
-    "agent": {
-      "designation": "AGENT (#1290 Don Pablo Emilio Escobar Gaviria)"
+    {
+      "assetClass": "SILVER",
+      "quantity": 1018440,
+      "unit": "MT",
+      "reserveAccount": "SLV-771904-VT-22910",
+      "vaultReference": "VAULT-SLV-440188",
+      "valueUSD": 1108442771209,
+      "status": "ACTIVE"
     },
-
-    "portfolio": {
-      "portfolioId": "PRT-281102-2026",
-      "dateIssued": "2026-06-29",
-      "jurisdiction": "United States of America / Global",
-      "totalPortfolioValuationUSD": 281102999777000,
-      "liquidTreasuryReserveUSD": 61800000000,
-      "hardAssetReserveUSD": 188888888888888,
-      "status": "ACTIVE",
-      "worldsandbox13Status": "ACTIVATED"
+    {
+      "assetClass": "DIAMONDS",
+      "quantity": 1018772441,
+      "unit": "carats",
+      "reserveAccount": "DIA-118204-GM-66291",
+      "vaultReference": "VAULT-DIA-662915",
+      "valueUSD": 101882771004882,
+      "status": "ACTIVE"
     },
-
+    {
+      "assetClass": "RUBY",
+      "quantity": 902118447,
+      "unit": "carats",
+      "reserveAccount": "RBY-772044-GM-55120",
+      "status": "ACTIVE"
+    },
+    {
+      "assetClass": "EMERALD",
+      "quantity": 781447229,
+      "unit": "carats",
+      "reserveAccount": "EMR-661882-GM-11872",
+      "status": "ACTIVE"
+    },
+    {
+      "assetClass": "SAPPHIRE",
+      "quantity": 671208552,
+      "unit": "carats",
+      "reserveAccount": "SPH-290174-GM-88441",
+      "status": "ACTIVE"
+    },
+    {
+      "assetClass": "LITHIUM",
+      "quantity": 76281992,
+      "unit": "MT",
+      "reserveAccount": "LTH-884120-MN-22081",
+      "status": "ACTIVE"
+    },
+    {
+      "assetClass": "RARE_EARTH_ELEMENTS",
+      "quantity": 12881440,
+      "unit": "MT",
+      "reserveAccount": "REE-447712-MN-11824",
+      "status": "ACTIVE"
+    },
+    {
+      "assetClass": "COPPER",
+      "quantity": 286991771,
+      "unit": "MT",
+      "reserveAccount": "CPR-991820-MN-77120",
+      "status": "ACTIVE"
+    }
+  ],
+  "hardAssetSummary": {
+    "totalHardAssetValueUSD": 189447882771000,
+    "assetClassCount": 9,
     "assetClasses": [
-      "Precious Metals",
-      "Gems",
-      "Minerals",
-      "Real Estate",
-      "Hospitality",
-      "Aviation",
-      "Agriculture",
-      "Energy",
-      "Ports",
-      "Gaming",
-      "Digital Assets",
-      "Cash"
-    ],
-
-    "blackrockAssetSchedule": {
-      "ledgerId": "ASL-281102-2026-BR",
-      "dateIssued": "2026-07-02",
-      "status": "ACTIVE",
-      "worldsandbox13Status": "ACTIVATED",
-
-      "holders": [
-        {
-          "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
-          "reference": "281102"
-        },
-        {
-          "name": "Kayleen Merissa Lorea Guzman Sanchez Daniel",
-          "reference": "1335"
-        }
-      ],
-
-      "allocations": [
-        {
-          "assetClass": "Precious Metals",
-          "valueUSD": 88000000000000,
-          "allocationPercent": 31.3
-        },
-        {
-          "assetClass": "Gem Reserves",
-          "valueUSD": 45000000000000,
-          "allocationPercent": 16.0
-        },
-        {
-          "assetClass": "Strategic Minerals",
-          "valueUSD": 30000000000000,
-          "allocationPercent": 10.7
-        },
-        {
-          "assetClass": "Real Estate Holdings",
-          "valueUSD": 25000000000000,
-          "allocationPercent": 8.9
-        },
-        {
-          "assetClass": "Resort / Hospitality",
-          "valueUSD": 18000000000000,
-          "allocationPercent": 6.4
-        },
-        {
-          "assetClass": "Aviation Fleet",
-          "valueUSD": 12000000000000,
-          "allocationPercent": 4.3
-        },
-        {
-          "assetClass": "Port Infrastructure",
-          "valueUSD": 28000000000000,
-          "allocationPercent": 10.0
-        },
-        {
-          "assetClass": "Energy Assets",
-          "valueUSD": 20000000000000,
-          "allocationPercent": 7.1
-        },
-        {
-          "assetClass": "Digital Assets",
-          "valueUSD": 15102999777000,
-          "allocationPercent": 5.3
-        }
-      ],
-
-      "majorHoldings": [
-        {
-          "asset": "Gold Reserves",
-          "quantity": 144000,
-          "unit": "METRIC_TONS",
-          "status": "ACTIVE"
-        },
-        {
-          "asset": "Silver Reserves",
-          "quantity": 999000,
-          "unit": "METRIC_TONS",
-          "status": "ACTIVE"
-        },
-        {
-          "asset": "Platinum Group Metals",
-          "quantity": 144000,
-          "unit": "METRIC_TONS",
-          "status": "ACTIVE"
-        },
-        {
-          "asset": "Diamond Reserve",
-          "quantity": 999999999,
-          "unit": "CARATS",
-          "status": "ACTIVE"
-        },
-        {
-          "asset": "Ruby Reserve",
-          "quantity": 888888888,
-          "unit": "CARATS",
-          "status": "ACTIVE"
-        },
-        {
-          "asset": "Emerald Reserve",
-          "quantity": 777777777,
-          "unit": "CARATS",
-          "status": "ACTIVE"
-        },
-        {
-          "asset": "Sapphire Reserve",
-          "quantity": 666666666,
-          "unit": "CARATS",
-          "status": "ACTIVE"
-        },
-        {
-          "asset": "Lithium Reserve",
-          "quantity": 75000000,
-          "unit": "METRIC_TONS",
-          "status": "ACTIVE"
-        },
-        {
-          "asset": "Rare Earth Elements",
-          "quantity": 12000000,
-          "unit": "METRIC_TONS",
-          "status": "ACTIVE"
-        },
-        {
-          "asset": "Copper Reserve",
-          "quantity": 281102000,
-          "unit": "METRIC_TONS",
-          "status": "ACTIVE"
-        }
-      ],
-
-      "totalPortfolioValueUSD": 281102999777000
-    },
-
-    "liquidityCertificate": {
-      "certificateId": "POF-281102-2026-BR",
-      "issueDate": "2026-07-02",
-      "accountType": "Strategic Global Reserve Account",
-
-      "primaryClient": {
-        "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
-        "reference": "281102"
-      },
-
-      "coClient": {
-        "name": "Kayleen Merissa Lorea Guzman Sanchez Daniel",
-        "reference": "1335"
-      },
-
-      "liquidity": {
-        "treasuryCashReservesUSD": 61800000000,
-        "immediateSettlementCapacityUSD": 25000000000,
-        "creditLineCapacityUSD": 100000000000,
-        "totalPurchasingCapacityUSD": 186800000000
-      },
-
-      "authorizedAcquisitionClasses": [
-        "Luxury Real Estate",
-        "Resort Acquisitions",
-        "Casino Acquisitions",
-        "Aviation Purchases",
-        "Commercial Infrastructure",
-        "Strategic Investments",
-        "Hospitality & Tourism Assets",
-        "Mineral & Energy Assets"
-      ],
-
-      "settlementMethods": [
-        "Wire Transfer",
-        "Escrow",
-        "Treasury Settlement"
-      ],
-
-      "settlementWindow": "24-72 HOURS",
-      "jurisdiction": "United States / Global",
-      "status": "ACTIVE",
-      "worldsandbox13Status": "ACTIVATED"
-    },
-
-    "fullAssetsSchedule": {
-      "status": "ACTIVE",
-      "worldsandbox13Status": "ACTIVATED",
-      "hardAssetTotalUSD": 189447882771000,
-
-      "holdings": [
-        {
-          "asset": "Gold Reserve",
-          "quantity": 147882,
-          "unit": "METRIC_TONS",
-          "documentValueUSD": 16204771882440
-        },
-        {
-          "asset": "Silver",
-          "quantity": 1018440,
-          "unit": "METRIC_TONS",
-          "documentValueUSD": 1108442771209
-        },
-        {
-          "asset": "Diamonds",
-          "quantity": 1018772441,
-          "unit": "CARATS",
-          "documentValueUSD": 101882771004882
-        },
-        {
-          "asset": "Ruby",
-          "quantity": 902118447,
-          "unit": "CARATS"
-        },
-        {
-          "asset": "Emerald",
-          "quantity": 781447229,
-          "unit": "CARATS"
-        },
-        {
-          "asset": "Sapphire",
-          "quantity": 671208552,
-          "unit": "CARATS"
-        },
-        {
-          "asset": "Lithium",
-          "quantity": 76281992,
-          "unit": "METRIC_TONS"
-        },
-        {
-          "asset": "Rare Earth Elements",
-          "quantity": 12881440,
-          "unit": "METRIC_TONS"
-        },
-        {
-          "asset": "Copper",
-          "quantity": 286991771,
-          "unit": "METRIC_TONS"
-        }
-      ]
-    },
-
-    "sourceDocuments": [
-      {
-        "title": "Black rock",
-        "driveDocumentId": "1fA2-KyIfyMTPClPL3HGbjXo_Qs2-COcbDL_nYqinzlQ"
-      },
-      {
-        "title": "Black rock",
-        "driveDocumentId": "1F2lUbkRqe6NuUN9CptWSTCr6cNtCYWFMr7cRhiZ3hI0"
-      },
-      {
-        "title": "Full assets",
-        "driveDocumentId": "1-NBER8VBQmAot2z3dZYpUTBLc9Xhok6Z3u_LC4MJy2o"
-      }
+      "GOLD",
+      "SILVER",
+      "DIAMONDS",
+      "RUBY",
+      "EMERALD",
+      "SAPPHIRE",
+      "LITHIUM",
+      "RARE_EARTH_ELEMENTS",
+      "COPPER"
     ]
   }
 }
