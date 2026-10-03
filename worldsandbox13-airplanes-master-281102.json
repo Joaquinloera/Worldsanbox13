@@ -1,0 +1,392 @@
+{
+  "worldsandbox13": {
+    "recordType": "WORLDSANBOX13_AIRPLANE_MASTER_REGISTRY",
+    "version": "1.0.0",
+    "status": "ACTIVE",
+    "registryReference": "281102",
+
+    "leadership": {
+      "ceo": {
+        "name": "Kayleen Merissa Loera Guzman Sanchez Daniel",
+        "title": "Chief Executive Officer",
+        "reference": "1335",
+        "status": "ACTIVE"
+      }
+    },
+
+    "principal": {
+      "name": "Joaquín Archivaldo Guzmán Loera Sanchez Daniel",
+      "reference": "281102",
+      "status": "ACTIVE"
+    },
+
+    "assetClass": "AIRPLANES",
+
+    "registryPolicy": {
+      "projectQuantityPerFleet": 50000,
+      "paymentStatus": "PAID IN FULL",
+      "balanceDueUSD": 0,
+      "pending": false,
+      "officialIdentifiers": "SOURCE_DOCUMENT_IDENTIFIERS_RETAINED",
+      "internalRegistryIdentifiers": "WORLDSANDBOX13_INTERNAL"
+    },
+
+    "fleets": [
+      {
+        "fleetId": "AIR-A380-281102",
+        "assetType": "AIRCRAFT_FLEET",
+        "manufacturer": "Airbus",
+        "model": "Airbus A380-800 VIP",
+        "configuration": "Custom Head-of-State Luxury Configuration",
+
+        "projectQuantity": 50000,
+        "sourceDocumentQuantity": 500,
+
+        "sourceIdentifiers": {
+          "serialNumberRange": {
+            "start": "A380VIP-0001",
+            "end": "A380VIP-0500"
+          },
+          "tailNumberBlock": {
+            "start": "N9001JDS",
+            "end": "N9500JDS"
+          }
+        },
+
+        "internalRegistrySeries": {
+          "prefix": "AIR-A380-281102",
+          "start": 1,
+          "end": 50000,
+          "firstInternalId": "AIR-A380-281102-00001",
+          "lastInternalId": "AIR-A380-281102-50000"
+        },
+
+        "transaction": {
+          "billOfSaleDate": "2025-09-07",
+          "seller": "Airbus S.A.S. / AZAutorV.com - Aviation Division",
+          "transferOfficer": "Jeffery T. Barr",
+          "transferOfficerRole": "Director - FAA & EASA Transfers",
+          "transferAuthority": "AZAutorV.com - Aviation Division",
+          "transferLocation": "Scottsdale, Arizona",
+          "buyerReference": "281102",
+          "unitPriceUSD": 600000000,
+          "sourceTotalSalePriceUSD": 300000000000,
+          "paymentMethod": "Wire Transfer",
+          "paymentStatus": "PAID IN FULL",
+          "balanceDueUSD": 0,
+          "pending": false,
+          "ownershipEffective": "Immediately"
+        },
+
+        "delivery": {
+          "origin": "Airbus S.A.S., Toulouse, France",
+          "destination": "Phoenix Sky Harbor International Airport (PHX), Phoenix, Arizona",
+          "route": "Toulouse, France -> Phoenix Sky Harbor International Airport (PHX), Phoenix, Arizona",
+          "operationalRange": "Global, nonstop intercontinental"
+        },
+
+        "aircraftSpecifications": {
+          "engines": {
+            "quantity": 4,
+            "model": "Rolls-Royce Trent 900"
+          },
+          "lengthMeters": 72.7,
+          "lengthImperial": "238 ft 7 in",
+          "wingspanMeters": 79.75,
+          "wingspanImperial": "261 ft 8 in",
+          "heightMeters": 24.1,
+          "heightImperial": "79 ft",
+          "rangeNauticalMiles": 8000,
+          "rangeKilometers": 14800,
+          "cruiseSpeed": "Mach 0.85",
+          "cruiseSpeedMPH": 560,
+          "ceilingFeet": 43000,
+          "vipPassengerCapacity": "400-500",
+          "crew": "30-40",
+          "cabinDecks": "2 full passenger decks + cargo hold"
+        },
+
+        "luxuryFeatures": [
+          "Private suites with bedrooms, showers, and wardrobes",
+          "Lounges and salons with panoramic windows",
+          "Dining halls with seating for 50+",
+          "Conference halls with secure communications",
+          "Spa",
+          "Gym",
+          "Medical center onboard",
+          "Cinema theater with reclining seats",
+          "Prayer and meditation rooms",
+          "Global satellite Wi-Fi",
+          "Entertainment systems"
+        ],
+
+        "safetyAndSecurity": [
+          "Reinforced fuselage sections (VIP armor)",
+          "EMP-hardened avionics",
+          "Full fire suppression systems",
+          "Secure escape chutes and pods",
+          "Independent backup power generators"
+        ],
+
+        "passengerExperience": [
+          "Private VIP terminal arrival at PHX or other global hubs",
+          "Dual jet bridge boarding into Grand Atrium and Upper Deck",
+          "Personal attendants",
+          "Cathedral-style lounge",
+          "Private suites",
+          "Lounges",
+          "Theaters"
+        ],
+
+        "sourceFleetOverview": {
+          "fleetSize": 500,
+          "approximateTotalPassengerCapacity": 225000,
+          "fleetValueUSD": 300000000000
+        },
+
+        "sourceSnapshots": [
+          {
+            "source": "Boeing / Airbus A380 VIP fleet document",
+            "sourceQuantity": 500,
+            "sourceFleetValueUSD": 300000000000,
+            "paymentStatus": "PAID IN FULL"
+          },
+          {
+            "source": "Asset13 of 2",
+            "sourceQuantity": 500,
+            "sourceFleetValueUSD": 301882774118
+          }
+        ]
+      },
+
+      {
+        "fleetId": "AIR-HJ420-281102",
+        "assetType": "AIRCRAFT_FLEET",
+        "manufacturer": "Honda Aircraft Company, LLC",
+        "model": "Honda HA-420 HondaJet Elite II",
+
+        "projectQuantity": 50000,
+        "sourceDocumentQuantity": 550,
+
+        "sourceIdentifiers": {
+          "serialNumberRange": {
+            "start": "HJ420-7701",
+            "end": "HJ420-9250"
+          },
+          "tailNumberBlock": {
+            "start": "N6901H",
+            "end": "N8450H"
+          }
+        },
+
+        "internalRegistrySeries": {
+          "prefix": "AIR-HJ420-281102",
+          "start": 1,
+          "end": 50000,
+          "firstInternalId": "AIR-HJ420-281102-00001",
+          "lastInternalId": "AIR-HJ420-281102-50000"
+        },
+
+        "transaction": {
+          "billOfSaleDate": "2025-09-07",
+          "buyer": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+          "buyerReference": "281102",
+          "seller": "Honda Aircraft Company, LLC & AZAutorV.com - Aviation Division",
+          "transferOfficer": "Jeffery T. Barr",
+          "transferOfficerRole": "Director - FAA Transfers & Aviation Compliance",
+          "salePriceUSD": 3272500000,
+          "paymentMethod": "Wire Transfer",
+          "paymentStatus": "PAID IN FULL",
+          "balanceDueUSD": 0,
+          "pending": false
+        },
+
+        "delivery": {
+          "location": "Cutter Aviation FBO",
+          "airport": "Phoenix Sky Harbor International Airport",
+          "airportCode": "PHX",
+          "city": "Phoenix",
+          "state": "Arizona",
+          "deliveryDate": "2025-09-07",
+          "deliveryTime": "11:00 PM"
+        },
+
+        "sourceFleetCondition": {
+          "condition": "Factory New",
+          "averageFlightHours": "<50 hrs each",
+          "fleetColors": [
+            "White/Blue",
+            "Black/Chrome",
+            "Mixed Executive Schemes"
+          ]
+        },
+
+        "aircraftSpecifications": {
+          "engines": {
+            "quantity": 2,
+            "model": "GE Honda HF120"
+          },
+          "avionics": "Garmin G3000",
+          "interior": "Executive Interior",
+          "enclosedLavatory": true,
+          "wifi": true,
+          "customLuxuryConfigurations": true
+        },
+
+        "sourceTransferStatus": "FAA 8050-1 filings pending",
+
+        "sourceNotes": [
+          "Document states Cutter Aviation as the FBO for fleet delivery at Phoenix Sky Harbor.",
+          "Document references FAA Form 8050-1 for ownership-transfer filings."
+        ]
+      }
+    ],
+
+    "individualAircraftSourceRecords": [
+      {
+        "recordId": "HONDAJET-SOURCE-N21HJ",
+        "manufacturer": "Honda",
+        "model": "HA-420 HondaJet",
+        "aircraftClass": "Very Light Jet (VLJ)",
+        "sourceTailNumber": "N21HJ",
+        "sourceSerialNumber": "HJ420-7761",
+        "year": 2024,
+        "flightHours": 47,
+        "engines": "GE Honda HF120",
+        "salePriceUSD": 5950000,
+        "paymentMethod": "Wire Transfer",
+        "paymentStatus": "PAID IN FULL",
+        "balanceDueUSD": 0,
+        "pending": false,
+        "billOfSaleDate": "2025-07-17",
+        "deliveryLocation": "Cutter Aviation, Phoenix Sky Harbor International Airport (PHX), Phoenix, Arizona",
+        "seller": "AZAutorV.com - Scottsdale, AZ",
+        "buyer": "Joaquín Archivaldo Guzmán Loera Sanchez Daniel",
+        "buyerReference": "281102"
+      },
+
+      {
+        "recordId": "HONDAJET-SOURCE-N223CX",
+        "manufacturer": "Honda",
+        "model": "HA-420 HondaJet",
+        "aircraftClass": "Very Light Jet (VLJ)",
+        "sourceTailNumber": "N223CX",
+        "sourceSerialNumber": "42000258",
+        "yearOfManufacture": 2024,
+        "totalFlightHours": 47,
+        "condition": "Excellent / Like New",
+        "exteriorColor": "White Base with Black Accent Striping (Obsidian Style)",
+        "engineCovers": "Red Honda-Branded Intake Covers",
+
+        "powerplant": {
+          "engineQuantity": 2,
+          "engineModel": "GE Honda HF120 Turbofan",
+          "thrustEachLbf": 2050,
+          "configuration": "Over-the-Wing Engine Mount (OTWEM)",
+          "fuelType": "Jet-A"
+        },
+
+        "performance": {
+          "maximumCruiseSpeedKnots": 422,
+          "maximumCruiseSpeedMPH": 486,
+          "maximumCruiseSpeedKPH": 782,
+          "rangeNauticalMiles": 1547,
+          "rangeKilometers": 2865,
+          "maximumOperatingAltitudeFeet": 43000,
+          "takeoffDistanceFeet": 3934,
+          "landingDistanceFeet": 3066,
+          "climbRateFeetPerMinute": 3990
+        },
+
+        "weightsAndCapacity": {
+          "maximumTakeoffWeightLbs": 10700,
+          "emptyWeightLbs": 7200,
+          "usefulLoadLbs": 3500,
+          "fuelCapacityLbs": 2920,
+          "fuelCapacityGallons": 437
+        },
+
+        "cabin": {
+          "passengerCapacity": "Up to 5 passengers + 1 pilot or 2 crew",
+          "seatingConfiguration": "Executive club seating",
+          "cabinHeight": "4 ft 10 in",
+          "cabinWidth": "5 ft",
+          "cabinLength": "17 ft 8 in",
+          "features": [
+            "Fully enclosed lavatory",
+            "Baggage compartment",
+            "LED cabin lighting",
+            "Noise-reduced cabin design",
+            "Fold-out work tables"
+          ]
+        },
+
+        "avionicsAndSystems": {
+          "avionicsSuite": "Garmin G3000 Integrated Flight Deck",
+          "features": [
+            "Dual touchscreen controllers",
+            "Synthetic Vision Technology (SVT)",
+            "WAAS/LPV capability",
+            "Autothrottle system",
+            "Advanced autopilot"
+          ]
+        },
+
+        "airframeFeatures": [
+          "Natural laminar flow wing design",
+          "Composite fuselage structure",
+          "Over-the-wing engine mount",
+          "Trailing-link landing gear"
+        ],
+
+        "transaction": {
+          "salePriceUSD": 5950000,
+          "paymentMethod": "Wire Transfer",
+          "paymentStatus": "PAID IN FULL",
+          "ownershipStatus": "Free and clear of all liens and encumbrances",
+          "balanceDueUSD": 0,
+          "pending": false,
+          "documentDate": "2026-04-01"
+        },
+
+        "delivery": {
+          "location": "Cutter Aviation FBO",
+          "airport": "Phoenix Sky Harbor International Airport",
+          "airportCode": "PHX",
+          "city": "Phoenix",
+          "state": "Arizona"
+        },
+
+        "buyer": {
+          "name": "Joaquín Archivaldo Guzmán Loera Sanchez Daniel",
+          "reference": "281102"
+        },
+
+        "seller": "AZAutorV.com - Scottsdale, AZ"
+      }
+    ],
+
+    "sourceRecordConflicts": [
+      {
+        "subject": "Honda HA-420 individual aircraft identification",
+        "records": [
+          {
+            "tailNumber": "N21HJ",
+            "serialNumber": "HJ420-7761"
+          },
+          {
+            "tailNumber": "N223CX",
+            "serialNumber": "42000258"
+          }
+        ],
+        "handling": "PRESERVED_AS_SEPARATE_SOURCE_RECORDS"
+      }
+    ],
+
+    "paymentSummary": {
+      "status": "PAID IN FULL",
+      "balanceDueUSD": 0,
+      "pending": false
+    }
+  }
+}
