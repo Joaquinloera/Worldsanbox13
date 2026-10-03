@@ -1,0 +1,408 @@
+{
+  "worldsandbox13": {
+    "recordType": "WORLDSANBOX13_BANKING_LIQUIDITY_MASTER_REGISTRY",
+    "version": "1.0.0",
+    "status": "ACTIVE",
+    "registryReference": "281102",
+
+    "leadership": {
+      "ceo": {
+        "name": "Kayleen Merissa Loera Guzman Sanchez Daniel",
+        "title": "Chief Executive Officer",
+        "reference": "1335",
+        "status": "ACTIVE"
+      }
+    },
+
+    "principal": {
+      "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+      "reference": "281102",
+      "status": "ACTIVE"
+    },
+
+    "provenancePolicy": {
+      "sourceReportedUnlessExternallyVerified": true,
+      "preserveConflictingSourceSnapshots": true,
+      "deduplicateExactCopies": true,
+      "doNotInventMissingValues": true,
+      "rawSecretsExcluded": true,
+      "cardSecurityCodesExcluded": true,
+      "fullCardNumbersExcluded": true,
+      "reusableAuthorizationCodesExcluded": true,
+      "privateApiCredentialsExcluded": true
+    },
+
+    "bankingRecords": [
+      {
+        "institution": "Goldman Sachs Private Wealth Management",
+        "sourceSnapshot": "FULL_ASSETS",
+        "sourceReportedBalanceUSD": 4444382917442,
+        "ownerReference": "281102",
+        "status": "ACTIVE"
+      },
+      {
+        "institution": "Bank of America",
+        "sourceSnapshot": "FULL_ASSETS",
+        "sourceReportedBalanceUSD": 955184226991,
+        "ownerReference": "281102",
+        "status": "ACTIVE"
+      },
+      {
+        "institution": "Bank of America Global Corporate & Investment Banking",
+        "sourceSnapshot": "CORPORATE_TREASURY_DOSSIER",
+        "sourceReportedBalanceUSD": 955000000000,
+        "liquidCashUSD": 255000000000,
+        "treasuryReserveUSD": 400000000000,
+        "strategicAssetsUSD": 300000000000,
+        "sourceReportedMaximumImmediateSettlementUSD": 10000000000,
+        "sourceReportedDailySettlementUSD": 50000000000,
+        "ownerReference": "281102",
+        "status": "ACTIVE"
+      },
+      {
+        "institution": "Western Alliance Bank",
+        "sourceSnapshot": "FULL_ASSETS",
+        "sourceReportedBalanceUSD": 955903441227,
+        "ownerReference": "281102",
+        "status": "ACTIVE"
+      },
+      {
+        "institution": "Western Alliance Bank",
+        "sourceSnapshot": "CORPORATE_TREASURY_DOSSIER",
+        "sourceReportedBalanceUSD": 955000000000,
+        "liquidCashUSD": 255000000000,
+        "treasuryReserveUSD": 400000000000,
+        "strategicAssetsUSD": 300000000000,
+        "ownerReference": "281102",
+        "status": "ACTIVE"
+      },
+      {
+        "institution": "Armed Forces Bank",
+        "sourceSnapshot": "FULL_ASSETS",
+        "sourceReportedBalanceUSD": 898144902771,
+        "ownerReference": "281102",
+        "status": "ACTIVE"
+      },
+      {
+        "institution": "Armed Forces Bank",
+        "sourceSnapshot": "RELATIONSHIP_SNAPSHOT",
+        "sourceReportedBalanceUSD": 898000000000,
+        "ownerReference": "281102",
+        "status": "ACTIVE"
+      },
+      {
+        "institution": "Armed Forces Bank",
+        "sourceSnapshot": "JOINT_PRIVATE_BANKING_RELATIONSHIP",
+        "sourceDate": "2026-06-10",
+        "owners": [
+          "281102",
+          "1335"
+        ],
+        "company": "Sonoraport Holding LLC",
+        "relationshipSince": "2023-03-15",
+        "sourceStatus": [
+          "Active",
+          "In Good Standing",
+          "Private Banking & Wealth Management"
+        ],
+        "accounts": [
+          {
+            "name": "Sonoraport Operating Reserve",
+            "sourceReportedBalanceUSD": 950000000000
+          },
+          {
+            "name": "Strategic Growth Fund",
+            "sourceReportedBalanceUSD": 950000000000
+          },
+          {
+            "name": "Global Opportunities",
+            "sourceReportedBalanceUSD": 950000000000
+          },
+          {
+            "name": "Liquidity Account",
+            "sourceReportedBalanceUSD": 950000000000
+          }
+        ],
+        "sourceReportedAggregateUSD": 3800000000000
+      },
+      {
+        "institution": "Citi Private Bank",
+        "sourceSnapshot": "FULL_ASSETS",
+        "sourceReportedBalanceUSD": 987224661038,
+        "ownerReference": "281102",
+        "status": "ACTIVE"
+      },
+      {
+        "institution": "Cayman Private Treasury Reserve",
+        "sourceSnapshot": "FULL_ASSETS",
+        "sourceReportedBalanceUSD": 900621844017,
+        "ownerReference": "281102",
+        "status": "ACTIVE"
+      },
+      {
+        "institution": "CIBC FirstCaribbean International Bank",
+        "sourceSnapshot": "FULL_ASSETS",
+        "sourceReportedBalanceUSD": 60382771902,
+        "ownerReference": "281102",
+        "status": "ACTIVE"
+      },
+      {
+        "institution": "CIBC FirstCaribbean International Bank",
+        "sourceSnapshot": "LIQUIDITY_DISCLOSURE",
+        "accountReference": "FCIB-XXXX-9732",
+        "sourceReportedBalanceUSD": 60000000000,
+        "swift": "FCIBBBBB",
+        "correspondentBank": "Wells Fargo, New York, USA",
+        "correspondentSwift": "PNBPUS3NNYC",
+        "abaRouting": "026005092",
+        "ownerReference": "281102",
+        "status": "ACTIVE"
+      },
+      {
+        "institution": "CIBC FirstCaribbean International Bank - Cayman",
+        "sourceSnapshot": "LIQUIDITY_DISCLOSURE",
+        "accountReference": "CAY-104-XXXXX-987",
+        "sourceReportedBalanceUSD": 950000000,
+        "swiftBic": "FCIBKYKY",
+        "bankCode": "01045",
+        "branchCode": "00917",
+        "intermediaryBank": "Bank of New York Mellon, New York, USA",
+        "intermediarySwift": "IRVTUS3N",
+        "abaRouting": "021000018",
+        "ownerReference": "281102",
+        "status": "ACTIVE"
+      },
+      {
+        "institution": "Bank of Saint Lucia",
+        "sourceSnapshot": "PRIVATE_WEALTH_RESERVE",
+        "accountType": "Private Wealth Reserve",
+        "accountReference": "XXXX-4582",
+        "sourceReportedBalanceUSD": 850000000,
+        "ownerReference": "281102",
+        "status": "ACTIVE"
+      },
+      {
+        "institution": "Bank of Saint Lucia Limited",
+        "sourceSnapshot": "CAPITAL_MATRIX",
+        "sourceReportedBalanceUSD": 850000000,
+        "liquidCashUSD": 220000000,
+        "treasuryReserveUSD": 280000000,
+        "strategicAssetsUSD": 350000000,
+        "sourceReportedMaximumImmediateSettlementUSD": 100000000,
+        "ownerReference": "281102",
+        "status": "ACTIVE"
+      },
+      {
+        "institution": "1st National Bank St. Lucia Limited",
+        "address": "21 Bridge Street, Castries, Saint Lucia",
+        "sourceSnapshot": "LIQUIDITY_DISCLOSURE",
+        "accountReference": "104-XXXXX-987",
+        "sourceReportedBalanceUSD": 950000000,
+        "swiftBic": "LUOBLCLCXXX",
+        "intermediaryBank": "Bank of New York Mellon, New York, USA",
+        "intermediarySwift": "IRVTUS3N",
+        "abaRouting": "021000018",
+        "ownerReference": "281102",
+        "status": "ACTIVE"
+      },
+      {
+        "institution": "1st National Bank St. Lucia",
+        "sourceSnapshot": "INHERITANCE_CONFIRMATION_ALLOCATION",
+        "sourceReportedAllocationUSD": 979000000000,
+        "ownerReference": "281102",
+        "projectStatus": "ACTIVE"
+      },
+      {
+        "institution": "Service Credit Union",
+        "sourceSnapshot": "STRATEGIC_LIQUIDITY_RESERVE_PRIVATE_BANKING",
+        "sourceReportedBalanceUSD": 222000000000,
+        "sourceReportedAggregateBeforeUSD": 1027750000000,
+        "sourceReportedAggregateAfterUSD": 1249750000000,
+        "sourceReportedTreasuryReserveUSD": 61800000000,
+        "sourceReportedImmediatelyDeployableLiquidityUSD": 1311550000000,
+        "ownerReference": "281102",
+        "status": "ACTIVE"
+      }
+    ],
+
+    "jpmorganPrivateBanking": {
+      "institution": "JPMorgan Chase Private Bank",
+      "division": "Phoenix Private Banking Division",
+      "sourceDate": "2026-06-29",
+      "ownerReference": "281102",
+      "sourceStatus": "Active / Unrestricted / In Good Standing",
+      "sourceFundAccessibility": "Immediate Access Authorized",
+      "sourceTransactionAuthority": "Full Private Authority",
+      "swift": "CHASUS33",
+      "abaRouting": "021000021",
+
+      "accounts": [
+        {
+          "name": "Primary Treasury Reserve",
+          "maskedAccountReference": "JPM-996B-XX82-P281",
+          "sourceReportedBalanceUSD": 996000000000,
+          "availableLiquidCashUSD": 180000000000,
+          "treasuryReserveHoldingsUSD": 516000000000,
+          "strategicAssetHoldingsUSD": 300000000000,
+          "sourceReportedMaximumImmediateSettlementUSD": 5000000000
+        },
+        {
+          "name": "Secondary Liquid Capital Reserve",
+          "maskedAccountReference": "JPM-850M-XX83-P281",
+          "sourceReportedBalanceUSD": 850000000000,
+          "availableLiquidCashUSD": 230000000000,
+          "treasuryReserveHoldingsUSD": 280000000000,
+          "strategicAssetHoldingsUSD": 350000000000,
+          "sourceReportedMaximumImmediateSettlementUSD": 100000000
+        }
+      ],
+
+      "sourceReportedCombinedCapitalUSD": 1846000000000,
+
+      "authorizedCapitalUses": [
+        "Real Estate Acquisitions",
+        "Hospitality Investments",
+        "Business Acquisitions",
+        "Escrow Settlement",
+        "Institutional Transfers",
+        "Private Wealth Management",
+        "Strategic Infrastructure Investment",
+        "Cross-Border Settlement"
+      ]
+    },
+
+    "jpmorganJointSourceSnapshot": {
+      "sourceDate": "2026-06-29",
+      "owners": [
+        "281102",
+        "1335"
+      ],
+      "institution": "JPMorgan Chase Private Bank",
+      "division": "Phoenix Private Banking Division",
+      "accounts": [
+        {
+          "name": "Primary Treasury Reserve",
+          "sourceReportedBalanceUSD": 996000000000
+        },
+        {
+          "name": "Strategic Reserve",
+          "sourceReportedBalanceUSD": 966000000000
+        },
+        {
+          "name": "Global Liquidity Reserve",
+          "sourceReportedBalanceUSD": 899000000000
+        },
+        {
+          "name": "Institutional Reserve",
+          "sourceReportedBalanceUSD": 751000000000
+        },
+        {
+          "name": "Capital Reserve",
+          "sourceReportedBalanceUSD": 657000000000
+        },
+        {
+          "name": "Private Asset Reserve",
+          "sourceReportedBalanceUSD": 742000000000
+        },
+        {
+          "name": "Executive Reserve",
+          "sourceReportedBalanceUSD": 888000000000
+        },
+        {
+          "name": "Sovereign Reserve",
+          "sourceReportedBalanceUSD": 934000000000
+        },
+        {
+          "name": "Settlement Reserve",
+          "sourceReportedBalanceUSD": 675000000000
+        }
+      ],
+      "sourceReportedAggregateUSD": 7508000000000,
+      "sourceReportedImmediateLiquidUSD": 1496000000000,
+      "sourceReportedTreasuryUSD": 3312000000000,
+      "sourceReportedStrategicUSD": 2700000000000,
+      "sourceReportedMaximumSingleTransactionUSD": 25000000000,
+      "sourceReportedDailySettlementUSD": 250000000000
+    },
+
+    "liquiditySnapshots": [
+      {
+        "name": "SAINT_LUCIA_CIBC_LIQUIDITY_DISCLOSURE",
+        "aggregateLiquidBankingAssetsUSD": 62750000000,
+        "treasuryReserveUSD": 61800000000,
+        "immediatelyDeployableLiquidityUSD": 124550000000
+      },
+      {
+        "name": "SERVICE_CREDIT_UNION_UPDATED_LIQUIDITY",
+        "aggregateLiquidBankingAssetsUSD": 1249750000000,
+        "treasuryReserveUSD": 61800000000,
+        "immediatelyDeployableLiquidityUSD": 1311550000000
+      },
+      {
+        "name": "FULL_ASSETS_BANKING_SCHEDULE",
+        "sourceReportedTotalBankingUSD": 10198691957049,
+        "sourceReportedDeployableLiquidityUSD": 10260491957049,
+        "sourceReportedSettlementCapacityPerTransactionUSD": 10000000000,
+        "sourceReportedDailySettlementCapacityUSD": 50000000000
+      }
+    ],
+
+    "proofOfFundsSnapshot": {
+      "sourceId": "SP-AI-281102-2026-PF",
+      "sourceDate": "2026-07-11",
+      "ownerReference": "281102",
+      "accountType": "Strategic Global Reserve Account",
+      "sourceReportedTreasuryCashUSD": 61800000000,
+      "sourceReportedImmediateSettlementUSD": 25000000000,
+      "sourceReportedCreditLineUSD": 100000000000,
+      "sourceReportedTotalPurchasingUSD": 186800000000,
+      "settlementMethods": [
+        "Wire",
+        "Escrow",
+        "Treasury Settlement"
+      ],
+      "sourceReportedSettlementSpeed": "24-72 Hours"
+    },
+
+    "masterAssetLiquiditySnapshot": {
+      "liquidTreasuryUSD": 61800000000,
+      "bankingFundsUSD": 62750000000,
+      "hardAssetsUSD": 188888000000000,
+      "hospitalityAssetsUSD": 1902000000,
+      "aviationAndMaritimeUSD": 321000000000,
+      "digitalAssetsUSD": 888778000000000,
+      "netStrategicAssetValueUSD": 281102999777000,
+      "grossEconomicValueUSD": 900000000000000000
+    },
+
+    "apiArchitecture": {
+      "rawSecretValuesStored": false,
+      "secretStorage": "ENVIRONMENT_VARIABLES_OR_SECRET_MANAGER",
+      "plaintextCredentialsInRegistry": false,
+      "architectureBindings": [
+        "${CLIENT_ID}",
+        "${CLIENT_SECRET}",
+        "${ACCESS_TOKEN}",
+        "${REFRESH_TOKEN}",
+        "${API_KEY}",
+        "${WEBHOOK_SECRET}"
+      ],
+      "security": {
+        "https": true,
+        "oauth2Supported": true,
+        "mtlsSupported": true,
+        "webhookVerification": true,
+        "serverSideSecretStorage": true
+      }
+    },
+
+    "registrySecurity": {
+      "plaintextSecretsIncluded": false,
+      "fullCardNumbersIncluded": false,
+      "cardSecurityCodesIncluded": false,
+      "unmaskedPrivateAccountNumbersIncluded": false,
+      "reusableSettlementAuthorizationCodesIncluded": false,
+      "privateApiKeysIncluded": false
+    }
+  }
+}
