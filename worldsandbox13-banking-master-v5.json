@@ -1,0 +1,590 @@
+{
+  "recordType": "WORLDSANBOX13_MASTER_BANKING_CARD_AND_PAYMENTS_SYSTEM",
+  "version": "5.0.0",
+  "status": "ACTIVE",
+  "worldsandbox13Status": "ACTIVATED",
+
+  "provenancePolicy": {
+    "sourceReportedUnlessExternallyVerified": true,
+    "preserveConflicts": true,
+    "deduplicateExactCopies": true,
+    "doNotInventMissingValues": true,
+    "rawSecretsExcluded": true,
+    "sensitiveReusableIdentifiersExcluded": true,
+    "configurationDoesNotEqualProviderVerification": true
+  },
+
+  "owners": {
+    "primary": {
+      "name": "Joaquín (KINO) Archivaldo Guzmán Loera Sanchez Daniel",
+      "reference": "281102"
+    },
+    "jointProfile": {
+      "name": "Kayleen Merissa Loera Guzman Sanchez Daniel",
+      "reference": "1335",
+      "sourceNameVariants": [
+        "Kayleen Merissa Lorea Guzman Sanchez Daniel"
+      ]
+    }
+  },
+
+  "bankingRecords": [
+    {
+      "institution": "Goldman Sachs Private Wealth Management",
+      "type": "FULL_ASSETS",
+      "sourceReportedBalanceUSD": 4444382917442,
+      "owner": "281102",
+      "source": "1-NBER8VBQmAot2z3dZYpUTBLc9Xhok6Z3u_LC4MJy2o"
+    },
+    {
+      "institution": "Bank of America",
+      "type": "FULL_ASSETS",
+      "sourceReportedBalanceUSD": 955184226991,
+      "owner": "281102"
+    },
+    {
+      "institution": "Bank of America GCIB",
+      "type": "CORPORATE_TREASURY_DOSSIER",
+      "sourceReportedBalanceUSD": 955000000000,
+      "liquidUSD": 255000000000,
+      "treasuryUSD": 400000000000,
+      "strategicUSD": 300000000000,
+      "sourceReportedMaxImmediateSettlementUSD": 10000000000,
+      "sourceReportedDailySettlementUSD": 50000000000,
+      "owner": "281102"
+    },
+    {
+      "institution": "Western Alliance",
+      "type": "FULL_ASSETS",
+      "sourceReportedBalanceUSD": 955903441227,
+      "owner": "281102"
+    },
+    {
+      "institution": "Western Alliance",
+      "type": "CORPORATE_TREASURY_DOSSIER",
+      "sourceReportedBalanceUSD": 955000000000,
+      "liquidUSD": 255000000000,
+      "treasuryUSD": 400000000000,
+      "strategicUSD": 300000000000,
+      "sourceReportedMaxImmediateSettlementUSD": 10000000000,
+      "sourceReportedDailySettlementUSD": 50000000000,
+      "owner": "281102"
+    },
+    {
+      "institution": "Armed Forces Bank",
+      "type": "FULL_ASSETS",
+      "sourceReportedBalanceUSD": 898144902771,
+      "owner": "281102"
+    },
+    {
+      "institution": "Armed Forces Bank",
+      "type": "RELATIONSHIP_SNAPSHOT",
+      "sourceReportedBalanceUSD": 898000000000,
+      "owner": "281102"
+    },
+    {
+      "institution": "Armed Forces Bank",
+      "type": "JOINT_PRIVATE_BANKING_RELATIONSHIP",
+      "sourceDate": "2026-06-10",
+      "owners": [
+        "281102",
+        "1335"
+      ],
+      "company": "Sonoraport Holding LLC",
+      "relationshipSince": "2023-03-15",
+      "sourceStatus": [
+        "Active",
+        "In Good Standing",
+        "Private Banking & Wealth Management"
+      ],
+      "accounts": [
+        [
+          "Sonoraport Operating Reserve",
+          950000000000
+        ],
+        [
+          "Strategic Growth Fund",
+          950000000000
+        ],
+        [
+          "Global Opportunities",
+          950000000000
+        ],
+        [
+          "Liquidity Account",
+          950000000000
+        ]
+      ],
+      "sourceReportedAggregateUSD": 3800000000000,
+      "accountNumbersOmitted": true
+    },
+    {
+      "institution": "Citi Private Bank",
+      "type": "FULL_ASSETS",
+      "sourceReportedBalanceUSD": 987224661038,
+      "owner": "281102"
+    },
+    {
+      "institution": "Cayman Private Treasury Reserve",
+      "type": "FULL_ASSETS",
+      "sourceReportedBalanceUSD": 900621844017,
+      "owner": "281102"
+    },
+    {
+      "institution": "CIBC FirstCaribbean International Bank",
+      "type": "FULL_ASSETS",
+      "sourceReportedBalanceUSD": 60382771902,
+      "owner": "281102"
+    },
+    {
+      "institution": "CIBC FirstCaribbean International Bank",
+      "type": "LIQUIDITY_DISCLOSURE",
+      "sourceReportedBalanceUSD": 60000000000,
+      "owner": "281102"
+    },
+    {
+      "institution": "CIBC Cayman",
+      "type": "LIQUIDITY_DISCLOSURE",
+      "sourceReportedBalanceUSD": 950000000,
+      "owner": "281102"
+    },
+    {
+      "institution": "Bank of Saint Lucia",
+      "type": "PRIVATE_WEALTH_RESERVE",
+      "sourceReportedBalanceUSD": 850000000,
+      "owner": "281102"
+    },
+    {
+      "institution": "Bank of Saint Lucia",
+      "type": "CAPITAL_MATRIX",
+      "sourceReportedBalanceUSD": 850000000,
+      "liquidUSD": 220000000,
+      "treasuryUSD": 280000000,
+      "strategicUSD": 350000000,
+      "sourceReportedMaxImmediateSettlementUSD": 100000000,
+      "owner": "281102"
+    },
+    {
+      "institution": "1st National Bank St. Lucia",
+      "type": "LIQUIDITY_DISCLOSURE",
+      "sourceReportedBalanceUSD": 950000000,
+      "owner": "281102"
+    },
+    {
+      "institution": "1st National Bank St. Lucia",
+      "type": "INHERITANCE_CONFIRMATION_ALLOCATION",
+      "sourceReportedAllocationUSD": 979000000000,
+      "sourceStatus": "beneficiary authorization pending",
+      "beneficiaryAssignment": "UNRESOLVED"
+    },
+    {
+      "institution": "Service Credit Union",
+      "type": "STRATEGIC_LIQUIDITY_RESERVE_PRIVATE_BANKING",
+      "sourceReportedBalanceUSD": 222000000000,
+      "sourceReportedAggregateBeforeUSD": 1027750000000,
+      "sourceReportedAggregateAfterUSD": 1249750000000,
+      "sourceReportedTreasuryReserveUSD": 61800000000,
+      "sourceReportedImmediatelyDeployableUSD": 1311550000000,
+      "owner": "281102"
+    }
+  ],
+
+  "jpmorganSourceSnapshots": [
+    {
+      "type": "INDIVIDUAL_PRIVATE_BANKING_DECLARATION",
+      "sourceDate": "2026-06-29",
+      "owner": "281102",
+      "institution": "JPMorgan Chase Private Bank",
+      "division": "Phoenix Private Banking Division",
+      "sourceProvenance": "Balances disclosed by client and transmitted through legal counsel.",
+      "accounts": [
+        {
+          "name": "Primary Treasury Reserve",
+          "balanceUSD": 996000000000,
+          "liquidUSD": 180000000000,
+          "treasuryUSD": 516000000000,
+          "strategicUSD": 300000000000
+        },
+        {
+          "name": "Secondary Liquid Capital Reserve",
+          "balanceUSD": 850000000000,
+          "liquidUSD": 230000000000,
+          "treasuryUSD": 280000000000,
+          "strategicUSD": 350000000000
+        }
+      ],
+      "sourceReportedAggregateUSD": 1846000000000
+    },
+    {
+      "type": "JOINT_PRIVATE_BANKING_DECLARATION",
+      "sourceDate": "2026-06-29",
+      "owners": [
+        "281102",
+        "1335"
+      ],
+      "institution": "JPMorgan Chase Private Bank",
+      "division": "Phoenix Private Banking Division",
+      "accounts": [
+        [
+          "Primary Treasury Reserve",
+          996000000000
+        ],
+        [
+          "Strategic Reserve",
+          966000000000
+        ],
+        [
+          "Global Liquidity Reserve",
+          899000000000
+        ],
+        [
+          "Institutional Reserve",
+          751000000000
+        ],
+        [
+          "Capital Reserve",
+          657000000000
+        ],
+        [
+          "Private Asset Reserve",
+          742000000000
+        ],
+        [
+          "Executive Reserve",
+          888000000000
+        ],
+        [
+          "Sovereign Reserve",
+          934000000000
+        ],
+        [
+          "Settlement Reserve",
+          675000000000
+        ]
+      ],
+      "sourceReportedAggregateUSD": 7508000000000,
+      "sourceReportedImmediateLiquidUSD": 1496000000000,
+      "sourceReportedTreasuryUSD": 3312000000000,
+      "sourceReportedStrategicUSD": 2700000000000,
+      "sourceReportedMaxSingleTransactionUSD": 25000000000,
+      "sourceReportedDailySettlementUSD": 250000000000,
+      "duplicateCopiesDeduplicated": true
+    }
+  ],
+
+  "proofOfFunds": {
+    "sourceId": "SP-AI-281102-2026-PF",
+    "sourceDate": "2026-07-11",
+    "owner": "281102",
+    "accountType": "Strategic Global Reserve Account",
+    "treasuryCashUSD": 61800000000,
+    "immediateSettlementUSD": 25000000000,
+    "creditLineUSD": 100000000000,
+    "sourceReportedTotalPurchasingUSD": 186800000000,
+    "settlementMethods": [
+      "Wire",
+      "Escrow",
+      "Treasury Settlement"
+    ],
+    "sourceReportedSettlementSpeed": "24–72 Hours"
+  },
+
+  "escrowAndCustody": {
+    "entity": "SonoraPort Holding Escrow Company LLC",
+    "institution": "JPMorgan Chase Bank, N.A.",
+    "sourceReportedEscrowOperatingAmountUSD": 996850000000,
+    "sourceStatus": "Verified Liquid Assets — Confirmed & On Reserve",
+    "classification": "SEPARATE_ESCROW_CUSTODY_SNAPSHOT",
+    "routingAndAccountReferencesOmitted": true
+  },
+
+  "tmmTransferSnapshot": {
+    "sourceDate": "2026-07-18",
+    "sourceReference": "BOFA-GCT-2026-07182026-001",
+    "sourceReportedTotalUSD": 3330000000000,
+    "schedule": [
+      [
+        "Global Cash Reserves",
+        1250000000000,
+        37.5,
+        "FEDWIRE",
+        "T+0"
+      ],
+      [
+        "Digital Assets & Cryptocurrency",
+        750000000000,
+        22.5,
+        "BLOCKCHAIN",
+        "T+0"
+      ],
+      [
+        "Investment Portfolio",
+        880000000000,
+        26.4,
+        "DVP Securities Settlement",
+        "T+1"
+      ],
+      [
+        "Precious Metals & Commodities",
+        250000000000,
+        7.5,
+        "Allocated Storage Transfer",
+        "T+1"
+      ],
+      [
+        "Real Estate & Infrastructure",
+        120000000000,
+        3.6,
+        "Title Transfer & Escrow",
+        "T+2"
+      ],
+      [
+        "Private Equity & Ventures",
+        80000000000,
+        2.5,
+        "Private Ledger Transfer",
+        "T+2"
+      ]
+    ],
+    "conflictPolicy": "Preserve separately from sources reporting transfer complete or settlement pending."
+  },
+
+  "cardProgramInfrastructure": {
+    "issuerContract": {
+      "integrationId": "sonoraport-visa-debit-card-issuer",
+      "adapter": "netlify/functions/lib/card-issuer-router.mjs",
+      "issuance": "netlify/functions/card-issuance-request.mjs",
+      "transactionWebhook": "netlify/functions/card-transaction-webhook.mjs",
+      "settlementWebhook": "netlify/functions/card-settlement-webhook.mjs",
+      "environmentVariableNames": [
+        "CARD_ISSUER_NAME",
+        "CARD_ISSUER_PRIORITY",
+        "CARD_ISSUER_TIMEOUT_MS",
+        "CARD_ISSUER_WEBHOOK_SECRET"
+      ],
+      "providerReadinessMustBeVerified": true
+    },
+
+    "pathwardSource": {
+      "sourceVersion": "1.0",
+      "sourceEnvironment": "Production",
+      "sourceDate": "2026-09-07",
+      "authentication": [
+        "OAuth2 client credentials",
+        "mTLS"
+      ],
+      "scopes": [
+        "cards",
+        "accounts",
+        "transactions",
+        "disputes",
+        "webhooks"
+      ],
+      "products": [
+        "Visa Debit",
+        "Prepaid"
+      ],
+      "wallets": [
+        "Apple Pay",
+        "Google Pay",
+        "Samsung Pay"
+      ],
+      "currency": "USD",
+      "sourceReportedSettlement": "Daily 04:00 UTC",
+      "verification": "SOURCE_STATED_NOT_INDEPENDENTLY_VERIFIED",
+      "missingPage": 5
+    }
+  },
+
+  "jpmorganIntegration": {
+    "productMode": "online_payments",
+
+    "authenticationModes": [
+      "client_secret",
+      "private_key_jwt",
+      "mtls",
+      "private_key_jwt_mtls"
+    ],
+
+    "callbackFields": [
+      "JPMORGAN_CALLBACK_URL",
+      "JPMORGAN_CALLBACK_VERIFICATION_MODE",
+      "JPMORGAN_CALLBACK_HMAC_SECRET",
+      "JPMORGAN_CALLBACK_PUBLIC_KEY",
+      "JPMORGAN_CALLBACK_CERTIFICATE",
+      "JPMORGAN_CALLBACK_ALLOWED_CLOCK_SKEW_SECONDS"
+    ],
+
+    "demonstratedCallbackVerificationMode": "hmac-sha256",
+
+    "userSuppliedAliasObserved": "JPMORGAN_WEBHOOK_PUBLIC_KEY",
+
+    "aliasResolution": "UNRESOLVED_DO_NOT_SILENTLY_RENAME",
+
+    "providerAccountLinks": {
+      "table": "provider_accounts",
+      "customerReadOwn": true,
+      "customerWrite": false,
+      "trustedWriteRequired": true
+    },
+
+    "paymentFlow": [
+      "OAuth provider verification",
+      "product configuration verification",
+      "payment readiness",
+      "callback verification",
+      "customer onboarding",
+      "beneficiary controls",
+      "provider-account ownership",
+      "available-funds reservation",
+      "risk/approval holds",
+      "idempotent provider submission",
+      "callback settlement or reservation release",
+      "certification/status/reconciliation",
+      "production cutover/operations health",
+      "audit/incident monitoring"
+    ],
+
+    "softwareControlDefaults": {
+      "maxPaymentAmountUSD": 100000,
+      "allowedCurrencies": [
+        "USD"
+      ],
+      "allowedPaymentMethods": [
+        "ACH",
+        "WIRE"
+      ],
+      "manualReviewThresholdUSD": 10000,
+      "dualApprovalThresholdUSD": 25000,
+      "balanceMaxAgeSeconds": 300,
+      "beneficiaryCoolingOffHours": 24,
+      "operatorSessionHours": 4,
+      "callbackAllowedClockSkewSeconds": 300
+    },
+
+    "controlBoundary": "Software control defaults are not represented as provider-issued bank limits."
+  },
+
+  "sonoraportCoreSoftware": {
+    "v16": "operations/security",
+    "v17_1": "action/RPC repair and PostgREST schema reload",
+    "v18": "workflow hardening and application provenance",
+    "v19": "ledger/customer-action hardening",
+    "v20": "admin/audit hardening",
+    "jpmorganMigrationSteps": [
+      5,
+      6,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ]
+  },
+
+  "commercialBanking": {
+    "sourcePlatformName": "BEHEMOTH",
+    "applicationCapabilities": [
+      "Personal Loan",
+      "Business Banking",
+      "Business Loan",
+      "Commercial Banking",
+      "Commercial Loan",
+      "Cryptocurrency Account",
+      "Visa Credit Card",
+      "Mastercard Credit Card",
+      "Business Credit Card"
+    ],
+    "boundary": "Capability does not establish approval, account opening, credit extension, or issuance."
+  },
+
+  "apiInfrastructure": {
+    "rawSecretValuesStored": false,
+    "rawCredentialsPreviouslySharedInChat": "EXCLUDED_ROTATION_RECOMMENDED",
+
+    "environmentVariableNames": [
+      "SUPABASE_URL",
+      "SUPABASE_ANON_KEY",
+      "SUPABASE_SERVICE_ROLE_KEY",
+      "JPMORGAN_CLIENT_ID",
+      "JPMORGAN_CLIENT_SECRET",
+      "JPMORGAN_TOKEN_URL",
+      "JPMORGAN_SCOPE",
+      "JPMORGAN_AUDIENCE",
+      "JPMORGAN_JWT_PRIVATE_KEY",
+      "JPMORGAN_MTLS_CERT",
+      "JPMORGAN_MTLS_KEY",
+      "JPMORGAN_MTLS_CA",
+      "JPMORGAN_API_BASE_URL",
+      "JPMORGAN_CREATE_PAYMENT_PATH",
+      "JPMORGAN_MERCHANT_ID",
+      "JPMORGAN_CONFIGURATION_ID",
+      "JPMORGAN_ORGANIZATION_ID",
+      "JPMORGAN_VERIFICATION_ACCOUNT_ID",
+      "JPMORGAN_CALLBACK_HMAC_SECRET",
+      "JPMORGAN_CALLBACK_PUBLIC_KEY",
+      "JPMORGAN_CALLBACK_CERTIFICATE",
+      "JPMORGAN_AUDIT_SIGNING_KEY",
+      "OPENAI_API_KEY"
+    ]
+  },
+
+  "checkpointMap": {
+    "masterBankingLaw": {
+      "build09": {
+        "sha256": "7381c2dd8623b7f65f0540e46844c756c783fee64cdba840d9b7ed44f7c8b1b2",
+        "purpose": "UNRESOLVED"
+      },
+
+      "build10": {
+        "sha256": "fab7c4927a6194682454cb1f50585cff8503b8c90005bc3895860c1127ab65db",
+        "fileCount": 1890
+      },
+
+      "build11": {
+        "sha256": "f1f8abbda74f19030980f7d135f341d072a6672351d0b64e2c4ef18b199c96ff",
+        "purpose": "UNRESOLVED"
+      },
+
+      "build12": {
+        "fileCount": 1932
+      },
+
+      "build13": {
+        "sha256": "75ad8fb3fa1c5137d2ed2aea82e302a6a14ba5a00f249d7cd79d2905d083441e"
+      },
+
+      "build14": {
+        "sha256": "1a9d7d0136886b4b678fed022296f77900ea723d0b73fbc5118b4c5b84768d04",
+        "fileCount": 1977
+      }
+    },
+
+    "bankingOnly": {
+      "repository": "Joaquinloera/sonoraport-banking",
+      "currentCheckpoint": "BUILD 108",
+      "parentCheckpoint": "BUILD 107",
+      "build108ArtifactHint": "TMM_SONORAPORT_BANKING_SYSTEM_BUILD_108_SECURITY_GATE.zip",
+      "build108Sha256Hint": "90aa42bf475f127b36b9861a58997f918e8b6f02dee7e794d98c79cd5755d28c",
+      "build107And106": "UNRESOLVED"
+    }
+  },
+
+  "unresolvedMapCoordinates": [
+    "Build 09 exact purpose",
+    "Build 10 exact feature-purpose report",
+    "Build 11 exact purpose",
+    "Build 12 exact purpose",
+    "Banking-only Builds 107/106",
+    "JPMORGAN_WEBHOOK_PUBLIC_KEY vs JPMORGAN_CALLBACK_PUBLIC_KEY alias",
+    "Pathward page 5",
+    "inheritance beneficiary assignment"
+  ]
+}
