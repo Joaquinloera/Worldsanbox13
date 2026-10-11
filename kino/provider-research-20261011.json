@@ -1,0 +1,65 @@
+{
+  "operation": "KINO-281102",
+  "date": "2026-10-11",
+  "researchMode": "TinyFish official documentation discovery",
+  "providerRecords": [
+    {
+      "provider": "GitHub Apps",
+      "docsUrl": "https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-an-installation-access-token-for-a-github-app",
+      "evidenceUrl": "https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-an-installation-access-token-for-a-github-app",
+      "authMethod": "GitHub App installation access token",
+      "state": "RESEARCHED",
+      "integrationStatus": "NOT_CONNECTED",
+      "division": "CENTCOM",
+      "skimPending": [
+        "scopes",
+        "permissions",
+        "token renewal",
+        "webhooks"
+      ]
+    },
+    {
+      "provider": "Stripe",
+      "docsUrl": "https://docs.stripe.com/keys",
+      "evidenceUrl": "https://docs.stripe.com/keys",
+      "authMethod": "restricted API keys; sandbox/live separate; agent approvals",
+      "state": "RESEARCHED",
+      "integrationStatus": "NOT_CONNECTED",
+      "division": "SOUTHCOM",
+      "skimPending": [
+        "exact permissions",
+        "webhook validation",
+        "sandbox connectivity"
+      ]
+    },
+    {
+      "provider": "AAMVA DLDV",
+      "docsUrl": "https://www.aamva.org/about/business-with-aamva",
+      "evidenceUrl": "https://www.aamva.org/about/business-with-aamva",
+      "authMethod": "commercial access by provider arrangement; credential details pending",
+      "state": "ACCESS_PENDING",
+      "integrationStatus": "NOT_CONNECTED",
+      "division": "CYBERCOM",
+      "skimPending": [
+        "authorization",
+        "provider onboarding",
+        "endpoints",
+        "consent"
+      ]
+    },
+    {
+      "provider": "AZDHS Medical Marijuana",
+      "docsUrl": "https://www.azdhs.gov/licensing/medical-marijuana/",
+      "evidenceUrl": "https://www.azdhs.gov/licensing/medical-marijuana/",
+      "authMethod": "verification interface/API access not confirmed",
+      "state": "RESEARCHED",
+      "integrationStatus": "NOT_CONNECTED",
+      "division": "SOUTHCOM",
+      "skimPending": [
+        "official verification process",
+        "approved integration access"
+      ]
+    }
+  ],
+  "notes": "Public docs research only. No secrets, personal ID details, active API keys, or deployed agent runs."
+}
