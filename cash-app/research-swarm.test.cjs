@@ -1,4 +1,22 @@
 'use strict';
-const test=require('node:test');const assert=require('node:assert/strict');const {DIVISIONS,run}=require('./research-swarm.cjs');
-test('six divisions run concurrently',async()=>{let calls=0;const r=await run(async()=>{calls++;return {status:200,ok:true}});assert.equal(r.agents.length,6);assert.equal(calls,12);assert.equal(r.paymentExecution,false);assert.ok(r.agents.every(a=>a.checks.every(c=>c.reachable)))});
-test('individual failures are isolated',async()=>{const r=await run(async()=>{throw Error('offline')});assert.equal(r.agents.length,6);assert.ok(r.agents.every(a=>a.checks.every(c=>c.error)))});
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const {AGENTS,DIVISIONS,run}=require('./research-swarm.cjs');
+test('30 unique checks, 10 per division',()=>{
+ assert.equal(AGENTS.length,30);
+ assert.equal(new Set(AGENTS.map(x=>x.id)).size,30);
+ for(const division of ['CYBERCOM','SOUTHCOM','CENTCOM'])assert.equal(AGENTS.filter(x=>x.division===division).length,10);
+ assert.equal(DIVISIONS.length,3);
+});
+test('all checks run and failures are isolated',async()=>{
+ const result=await run(async url=>{if(url.includes('owasp.org'))throw Error('offline');return {ok:true,status:200};});
+ assert.equal(result.executedChecks,30);
+ assert.equal(result.summary.reachable,29);
+ assert.equal(result.summary.failed,1);
+ assert.equal(result.paymentExecution,false);
+});
+test('all offline checks produce errors without crashing',async()=>{
+ const result=await run(async()=>{throw Error('offline')});
+ assert.equal(result.summary.failed,30);
+ assert.ok(result.agents.every(a=>a.state==='error'));
+});
