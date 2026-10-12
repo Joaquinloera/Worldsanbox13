@@ -2,8 +2,8 @@
 const fs=require('node:fs/promises');
 const DIVISIONS=[
 ['CYBERCOM #88',['https://developers.cash.app/','https://docs.stripe.com/']],
-['SOUTHCOM #29.999.00',['https://www.bcb.gov.br/','https://www.banxico.org.mx/']],
-['CENTCOM #1111',['https://www.npci.org.in/','https://www.ndb.int/']],
+['SOUTHCOM #2222',['https://www.bcb.gov.br/','https://www.banxico.org.mx/','https://www.usa.gov/']],
+['CENTCOM #1111',['https://www.npci.org.in/','https://www.ndb.int/','https://docs.github.com/']],
 ['AGENT #55',['https://www.cips.com.cn/','https://www.icbc.com.cn/']],
 ['AGENT #5505',['https://developers.cash.app/','https://developer.paypal.com/']],
 ['AGENT #5515',['https://docs.github.com/','https://docs.netlify.com/']]
