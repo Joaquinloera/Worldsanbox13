@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 1,
+  "capacity": 30,
+  "coordinator": "281102",
+  "agents": [
+    {
+      "slot": 1,
+      "id": "281102",
+      "name": "KINO",
+      "role": "coordination",
+      "status": "defined",
+      "enabled": true,
+      "executor": "unbound"
+    },
+    {
+      "slot": 2,
+      "id": "88",
+      "name": "CYBERCOM",
+      "role": "security",
+      "status": "defined",
+      "enabled": true,
+      "executor": "unbound"
+    },
+    {
+      "slot": 3,
+      "id": "1111",
+      "name": "CENTCOM",
+      "role": "architecture",
+      "status": "defined",
+      "enabled": true,
+      "executor": "unbound"
+    },
+    {
+      "slot": 4,
+      "id": "2222",
+      "name": "SOUTHCOM",
+      "role": "research",
+      "status": "defined",
+      "enabled": true,
+      "executor": "unbound"
+    },
+    {
+      "slot": 5,
+      "id": "55",
+      "name": "Agent 55",
+      "role": "support",
+      "status": "defined",
+      "enabled": true,
+      "executor": "unbound"
+    },
+    {
+      "slot": 6,
+      "id": "5505",
+      "name": "Agent 5505",
+      "role": "support",
+      "status": "defined",
+      "enabled": true,
+      "executor": "unbound"
+    },
+    {
+      "slot": 7,
+      "id": "5515",
+      "name": "Agent 5515",
+      "role": "support",
+      "status": "defined",
+      "enabled": true,
+      "executor": "unbound"
+    },
+    {
+      "slot": 8,
+      "id": "reserve-08",
+      "name": "Agent 08",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 9,
+      "id": "reserve-09",
+      "name": "Agent 09",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 10,
+      "id": "reserve-10",
+      "name": "Agent 10",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 11,
+      "id": "reserve-11",
+      "name": "Agent 11",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 12,
+      "id": "reserve-12",
+      "name": "Agent 12",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 13,
+      "id": "reserve-13",
+      "name": "Agent 13",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 14,
+      "id": "reserve-14",
+      "name": "Agent 14",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 15,
+      "id": "reserve-15",
+      "name": "Agent 15",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 16,
+      "id": "reserve-16",
+      "name": "Agent 16",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 17,
+      "id": "reserve-17",
+      "name": "Agent 17",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 18,
+      "id": "reserve-18",
+      "name": "Agent 18",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 19,
+      "id": "reserve-19",
+      "name": "Agent 19",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 20,
+      "id": "reserve-20",
+      "name": "Agent 20",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 21,
+      "id": "reserve-21",
+      "name": "Agent 21",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 22,
+      "id": "reserve-22",
+      "name": "Agent 22",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 23,
+      "id": "reserve-23",
+      "name": "Agent 23",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 24,
+      "id": "reserve-24",
+      "name": "Agent 24",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 25,
+      "id": "reserve-25",
+      "name": "Agent 25",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 26,
+      "id": "reserve-26",
+      "name": "Agent 26",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 27,
+      "id": "reserve-27",
+      "name": "Agent 27",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 28,
+      "id": "reserve-28",
+      "name": "Agent 28",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 29,
+      "id": "reserve-29",
+      "name": "Agent 29",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    },
+    {
+      "slot": 30,
+      "id": "reserve-30",
+      "name": "Agent 30",
+      "role": "unassigned",
+      "status": "defined",
+      "enabled": false,
+      "executor": "unbound"
+    }
+  ]
+}
