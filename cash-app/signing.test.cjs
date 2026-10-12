@@ -1,0 +1,11 @@
+'use strict';
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const {signRequest}=require('./signing.cjs');
+const base={method:'POST',path:'/network/v1/payouts',host:'sandbox.api.cash.app',headers:{Accept:'application/json',Authorization:'Client test key','Content-Type':'application/json'},body:'{"hello":"world"}',secret:'sample-not-real'};
+test('deterministic V1 signature',()=>{const a=signRequest(base);assert.match(a,/^V1 [a-f0-9]{64}$/);assert.equal(a,signRequest(base))});
+test('body tampering changes signature',()=>assert.notEqual(signRequest(base),signRequest({...base,body:'{"hello":"other"}'})));
+test('secret changes signature',()=>assert.notEqual(signRequest(base),signRequest({...base,secret:'another'})));
+test('reject unknown host',()=>assert.throws(()=>signRequest({...base,host:'example.org'})));
+test('reject host mismatch',()=>assert.throws(()=>signRequest({...base,headers:{...base.headers,Host:'example.org'}})));
+test('reject missing secret',()=>assert.throws(()=>signRequest({...base,secret:''})));
