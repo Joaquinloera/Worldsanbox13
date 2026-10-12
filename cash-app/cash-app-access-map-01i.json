@@ -1,0 +1,55 @@
+{
+  "agent": "KINO-281102",
+  "operation": "SWARM_SKIM",
+  "tracks": [
+    {
+      "agent": "TinyFish",
+      "topic": "sandbox and partner eligibility",
+      "findings": [
+        "Sandbox uses sandbox.api.cash.app",
+        "Payouts documented for PSP partners"
+      ],
+      "sources": [
+        "https://developers.cash.app/cash-app-pay-partner-api/guides/technical-guides/sandbox/developer-sandbox",
+        "https://developers.cash.app/cash-app-pay-partner-api/guides/technical-guides/payouts/about"
+      ]
+    },
+    {
+      "agent": "Exa",
+      "topic": "webhook authentication",
+      "findings": [
+        "Webhook signatures documented using HMAC-SHA-256 with canonical request and API secret",
+        "Signature verification required before accepting events"
+      ],
+      "sources": [
+        "https://developers.cash.app/cash-app-pay-partner-api/guides/technical-guides/webhooks/webhook-signature-generation"
+      ]
+    },
+    {
+      "agent": "ParallelSearch",
+      "topic": "API permission scopes",
+      "findings": [
+        "PAYOUTS_WRITE allows creating payouts",
+        "PAYOUTS_READ allows payout read operations",
+        "Sandbox credentials are separate from production"
+      ],
+      "sources": [
+        "https://developers.cash.app/cash-app-pay-partner-api/api-reference/management-api/scopes",
+        "https://developers.cash.app/cash-app-pay-partner-api/guides/technical-guides/sandbox/developer-sandbox"
+      ]
+    }
+  ],
+  "integration": {
+    "sandboxHost": "https://sandbox.api.cash.app",
+    "productionHost": "https://api.cash.app",
+    "payoutEndpoint": "/network/v1/payouts",
+    "requiredScope": "PAYOUTS_WRITE",
+    "webhookVerification": "provider-documented canonical HMAC-SHA-256",
+    "liveTransactionSubmitted": false
+  },
+  "next": [
+    "Implement sandbox-only client with injected credentials",
+    "Build webhook verification and replay tests",
+    "Run Python and Node static checks"
+  ]
+}
