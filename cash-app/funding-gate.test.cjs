@@ -1,0 +1,13 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+const {validateFundingInstruction:f}=require('./funding-gate.cjs');
+const i={provider:'cash-app-partner',amountCents:1000000,currency:'USD',sourceAccountId:'bank-source-123',recipientId:'recipient-123',approvalReference:'approval-123',idempotencyKey:'request-123'};
+const e={KINO_LIVE_TRANSFERS:'enabled',KINO_PROVIDER_APPROVED:'true',KINO_SOURCE_FUNDED:'true',KINO_RECIPIENT_VERIFIED:'true',KINO_PAYMENT_AUTHORIZED:'true'};
+test('valid verified instruction',()=>assert.equal(f(i,e).amountCents,1000000));
+test('default denies',()=>assert.throws(()=>f(i,{})));
+test('unfunded denies',()=>assert.throws(()=>f(i,{...e,KINO_SOURCE_FUNDED:'false'})));
+test('unauthorized denies',()=>assert.throws(()=>f(i,{...e,KINO_PAYMENT_AUTHORIZED:'false'})));
+test('unapproved denies',()=>assert.throws(()=>f(i,{...e,KINO_PROVIDER_APPROVED:'false'})));
+test('unknown provider denies',()=>assert.throws(()=>f({...i,provider:'unknown'},e)));
+test('bad amount denies',()=>assert.throws(()=>f({...i,amountCents:-1},e)));
+test('cashtag is not verified recipient id',()=>assert.throws(()=>f({...i,recipientId:'$sonoraport13'},e)));
