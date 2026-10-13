@@ -1,0 +1,25 @@
+name: KINO Build08 Bounded Public Research Worker
+on:
+  push:
+    paths:
+      - 'cash-app/research-swarm.cjs'
+      - 'cash-app/research-swarm.test.cjs'
+      - '.github/workflows/kino-build08-research-safety-ci.yml'
+  pull_request:
+    paths:
+      - 'cash-app/research-swarm.cjs'
+      - 'cash-app/research-swarm.test.cjs'
+      - '.github/workflows/kino-build08-research-safety-ci.yml'
+permissions:
+  contents: read
+jobs:
+  bounded-public-research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify KINO public-document research worker and guardrails
+        run: node --test cash-app/research-swarm.test.cjs
