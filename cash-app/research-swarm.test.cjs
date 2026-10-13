@@ -20,3 +20,7 @@ test('all offline checks produce errors without crashing',async()=>{
  assert.equal(result.summary.failed,30);
  assert.ok(result.agents.every(a=>a.state==='error'));
 });
+
+test('every agent has a unique official research target and division lead',()=>{
+ for(const agent of AGENTS){assert.match(agent.url,/^https:\/\//);assert.ok(agent.task);assert.ok(agent.lead);assert.ok(['CYBERCOM','SOUTHCOM','CENTCOM'].includes(agent.division));}
+});
