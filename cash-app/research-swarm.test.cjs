@@ -24,3 +24,14 @@ test('all offline checks produce errors without crashing',async()=>{
 test('every agent has a unique official research target and division lead',()=>{
  for(const agent of AGENTS){assert.match(agent.url,/^https:\/\//);assert.ok(agent.task);assert.ok(agent.lead);assert.ok(['CYBERCOM','SOUTHCOM','CENTCOM'].includes(agent.division));}
 });
+
+test('SKIM extracts authentication, API and same-host documentation signals',async()=>{
+ const html='<title>Partner API</title><p>OAuth JWT REST API webhook SDK</p><a href="https://docs.github.com/en/rest">docs</a><a href="https://outside.example/">external</a>';
+ const result=await run(async()=>({ok:true,status:200,text:async()=>html}));
+ assert.equal(result.mode,'public-docs-skim');
+ assert.equal(result.executedChecks,30);
+ assert.equal(result.agents[0].skim.title,'Partner API');
+ assert.ok(result.agents[0].skim.authSignals.includes('OAuth'));
+ assert.ok(result.agents[0].skim.apiSignals.includes('webhook'));
+ assert.ok(result.agents.every(a=>!a.skim.documentationLinks.includes('https://outside.example/')));
+});
