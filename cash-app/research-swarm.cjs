@@ -47,7 +47,22 @@ async function probe(agent,fetcher=fetch,timeoutMs=10000) {
  const timer=setTimeout(()=>controller.abort(),timeoutMs);
  try {
    const res=await fetcher(agent.url,{method:'GET',redirect:'follow',signal:controller.signal});
-   return {...agent,status:res.status,reachable:res.ok,state:res.ok?'reachable':'http_error'};
+   let skim={title:null,authSignals:[],apiSignals:[],documentationLinks:[]};
+   if(res.ok && typeof res.text==='function'){
+     try{
+       const html=(await res.text()).slice(0,250000);
+       const title=html.match(/<title[^>]*>([^<]{1,200})<\/title>/i);
+       const authTerms=['OAuth','API key','JWT','Basic Auth','client credentials','bearer token','sandbox'];
+       const apiTerms=['REST API','GraphQL','webhook','OpenAPI','Swagger','SDK','rate limit'];
+       const links=[...html.matchAll(/href=["'](https:\/\/[^"'\s<>]+)["']/gi)].map(m=>m[1]);
+       const host=new URL(agent.url).hostname;
+       skim={title:title?title[1].replace(/&amp;/g,'&').trim():null,
+         authSignals:authTerms.filter(term=>html.toLowerCase().includes(term.toLowerCase())),
+         apiSignals:apiTerms.filter(term=>html.toLowerCase().includes(term.toLowerCase())),
+         documentationLinks:[...new Set(links.filter(link=>{try{return new URL(link).hostname===host}catch{return false}}))].slice(0,12)};
+     }catch(e){skim.extractionError=String(e.message||e).slice(0,120)}
+   }
+   return {...agent,status:res.status,reachable:res.ok,state:res.ok?'reachable':'http_error',skim};
  } catch(e) {
    return {...agent,reachable:false,state:'error',error:String(e.message||e).slice(0,160)};
  } finally {clearTimeout(timer);}
@@ -55,7 +70,7 @@ async function probe(agent,fetcher=fetch,timeoutMs=10000) {
 async function run(fetcher=fetch) {
  const settled=await Promise.allSettled(AGENTS.map(agent=>probe(agent,fetcher)));
  const results=settled.map((r,i)=>r.status==='fulfilled'?r.value:{...AGENTS[i],state:'error',reachable:false,error:String(r.reason)});
- return {at:new Date().toISOString(),mode:'public-docs-reachability',paymentExecution:false,
+ return {at:new Date().toISOString(),mode:'public-docs-skim',paymentExecution:false,
   configuredAgents:AGENTS.length,executedChecks:results.length,
   summary:{reachable:results.filter(x=>x.reachable).length,failed:results.filter(x=>!x.reachable).length},
   agents:results};
