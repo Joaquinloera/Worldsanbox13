@@ -1,0 +1,42 @@
+{
+  "build": "KINO-281102-BUILD-03",
+  "date": "2026-10-18",
+  "live_integrations_verified": false,
+  "records": [
+    {
+      "id": "solana-balance",
+      "provider": "Solana",
+      "sector": "blockchain",
+      "operation": "JSON-RPC getBalance",
+      "source": "https://solana.com/docs/rpc/http/getbalance"
+    },
+    {
+      "id": "openai-responses",
+      "provider": "OpenAI",
+      "sector": "AI",
+      "operation": "POST /v1/responses",
+      "source": "https://developers.openai.com/api/reference/resources/responses/methods/create"
+    },
+    {
+      "id": "stripe-intent",
+      "provider": "Stripe",
+      "sector": "payments",
+      "operation": "POST /v1/payment_intents",
+      "source": "https://docs.stripe.com/api/payment_intents/create"
+    },
+    {
+      "id": "paypal-order",
+      "provider": "PayPal",
+      "sector": "payments",
+      "operation": "POST /v2/checkout/orders",
+      "source": "https://developer.paypal.com/docs/api/orders/v2/"
+    },
+    {
+      "id": "uk-open-banking",
+      "provider": "Open Banking UK",
+      "sector": "banking",
+      "operation": null,
+      "source": "https://github.com/OpenBankingUK/read-write-api-specs"
+    }
+  ]
+}
