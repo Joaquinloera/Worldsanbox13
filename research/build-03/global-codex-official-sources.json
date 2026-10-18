@@ -1,0 +1,48 @@
+{
+  "build": "KINO-281102-BUILD-03",
+  "date": "2026-10-18",
+  "status": "public_documentation_only",
+  "live_integrations_verified": false,
+  "records": [
+    {
+      "provider": "Solana",
+      "sector": "blockchain",
+      "operation": "getBalance",
+      "protocol": "JSON-RPC",
+      "source": "https://solana.com/docs/rpc/http/getbalance",
+      "auth": "RPC-provider dependent"
+    },
+    {
+      "provider": "OpenAI",
+      "sector": "AI",
+      "operation": "POST /v1/responses",
+      "protocol": "REST",
+      "source": "https://developers.openai.com/api/reference/resources/responses/methods/create",
+      "auth": "Bearer API key"
+    },
+    {
+      "provider": "Stripe",
+      "sector": "payments",
+      "operation": "POST /v1/payment_intents",
+      "protocol": "REST",
+      "source": "https://docs.stripe.com/api/payment_intents/create",
+      "auth": "Authorized Stripe API key"
+    },
+    {
+      "provider": "PayPal",
+      "sector": "payments",
+      "operation": "POST /v2/checkout/orders",
+      "protocol": "REST",
+      "source": "https://developer.paypal.com/docs/api/orders/v2/",
+      "auth": "OAuth2 bearer token"
+    },
+    {
+      "provider": "Open Banking UK",
+      "sector": "banking",
+      "operation": null,
+      "protocol": "OpenAPI 3.0 published specifications",
+      "source": "https://github.com/OpenBankingUK/read-write-api-specs",
+      "auth": "Institution-dependent; production access unverified"
+    }
+  ]
+}
