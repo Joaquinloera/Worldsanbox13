@@ -1,0 +1,88 @@
+{
+  "build": "KINO-281102-BUILD-05",
+  "date": "2026-10-18",
+  "previous": "research/build-04/ai-digital-assets-api-matrix.json",
+  "live_integrations_verified": false,
+  "records": [
+    {
+      "provider": "Federal Reserve FedNow",
+      "sector": "banking",
+      "region": "United States",
+      "operation": "FedNow Service technical documentation",
+      "auth": "Participant onboarding and financial-institution eligibility",
+      "source": "https://www.frbservices.org/financial-services/fednow"
+    },
+    {
+      "provider": "Banco Central do Brasil Pix",
+      "sector": "payments",
+      "region": "Brazil",
+      "operation": "GET /pix/{e2eid}",
+      "auth": "OAuth2 pix.read via participating PSP",
+      "source": "https://github.com/bacen/pix-api/blob/master/openapi.yaml"
+    },
+    {
+      "provider": "Open Banking UK",
+      "sector": "banking",
+      "region": "United Kingdom",
+      "operation": "Read/Write OpenAPI specifications",
+      "auth": "Institution-specific onboarding and consent",
+      "source": "https://github.com/OpenBankingUK/read-write-api-specs"
+    },
+    {
+      "provider": "Ethereum",
+      "sector": "blockchain",
+      "region": "Global",
+      "operation": "eth_getBalance JSON-RPC",
+      "auth": "Node/RPC provider dependent",
+      "source": "https://ethereum.github.io/execution-apis/"
+    },
+    {
+      "provider": "Solana",
+      "sector": "blockchain",
+      "region": "Global",
+      "operation": "getBalance JSON-RPC",
+      "auth": "Node/RPC provider dependent",
+      "source": "https://solana.com/docs/rpc/http/getbalance"
+    },
+    {
+      "provider": "OpenAI",
+      "sector": "AI",
+      "region": "Global",
+      "operation": "POST /v1/responses",
+      "auth": "Authorized bearer API key",
+      "source": "https://developers.openai.com/api/reference/resources/responses/methods/create"
+    },
+    {
+      "provider": "Anthropic",
+      "sector": "AI",
+      "region": "Global",
+      "operation": "POST /v1/messages",
+      "auth": "Authorized API credentials",
+      "source": "https://docs.anthropic.com/en/api/messages"
+    },
+    {
+      "provider": "Stripe",
+      "sector": "payments",
+      "region": "Global",
+      "operation": "POST /v1/payment_intents",
+      "auth": "Authorized Stripe secret key",
+      "source": "https://docs.stripe.com/api/payment_intents/create"
+    },
+    {
+      "provider": "Coinbase Developer Platform",
+      "sector": "digital-assets",
+      "region": "Global",
+      "operation": "Create EVM account REST API",
+      "auth": "CDP project credentials and permissions",
+      "source": "https://docs.cdp.coinbase.com/api-reference/v2/rest-api/evm-accounts/create-an-evm-account"
+    },
+    {
+      "provider": "Amazon Bedrock",
+      "sector": "AI",
+      "region": "Global",
+      "operation": "POST /model/{modelId}/invoke",
+      "auth": "AWS IAM bedrock:InvokeModel",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_InvokeModel.html"
+    }
+  ]
+}
