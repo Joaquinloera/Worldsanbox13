@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "build": "KINO-281102-BUILD-02",
+  "date": "2026-10-18",
+  "operations": [
+    {
+      "id": "paypal-oauth-token",
+      "provider": "PayPal",
+      "method": "POST",
+      "operation": "/v1/oauth2/token",
+      "auth": "OAuth2 client credentials",
+      "source": "https://developer.paypal.com/api/rest/authentication/"
+    },
+    {
+      "id": "square-create-payment",
+      "provider": "Square",
+      "method": "POST",
+      "operation": "/v2/payments",
+      "permission": "PAYMENTS_WRITE",
+      "source": "https://developer.squareup.com/reference/square/payments-api/create-payment"
+    },
+    {
+      "id": "pix-read-transaction",
+      "provider": "Banco Central do Brasil Pix",
+      "method": "GET",
+      "operation": "/pix/{e2eid}",
+      "scope": "pix.read",
+      "source": "https://github.com/bacen/pix-api/blob/master/openapi.yaml"
+    },
+    {
+      "id": "ethereum-get-balance",
+      "provider": "Ethereum",
+      "method": "JSON-RPC",
+      "operation": "eth_getBalance",
+      "source": "https://ethereum.github.io/execution-apis/"
+    }
+  ],
+  "live_integrations_verified": false
+}
