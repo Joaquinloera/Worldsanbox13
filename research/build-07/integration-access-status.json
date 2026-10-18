@@ -1,0 +1,78 @@
+{
+  "build": "KINO-281102-BUILD-07",
+  "previous": "research/build-06/integration-readiness-matrix.json",
+  "purpose": "Local validation and explicit access readiness, no live API calls",
+  "live_integrations_verified": false,
+  "records": [
+    {
+      "provider": "FedNow",
+      "sector": "banking",
+      "region": "US",
+      "integration_state": "institutional_access_required",
+      "source": "https://www.frbservices.org/financial-services/fednow"
+    },
+    {
+      "provider": "Pix",
+      "sector": "payments",
+      "region": "Brazil",
+      "integration_state": "institutional_access_required",
+      "source": "https://github.com/bacen/pix-api/blob/master/openapi.yaml"
+    },
+    {
+      "provider": "Open Banking UK",
+      "sector": "banking",
+      "region": "UK",
+      "integration_state": "institutional_access_required",
+      "source": "https://github.com/OpenBankingUK/read-write-api-specs"
+    },
+    {
+      "provider": "Ethereum",
+      "sector": "blockchain",
+      "region": "Global",
+      "integration_state": "documentation_only",
+      "source": "https://ethereum.github.io/execution-apis/"
+    },
+    {
+      "provider": "Solana",
+      "sector": "blockchain",
+      "region": "Global",
+      "integration_state": "documentation_only",
+      "source": "https://solana.com/docs/rpc/http/getbalance"
+    },
+    {
+      "provider": "OpenAI",
+      "sector": "AI",
+      "region": "Global",
+      "integration_state": "developer_credentials_required",
+      "source": "https://developers.openai.com/api/reference/resources/responses/methods/create"
+    },
+    {
+      "provider": "Anthropic",
+      "sector": "AI",
+      "region": "Global",
+      "integration_state": "developer_credentials_required",
+      "source": "https://docs.anthropic.com/en/api/messages"
+    },
+    {
+      "provider": "Stripe",
+      "sector": "payments",
+      "region": "Global",
+      "integration_state": "developer_credentials_required",
+      "source": "https://docs.stripe.com/api/payment_intents/create"
+    },
+    {
+      "provider": "Coinbase CDP",
+      "sector": "digital-assets",
+      "region": "Global",
+      "integration_state": "developer_credentials_required",
+      "source": "https://docs.cdp.coinbase.com/api-reference/v2/rest-api/evm-accounts/create-an-evm-account"
+    },
+    {
+      "provider": "Amazon Bedrock",
+      "sector": "AI",
+      "region": "Global",
+      "integration_state": "developer_credentials_required",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_InvokeModel.html"
+    }
+  ]
+}
