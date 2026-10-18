@@ -1,0 +1,89 @@
+{
+  "build": "KINO-281102-BUILD-06",
+  "previous": "research/build-05/global-access-integration-matrix.json",
+  "scope": "cross-sector integration readiness",
+  "records": [
+    {
+      "provider": "FedNow",
+      "sector": "banking",
+      "region": "US",
+      "source": "https://www.frbservices.org/financial-services/fednow",
+      "access": "participant onboarding",
+      "live_verified": false
+    },
+    {
+      "provider": "Pix",
+      "sector": "payments",
+      "region": "Brazil",
+      "source": "https://github.com/bacen/pix-api/blob/master/openapi.yaml",
+      "access": "participating PSP",
+      "live_verified": false
+    },
+    {
+      "provider": "Open Banking UK",
+      "sector": "banking",
+      "region": "UK",
+      "source": "https://github.com/OpenBankingUK/read-write-api-specs",
+      "access": "institution-specific consent",
+      "live_verified": false
+    },
+    {
+      "provider": "Ethereum",
+      "sector": "blockchain",
+      "region": "Global",
+      "source": "https://ethereum.github.io/execution-apis/",
+      "access": "RPC provider",
+      "live_verified": false
+    },
+    {
+      "provider": "Solana",
+      "sector": "blockchain",
+      "region": "Global",
+      "source": "https://solana.com/docs/rpc/http/getbalance",
+      "access": "RPC provider",
+      "live_verified": false
+    },
+    {
+      "provider": "OpenAI",
+      "sector": "AI",
+      "region": "Global",
+      "source": "https://developers.openai.com/api/reference/resources/responses/methods/create",
+      "access": "API key",
+      "live_verified": false
+    },
+    {
+      "provider": "Anthropic",
+      "sector": "AI",
+      "region": "Global",
+      "source": "https://docs.anthropic.com/en/api/messages",
+      "access": "API credentials",
+      "live_verified": false
+    },
+    {
+      "provider": "Stripe",
+      "sector": "payments",
+      "region": "Global",
+      "source": "https://docs.stripe.com/api/payment_intents/create",
+      "access": "API key",
+      "live_verified": false
+    },
+    {
+      "provider": "Coinbase CDP",
+      "sector": "digital-assets",
+      "region": "Global",
+      "source": "https://docs.cdp.coinbase.com/api-reference/v2/rest-api/evm-accounts/create-an-evm-account",
+      "access": "project credentials",
+      "live_verified": false
+    },
+    {
+      "provider": "Amazon Bedrock",
+      "sector": "AI",
+      "region": "Global",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_InvokeModel.html",
+      "access": "AWS IAM",
+      "live_verified": false
+    }
+  ],
+  "credential_access": false,
+  "live_integrations_verified": false
+}
