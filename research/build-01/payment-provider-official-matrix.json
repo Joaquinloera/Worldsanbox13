@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "build": "KINO-281102-BUILD-01",
+  "date": "2026-10-18",
+  "repository": "Joaquinloera/Worldsanbox13",
+  "method": "TinyFish+Exa official-source discovery; original repository Cash App files inspected; no private credentials collected",
+  "status": "public_documentation_research_not_live_integrations",
+  "providers": [
+    {
+      "name": "Cash App Pay",
+      "category": "payments",
+      "documentation": "https://developers.cash.app/cash-app-pay-partner-api/guides/technical-guides/integrating-with-cash-app-pay/api-integration-quickstart",
+      "capability": "Merchant payments through Cash App Pay API",
+      "access": "Partner integration/onboarding; production authorization not verified",
+      "verified": "official developer documentation located"
+    },
+    {
+      "name": "Square Cash App Pay",
+      "category": "payments",
+      "documentation": "https://developer.squareup.com/docs/payments-api/take-payments/cash-app-payments",
+      "capability": "Payments API CreatePayment for Cash App payment processing",
+      "access": "Square developer account and credentials",
+      "verified": "official developer documentation located"
+    },
+    {
+      "name": "Zelle",
+      "category": "bank-network",
+      "documentation": "https://www.zelle.com/join-zelle-network/partners",
+      "capability": "Person-to-person, small-business payments and disbursements through participating institutions",
+      "access": "Financial institution/processor partnership; no general-purpose public API established",
+      "verified": "official partner information located"
+    },
+    {
+      "name": "PayPal",
+      "category": "payments",
+      "documentation": "https://developer.paypal.com/api/rest/authentication",
+      "capability": "REST APIs",
+      "authentication": "OAuth 2.0 access token; client credentials",
+      "access": "Developer app sandbox/live credentials issued by PayPal",
+      "verified": "official authentication documentation located"
+    },
+    {
+      "name": "Apple Pay",
+      "category": "wallet",
+      "documentation": "https://developer.apple.com/apple-pay/implementation/",
+      "capability": "Apple Pay apps and web integration",
+      "authentication": "Merchant ID and certificates; payment provider may be required",
+      "access": "Apple Developer and/or payment service provider",
+      "verified": "official implementation documentation located"
+    },
+    {
+      "name": "Google Pay",
+      "category": "wallet",
+      "documentation": "https://developers.google.com/pay/api/web/guides/tutorial",
+      "capability": "Google Pay Web API",
+      "authentication": "Payment gateway tokenization for common card implementations",
+      "access": "Merchant gateway/processor configuration",
+      "verified": "official developer tutorial located"
+    }
+  ],
+  "related_existing_paths": [
+    "cash-app/cash-app-access-map-01i.json",
+    "cash-app/cash-app-sandbox-client.cjs",
+    "cash-app/research-swarm.cjs",
+    "global-institutions.json"
+  ],
+  "policy": "No fictional keys, no claimed live money movement, no changes to existing files."
+}
