@@ -1,0 +1,38 @@
+{
+  "build": "KINO-281102-BUILD-04",
+  "date": "2026-10-18",
+  "previous_build": "research/build-03/global-codex-official-sources.json",
+  "status": "official_documentation_research",
+  "live_integrations_verified": false,
+  "autonomous_agents_deployed": false,
+  "records": [
+    {
+      "provider": "Anthropic",
+      "sector": "AI",
+      "operation": "POST /v1/messages",
+      "auth": "Anthropic API credentials",
+      "source": "https://docs.anthropic.com/en/api/messages"
+    },
+    {
+      "provider": "Google Gemini",
+      "sector": "AI",
+      "operation": "POST /v1beta/interactions",
+      "auth": "x-goog-api-key",
+      "source": "https://ai.google.dev/gemini-api/docs/text-generation"
+    },
+    {
+      "provider": "Amazon Bedrock",
+      "sector": "AI",
+      "operation": "POST /model/{modelId}/invoke",
+      "auth": "AWS IAM bedrock:InvokeModel",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_InvokeModel.html"
+    },
+    {
+      "provider": "Coinbase Developer Platform",
+      "sector": "digital-assets",
+      "operation": "Create EVM account (REST API)",
+      "auth": "CDP developer authorization",
+      "source": "https://docs.cdp.coinbase.com/api-reference/v2/rest-api/evm-accounts/create-an-evm-account"
+    }
+  ]
+}
