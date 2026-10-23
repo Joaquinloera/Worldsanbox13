@@ -42,7 +42,57 @@ const AGENTS = Object.entries(GROUPS).flatMap(([division,group]) => group.target
  id:`KINO-${division}-${String(i+1).padStart(2,'0')}`, division, lead:group.lead, task, url
 })));
 const DIVISIONS = Object.entries(GROUPS).map(([name,group])=>[name+' '+group.lead,group.targets.map(x=>x[1])]);
+
+const MAX_DOCUMENT_BYTES = 262144;
+const MAX_CONCURRENT_REQUESTS = 4;
+const SECRET_QUERY_KEY = /token|key|secret|password|credential|session|signature|auth/i;
+const ALLOWED_HOSTS = new Set(AGENTS.map(agent => new URL(agent.url).hostname));
+function safeResearchUrl(value) {
+  try {
+    const u = new URL(value);
+    return u.protocol === 'https:' && !u.username && !u.password && !u.port && !u.hash &&
+      ALLOWED_HOSTS.has(u.hostname) && ![...u.searchParams.keys()].some(k => SECRET_QUERY_KEY.test(k));
+  } catch { return false; }
+}
+async function readBoundedHtml(response) {
+  if (response.body && typeof response.body.getReader === 'function') {
+    const reader = response.body.getReader();
+    const parts = [];
+    let bytes = 0;
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      bytes += value.byteLength;
+      if (bytes > MAX_DOCUMENT_BYTES) {
+        await reader.cancel().catch(() => {});
+        throw Error('DOCUMENT_OVERSIZE');
+      }
+      parts.push(Buffer.from(value));
+    }
+    return Buffer.concat(parts).toString('utf8');
+  }
+  if (typeof response.text !== 'function') return '';
+  const html = await response.text();
+  if (Buffer.byteLength(html, 'utf8') > MAX_DOCUMENT_BYTES) throw Error('DOCUMENT_OVERSIZE');
+  return html;
+}
+async function limitedMap(items, fn, maxConcurrent = MAX_CONCURRENT_REQUESTS) {
+  const result = new Array(items.length);
+  let cursor = 0;
+  async function worker() {
+    for (;;) {
+      const i = cursor++;
+      if (i >= items.length) return;
+      try { result[i] = await fn(items[i], i); }
+      catch (error) { result[i] = { state: 'error', reachable: false, error: String(error?.message || error).slice(0, 100) }; }
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(items.length, maxConcurrent) }, worker));
+  return result;
+}
+
 async function probe(agent,fetcher=fetch,timeoutMs=10000) {
+ if(!safeResearchUrl(agent.url))return {...agent,reachable:false,state:'blocked',error:'UNAPPROVED_PUBLIC_SOURCE_URL'};
  const controller=new AbortController();
  const timer=setTimeout(()=>controller.abort(),timeoutMs);
  try {
@@ -50,7 +100,7 @@ async function probe(agent,fetcher=fetch,timeoutMs=10000) {
    let skim={title:null,authSignals:[],apiSignals:[],documentationLinks:[]};
    if(res.ok && typeof res.text==='function'){
      try{
-       const html=(await res.text()).slice(0,250000);
+       const html=await readBoundedHtml(res);
        const title=html.match(/<title[^>]*>([^<]{1,200})<\/title>/i);
        const authTerms=['OAuth','API key','JWT','Basic Auth','client credentials','bearer token','sandbox'];
        const apiTerms=['REST API','GraphQL','webhook','OpenAPI','Swagger','SDK','rate limit'];
@@ -59,7 +109,7 @@ async function probe(agent,fetcher=fetch,timeoutMs=10000) {
        skim={title:title?title[1].replace(/&amp;/g,'&').trim():null,
          authSignals:authTerms.filter(term=>html.toLowerCase().includes(term.toLowerCase())),
          apiSignals:apiTerms.filter(term=>html.toLowerCase().includes(term.toLowerCase())),
-         documentationLinks:[...new Set(links.filter(link=>{try{return new URL(link).hostname===host}catch{return false}}))].slice(0,12)};
+         documentationLinks:[...new Set(links.filter(link=>{try{const u=new URL(link);return u.protocol==='https:'&&!u.username&&!u.password&&!u.port&&u.hostname===host&&![...u.searchParams.keys()].some(k=>SECRET_QUERY_KEY.test(k))}catch{return false}}))].slice(0,12)};
      }catch(e){skim.extractionError=String(e.message||e).slice(0,120)}
    }
    return {...agent,status:res.status,reachable:res.ok,state:res.ok?'reachable':'http_error',skim};
@@ -68,15 +118,14 @@ async function probe(agent,fetcher=fetch,timeoutMs=10000) {
  } finally {clearTimeout(timer);}
 }
 async function run(fetcher=fetch) {
- const settled=await Promise.allSettled(AGENTS.map(agent=>probe(agent,fetcher)));
- const results=settled.map((r,i)=>r.status==='fulfilled'?r.value:{...AGENTS[i],state:'error',reachable:false,error:String(r.reason)});
+ const results=await limitedMap(AGENTS,agent=>probe(agent,fetcher));
  return {at:new Date().toISOString(),mode:'public-docs-skim',paymentExecution:false,
   configuredAgents:AGENTS.length,executedChecks:results.length,
   summary:{reachable:results.filter(x=>x.reachable).length,failed:results.filter(x=>!x.reachable).length},
   agents:results};
 }
 async function worker([name,urls],fetcher=fetch){
- const checks=await Promise.all(urls.map((url,i)=>probe({id:name+'-'+i,division:name,url,task:url},fetcher)));
+ const checks=await limitedMap(urls,(url,i)=>probe({id:name+'-'+i,division:name,url,task:url},fetcher));
  return {agent:name,checks};
 }
 if(require.main===module)run().then(async result=>{
@@ -84,4 +133,4 @@ if(require.main===module)run().then(async result=>{
  await fs.writeFile('/tmp/kino/latest.json',JSON.stringify(result,null,2));
  console.log(JSON.stringify(result));
 }).catch(e=>{console.error(e);process.exitCode=1;});
-module.exports={GROUPS,AGENTS,DIVISIONS,probe,worker,run};
+module.exports={GROUPS,AGENTS,DIVISIONS,probe,worker,run,safeResearchUrl,readBoundedHtml,MAX_DOCUMENT_BYTES,MAX_CONCURRENT_REQUESTS};

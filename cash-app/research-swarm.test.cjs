@@ -35,3 +35,37 @@ test('SKIM extracts authentication, API and same-host documentation signals',asy
  assert.ok(result.agents[0].skim.apiSignals.includes('webhook'));
  assert.ok(result.agents.every(a=>!a.skim.documentationLinks.includes('https://outside.example/')));
 });
+
+test('only approved public HTTPS research URLs with non-secret parameters are accepted',()=>{
+ const {safeResearchUrl}=require('./research-swarm.cjs');
+ assert.equal(safeResearchUrl('https://docs.github.com/en/rest'),true);
+ for(const bad of ['http://docs.github.com/en/rest','https://evil.example/docs','https://docs.github.com:8080/en/rest','https://person:pass@docs.github.com/en/rest','https://docs.github.com/en/rest?api_key=abc','https://docs.github.com/en/rest#token'])
+  assert.equal(safeResearchUrl(bad),false,bad);
+});
+test('streaming response rejects oversized public documents and cancels reader',async()=>{
+ const {readBoundedHtml,MAX_DOCUMENT_BYTES}=require('./research-swarm.cjs');
+ let cancelled=false;
+ const reader={read:async()=>({done:false,value:Buffer.alloc(MAX_DOCUMENT_BYTES+1)}),cancel:async()=>{cancelled=true}};
+ await assert.rejects(readBoundedHtml({body:{getReader:()=>reader}}),/DOCUMENT_OVERSIZE/);
+ assert.equal(cancelled,true);
+});
+test('SKIM omits source links containing credential-shaped query keys',async()=>{
+ const {probe}=require('./research-swarm.cjs');
+ const a=AGENTS.find(x=>x.url==='https://docs.github.com/en/authentication');
+ const html='<title>API Docs</title><a href="https://docs.github.com/en/rest?token=secret">unsafe</a><a href="https://docs.github.com/en/rest">safe</a>';
+ const out=await probe(a,async()=>({ok:true,status:200,text:async()=>html}));
+ assert.deepEqual(out.skim.documentationLinks,['https://docs.github.com/en/rest']);
+});
+test('30 probe run executes at most four concurrent public requests',async()=>{
+ const {MAX_CONCURRENT_REQUESTS}=require('./research-swarm.cjs');
+ let active=0,peak=0;
+ const r=await run(async()=>{
+  active++;peak=Math.max(peak,active);
+  await new Promise(resolve=>setTimeout(resolve,3));
+  active--;
+  return {ok:true,status:200,text:async()=>'<title>Safe</title>'};
+ });
+ assert.equal(r.executedChecks,30);
+ assert.ok(peak<=MAX_CONCURRENT_REQUESTS,JSON.stringify({peak}));
+ assert.ok(peak>1,'concurrent runner should use multiple worker slots');
+});
